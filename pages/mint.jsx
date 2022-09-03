@@ -59,10 +59,10 @@ const Mint = () => {
         <div className={styles.infoSide}>
           {/* Title of your NFT Collection */}
           {/* <h1>{contractMetadata?.name}</h1> */}
-          <h1>Hyena Gangsta Club</h1>
+          <h1>Meg4mint</h1>
           {/* Description of your NFT Collection */}
           {/* <p className={styles.description}>{contractMetadata?.description}</p> */}
-          <p>Welcome on the minting page, HGC are free and there is no royalty on the secondary market</p>
+          <p>Welcome on the minting page, Meg4mint are free and there is no royalty on the secondary market</p>
         </div>
 
         <div className={styles.imageSide}>
@@ -135,13 +135,13 @@ const Mint = () => {
       </div>
       {/* Powered by thirdweb */}{' '}
       {/* <img src="/logo.png" alt="thirdweb Logo" width={135} className={styles.buttonGapTop}/> */}
-      <Image
+      {/* <Image
               className="logo"
               src="/images/logo.png" // Route of the image file
               height={100} // Desired size with correct aspect ratio
               width={100} // Desired size with correct aspect ratio
               alt="logo"
-            />
+            /> */}
     </div>);
 };
 export default Mint;
