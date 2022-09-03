@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Change the values in here to match your branding */
+:root {
+  /* Background color of the page */
+  --background-color: #10100f;
+
+  /* Color of the text/words */
+  --text-color: #fff;
+
+  /* Main color of your brand */
+  --color-primary: #02efee;
+
+  /* Secondary color of your brand */
+  --color-secondary: #418dff;
+
+  /* Which font you want to use */
+  --font: "GT America", "Bebas Regular";
+
+  /* Color of the border around items */
+  --border-color: #02efee;
+}
+
+/* --- Don't need to modify below here --- */
+
+/* Default design values of the entire document */
+
+body {
+  background: var(--background-color);
+  font-family: var(--font);
+  color: var(--text-color);
+
+  display: flex;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+/* Box sizing rules */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("../public/fonts/GT-America-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Regular";
+  src: url("../public/fonts/FontsFree-Net-Bebas-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NES Controller";
+  src: url("../public/fonts/NES_Controller_MrShrike.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PressStart2P";
+  src: url("../public/fonts/PressStart2P-vaV7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  min-height: 100vh !important ;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont,"Bebas Regular", "GT America", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
