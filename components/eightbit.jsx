@@ -47,11 +47,10 @@ const MobileComponent = () =>
         alt="Figures"
       /> */}
       <h1><u>Hyena<span className="h1color">zation</span></u></h1>
-      <h2><br></br>The Hyena Gangsta Club starts with a collection of 3023
-      unique Hyena Gangsta NFTs generated from hand-drawn art.
-      The Hyena Gangsta Club aims to be a brand of the web3, 
-      no utility just a brand builds by his own community for fun and for free.<br></br><br></br>
-      More than a community it is a gang, a decentralised gang, Hyenazation!</h2>
+      <h2><br></br> Mega Man has robotic animals: the dog Rush, the cat Tango,
+       and the bird Beat. Light has robot assistants: Auto (Rightot in Japan)
+        the mechanic and Eddie the walking suitcase (who sometimes gives Mega Man help),
+         (Flip Top in Japan).<br></br><br></br></h2>
     </div>
     <Box
         component="img"
@@ -64,8 +63,8 @@ const MobileComponent = () =>
           marginLeft: "auto",
           marginBottom: "-8px",
         }}
-        alt="Hyena"
-        src="/images/BackHyena.png"
+        alt="pill"
+        src="/images/pilule.gif"
       />
   </ContentMob>
 ;
@@ -80,26 +79,24 @@ const DesktopComponent = () =>
         width={84} // Desired size with correct aspect ratio
         alt="Figures"
       /> */}
-      <h1><u>Hyena<span className="h1color">zation</span></u></h1>
-      <h2><br></br>The Hyena Gangsta Club starts with a collection of 3023
-      unique Hyena Gangsta NFTs generated from hand-drawn art.
-      The Hyena Gangsta Club aims to be a brand of the web3 
-      and metaverse, no utility just a brand builds by his own community for fun and for free.<br></br><br></br>
-      More than a community it is a gang, a decentralised gang, Hyenazation!</h2>
+      <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
+      <h2><br></br> Mega Man personality and intelligence correspond to those of a 10 year old boy.
+       He does not have the maturity of future robots. Mega Man has robotic animals: the dog Rush, the cat Tango,
+       and the bird Beat.<br></br><br></br></h2>
     </div>
     <Box 
         component="img"
         sx={{
-          height: 500,
-          width: 500,
-          maxHeight: { md: 500 },
-          maxWidth: { md: 500 },
+          height: 250,
+          width: 250,
+          maxHeight: { md: 300 },
+          maxWidth: { md: 300 },
           // position: "absolute",
-          marginTop: "-100px",
+          // marginTop: "-100px",
           right: "-50px",
         }}
-        alt="BackHyena"
-        src="/images/BackHyena.png"
+        alt="pill"
+        src="/images/pilule.gif"
       />
   </Content>
  ;
@@ -111,7 +108,7 @@ const Layouts = () => {
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
-export default function Hyenazation() {
+export default function eightbit() {
   return (
     <>
       <ViewportProvider>
@@ -143,27 +140,27 @@ const Content = styled.div`
   }
   h1 {
     text-align: left;
-    font-family: "Bebas Regular";
+    font-family: "NES Controller";
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
-    color: #ffdd00;
+    color: 	#02efee;
     min-width: 0;
-    margin-left: 10%;
+    margin-left: 20%;
   }
   h1 .h1color {
     color: #ffffff;
   }
   h2 {
     text-align: left;
-    font-family: "GT America";
-    font-size: calc(1rem + 0.8vw);
+    font-family: "Roboto";
+    font-size: calc(1rem + 0.4vw);
     //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
-    margin-left: 10%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
   u {
     text-decoration: underline;
-    text-decoration-color: #ffdd00;
+    text-decoration-color: #02efee;
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
 }

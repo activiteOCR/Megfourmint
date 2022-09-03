@@ -1,6 +1,6 @@
 // import styled from "styled-components";
 import Home from "../components/Home";
-import Hyenazation from "../components/Hyenazation";
+import Eightbit from "../components/eightbit";
 import { Element } from 'react-scroll'
 import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
@@ -14,16 +14,16 @@ const HomePage = () => {
       <Element id='Home' name='Home'>
         <Home />
       </Element>
-      <Element id='Rocket' name='Rocket'>
-        <Hyenazation />
+      <Element id='8-BIT' name='8-BIT'>
+        <Eightbit/>
       </Element>
       {/* <Element id='Roadmap' name='Roadmap'>
         <Roadmap />
       </Element> */}
-      <Element id='Team' name='Team'>
+      <Element id='LAB' name='LAB'>
         <Team />
       </Element>
-      <Element id='Faq' name='Faq'>
+      <Element id='FAQ' name='FAQ'>
         <TheFaq />
       </Element>
       <Footer />

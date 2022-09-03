@@ -28,7 +28,7 @@ import Fade from '@mui/material/Fade';
 import { Link } from "react-scroll";
 
 const drawerWidth = 200;
-const navItems = ['Home', 'Team', 'Faq' ];
+const navItems = ['8-BIT', 'LAB', 'FAQ' ];
 
 // const theme = createTheme({
 //   breakpoints: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles({
     borderRadius: 3,
     color: 'white',
     height: 40,
-    //padding: '0 30px',
+    marginRight: 200,
     justifyContent: 'flex-end',
   },
   hide: {
@@ -154,6 +154,11 @@ export default function DrawerAppBar(props) {
             <ListItemText  primary='Giveaway' />
           </ListItemButton>
         </ListItem>
+        <ListItem key='Mint' disablePadding>
+          <ListItemButton target="_blank" href="/mint" sx={{ flexDirection: 'column' }}>
+            <ListItemText  primary='Mint' />
+          </ListItemButton>
+        </ListItem>
         <SocialDrawer >
           <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
             <Discord className="icon" />
@@ -175,7 +180,6 @@ export default function DrawerAppBar(props) {
     <Box  sx={{ display: 'flex' }}>
       <AppBar component="nav" theme={theme} position="static" >
         <Toolbar className={classes.root} id="back-to-top-anchor" >
-        {/* <Box sx={{ flexGrow: 0.5 }} /> */}
         <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -207,7 +211,6 @@ export default function DrawerAppBar(props) {
                  Mint
             </Button>
           </Box>
-          {/* <Box sx={{ flexGrow: 0.5 }} /> */}
           <Box className={classes.hide} sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Social >
               <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
@@ -258,17 +261,11 @@ const Social = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    /* filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%)
-      hue-rotate(315deg) brightness(89%) contrast(74%); */
-      /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%); */
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-      hue-rotate(359deg) brightness(103%) contrast(104%); */
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -277,9 +274,7 @@ const Social = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%); */
-      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+      filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
       transform: scale(1.4);
     }
     margin-right: 3%;
@@ -295,17 +290,11 @@ const SocialDrawer = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    /* filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%)
-      hue-rotate(315deg) brightness(89%) contrast(74%); */
-      /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%); */
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-      hue-rotate(359deg) brightness(103%) contrast(104%); */
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -314,9 +303,7 @@ const SocialDrawer = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      /* filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%); */
-      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+      filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
       transform: scale(1.4);
     }
     margin-right: 3%;
