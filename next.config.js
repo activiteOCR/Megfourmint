@@ -6,7 +6,7 @@ const nextConfig = {
 module.exports ={
   nextConfig,
 
-  optimizeFonts: false,
+  optimizeFonts: true,
   
 };
 
