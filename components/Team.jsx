@@ -380,7 +380,7 @@ const Content = styled(Box)`
   }
   h2 {
     text-align: left;
-    font-family: "Roboto";
+    font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
     //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
@@ -417,8 +417,6 @@ const Social = styled(IconButton)`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    /* filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%)
-      hue-rotate(315deg) brightness(89%) contrast(74%); */
       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
     transition: transform 0.1s ease-in;

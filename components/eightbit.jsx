@@ -151,7 +151,7 @@ const Content = styled.div`
   }
   h2 {
     text-align: left;
-    font-family: "Roboto";
+    font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
     //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
@@ -178,9 +178,9 @@ const ContentMob = styled.div`
   }
   h1 {
     text-align: left;
-    font-family: "Bebas Regular";
+    font-family: "NES Controller";
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
-    color: #ffdd00;
+    color: #02efee;
     min-width: 0;
     margin-left: 10%;
   }
@@ -188,7 +188,7 @@ const ContentMob = styled.div`
     color: #ffffff;
   }
   h2 {
-    font-family: "GT America";
+    font-family: "Bebas Regular";
     font-size: calc(1rem + 0.8vw);
     //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
@@ -200,7 +200,7 @@ const ContentMob = styled.div`
   }
   u {
     text-decoration: underline;
-    text-decoration-color: #ffdd00;
+    text-decoration-color: #02efee;
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
 }

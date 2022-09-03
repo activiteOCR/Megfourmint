@@ -1,9 +1,6 @@
 import React from "react";
 import { useState, useEffect, useContext, createContext } from "react"
 import styled from "styled-components";
-import Image from 'next/image';
-import bgImage from "../public/images/background.jpg";
-import logo from "../public/images/logo.png";
 import DrawAppBar from "./DrawAppBar";
 
 const viewportContext = createContext({});
@@ -92,8 +89,7 @@ const Wrapper = styled.div`
   background-position: center center; 
   margin: 0 auto;
   background-color: #10100f;
-  /* border-bottom: 5px solid #02efee; */
-  overflow-y:visible;
+  /* overflow-y:visible; */
 
 `;
 const Content = styled.div`

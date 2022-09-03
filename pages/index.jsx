@@ -2,7 +2,7 @@
 import Home from "../components/Home";
 import Eightbit from "../components/eightbit";
 import { Element } from 'react-scroll'
-import Roadmap from "../components/Roadmap";
+// import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
 import TheFaq from "../components/TheFaq";
 import Footer from "../components/Footer";

@@ -23,14 +23,13 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   padding: 2% 2% 2% 2%;
-  background-color: #1d1d1b;
-  //border: 1px solid #ffdd00;
+  background-color: #10100f;
 `;
 const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 18%;
+  margin-right: 20%;
   gap: 12px;
   h1 {
     font-family: "Bebas Regular";
@@ -41,7 +40,7 @@ const Content = styled.div`
   }
   u {
     text-decoration: underline;
-    text-decoration-color: #ffdd00;
+    text-decoration-color: #02efee;
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
   }
@@ -49,59 +48,50 @@ const Content = styled.div`
 const data = {
     rows: [
         {
-            title: "What is an NFT ?",
-            content: `NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.`,
+            title: "1. What are Meg4mint?",
+            content: `Meg4mint are robots from the childhood dimension who will be spawned here to explore our memories`,
         },
         {
-            title: "What is metamask ?",
-            content:
-                "Metamask is a crypto-wallet that can store your Ethereum, and is needed to purchase and mint a HGC. Having a wallet gives you an Ethereum address (i.e. 0xSPOO….666), this is where your NFT will be stored. Learn more about Metamask and how easy it is to use over here! (https://metamask.io).",
+            title: "2. What chain is Meg4mint on?",
+            content: 'Ethereum Mainnet',
         },
         {
-            title: "What blockchain is HGC based on?",
-            content: `Ethereum. ERC-721 Token`,
+            title: "3. How much do 8liens cost?",
+            content: `Meg4mint are free, and there is no royalty on secondary market`,
         },
         {
-            title: "Buying an NFT for the first time ?",
-            content: "Get the Metamask Chrome or Firefox extension. Load it with ETH through services that allow you to change your money to ETH like Coinbase, Binance or Kraken. Then, click the button MINT on the scary banner to connect your wallet and approve the transaction on Metamask. That’s it !",
+            title: "4. What is your revenue model?",
+            content: 'We are keeping 10% of Meg4mint for the 2 founders (like punks did)',
         },
         {
-            title: "What is the release date for the HGC collection?",
-            content: "Date to be defined",
+            title: "5. Is there a treasury?",
+            content: 'An additional 10% have been held back for development, some have been given to devs and advisors already and the remainder will be minted to a wallet for future development. Any future proceeds from this will all go back into the project. Any sales will be completely transparent and announced in advance.',
         },
         {
-            title: "How much will it cost to mint a HGC NFT?",
-            content: "Freemint, you will only pay the fees",
+            title: "6. How were spawn list spots distributed?",
+            content: 'All spots were given out to the community through discord or Twitter, 1 spot per human (artists and devs and a few advisors received more than 1)',
         },
         {
-            title: "When will the HGC collection be revealed?",
-            content: "Approx 72 hours after the public sale started.",
+            title: "7. Is there utility? A token? A Game? Metaverse?",
+            content: 'Lol- no. 8liens are NFT art, inspired by cryptopunks',
         },
         {
-            title: "How do I purchase the HGC collection?",
-            content: "Mint on this official site during the sale period or buy on OpenSea.",
-        },
-        {
-            title: "How can I see the HGC collection I minted?",
-            content: "Visit OpenSea and connect your wallet. You should be able to see the collection you minted in your account.",
-        },
-        {
-            title: "What can I do with my HGC / How can I trade them?",
-            content: "You are free to do anything with them under a non-exclusive license. HGC adheres to the ERC-721 standard so you can trade them on platforms like OpenSea.",
+            title: "8. What can I do with my Meg4mint?",
+            content: 'All 8liens will be CC0, excluding the 1/1 pieces which will be determined individually by each artist',
         },
     ],
 };
 const styles = {
-    bgColor: "#1d1d1b",
+    bgColor: "#10100f",
     titleTextColor: "white",
     rowTitleTextSize: '22px',
     rowContentTextSize: '18px',
     rowContentPaddingTop: '10px',
     rowContentPaddingBottom: '10px',
     rowContentPaddingLeft: '50px',
-    rowTitleColor: "#ffdd00",
+    rowTitleColor: "#02efee",
     rowContentColor: 'white',
-    arrowColor: "#ffdd00",
+    arrowColor: "#02efee",
 };
 const config = {
     // animate: true,

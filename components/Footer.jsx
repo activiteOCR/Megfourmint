@@ -39,9 +39,9 @@ const useViewport = () => {
 const MobileComponent = () => 
 <Content>
 <SocialCopyWrapper>
-  <img src="/images/logoYellow.png" alt="logo" className="LogoYellow" />
-  <CopyRight>© COPYRIGHT HYENA GANGSTA CLUB - 2022 -</CopyRight>  
-    <Social>
+  {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
+  <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>  
+    {/* <Social>
       <Discord
         className="icon"
         onClick={() =>
@@ -58,7 +58,7 @@ const MobileComponent = () =>
         window.open("https://www.instagram.com/hyena_gangsta_club/")
         }
       />
-    </Social>
+    </Social> */}
 </SocialCopyWrapper>
 </Content>
 ;
@@ -66,9 +66,9 @@ const MobileComponent = () =>
 const DesktopComponent = () =>
 <Content>
 <SocialCopyWrapper>
-    <CopyRight>© COPYRIGHT HYENA GANGSTA CLUB - 2022 -</CopyRight>
-    <img src="/images/logoYellow.png" alt="logo" className="LogoYellow" />
-    <Social>
+    <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>
+    {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
+    {/* <Social>
     <Discord
         className="icon"
         onClick={() =>
@@ -85,7 +85,7 @@ const DesktopComponent = () =>
         window.open("https://www.instagram.com/hyena_gangsta_club/")
         }
     />
-    </Social>
+    </Social> */}
 </SocialCopyWrapper>
 </Content>
  ;
@@ -107,32 +107,31 @@ export default function Hyenazation() {
   )
 }
 const Wrapper = styled.div`
-  height: 15%;
+  height: 5%;
   width: 100%;
   padding: 2% 2% 2% 2%;
   background-color: #10100f;
-  //border: 1px solid #ffdd00;
-  //overflow-y:hidden;
   @media (max-width: 600px){
     height: 10%;
   }
 `;
 const Content = styled.div`
   /* display: flex; */
-  .LogoYellow {
-    height: 90%;
+  
+  .creativeCommon {
+    height: 40%;
     width: 20%;
-    margin-right: 20%;
+    /* margin-right: 20%; */
   }
   @media (max-width: 1200px){
-    .LogoYellow {
+    .creativeCommon {
       min-width: 24%;
       min-height: 12%;
       margin-right: 25%;
     }
   }
   @media (max-width: 900px){
-    .LogoYellow {
+    .creativeCommon {
       margin-right: 0;
       min-width: 40%;
       min-height: 20%;
@@ -140,52 +139,54 @@ const Content = styled.div`
   }
 `;
 const CopyRight = styled.p`
-  font-family: "GT America";
-  font-size: 1.0rem;
-  color: #ffdd00;
+  font-family: "NES Controller";
+  font-size: 1.1rem;
+  color: #ffffff;
 `;
 const SocialCopyWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: space-between; */
   flex: 1;
   @media (max-width: 900px){
     flex-direction: column;
     text-align: center;
   }
 `;
-const Social = styled.div`
-  height: 100%;
-  //align-self: end;
-  display: flex;
-  flex-direction: column;
-  /* gap: 12%; */
-  .icon {
-    padding-bottom: 20px;
-    width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-    transition: transform 0.1s ease-in;
-  }
-  .icon:hover {
-    filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-      hue-rotate(359deg) brightness(103%) contrast(104%);
-    transform: scale(1.4);
-    cursor: pointer;
-  }
-  .icon:active {
-    transform: scale(1.3);
-  }
-  @media (max-width: 900px) {
-    flex-direction: row;
-    margin-left:20px;
-    .icon {
-      padding-right: 15px;
-      padding-top: 20px;
-      width: clamp(2.0rem, 0.536rem + 1.488vw, 1.9rem); 
-      filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-      transform: scale(1.4);
-    }
-  }
-`;
+// const Social = styled.div`
+//   height: 100%;
+//   //align-self: end;
+//   display: flex;
+//   flex-direction: column;
+//   /* gap: 12%; */
+//   .icon {
+//     padding-bottom: 20px;
+//     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
+//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
+//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+//     transition: transform 0.1s ease-in;
+//   }
+//   .icon:hover {
+//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
+//       hue-rotate(359deg) brightness(103%) contrast(104%);
+//     transform: scale(1.4);
+//     cursor: pointer;
+//   }
+//   .icon:active {
+//     transform: scale(1.3);
+//   }
+//   @media (max-width: 900px) {
+//     flex-direction: row;
+//     margin-left:20px;
+//     .icon {
+//       padding-right: 15px;
+//       padding-top: 20px;
+//       width: clamp(2.0rem, 0.536rem + 1.488vw, 1.9rem); 
+//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
+//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+//       transform: scale(1.4);
+//     }
+//   }
+// `;

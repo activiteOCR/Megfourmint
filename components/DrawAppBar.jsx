@@ -57,7 +57,7 @@ const useStyles = makeStyles({
     borderRadius: 3,
     color: 'white',
     height: 40,
-    marginRight: 200,
+    marginRight: 300,
     justifyContent: 'flex-end',
   },
   hide: {
@@ -261,11 +261,11 @@ const Social = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -274,7 +274,7 @@ const Social = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
       transform: scale(1.4);
     }
     margin-right: 3%;
@@ -290,11 +290,11 @@ const SocialDrawer = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -303,7 +303,7 @@ const SocialDrawer = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(6205%) hue-rotate(247deg) brightness(114%) contrast(138%);
+      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
       transform: scale(1.4);
     }
     margin-right: 3%;
