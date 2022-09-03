@@ -32,7 +32,7 @@ const Content = styled.div`
   margin-right: 20%;
   gap: 12px;
   h1 {
-    font-family: "Bebas Regular";
+    font-family: "NES Controller";
     font-size: 80px;
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: white;

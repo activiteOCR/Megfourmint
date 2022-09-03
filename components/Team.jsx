@@ -272,7 +272,7 @@ const useStyles = makeStyles({
   const DesktopComponent = ({classes}) =>
   <Content>
     <Box className={classes.root} >
-    <h1><u><span className="h1color">TEAM</span></u></h1>
+    <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
         <Grid container spacing={2}>
             <Grid item xs={6}>
