@@ -1,7 +1,6 @@
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Head from "next/head";
-// import ThirdwebGuideFooter from "../components/GitHubLink";
 
 // This is the chainId your dApp will work on.
 const activeChainId = ChainId.Mumbai;
@@ -15,7 +14,6 @@ function MyApp({ Component, pageProps }) {
           <meta name="keywords" content="Freemint, NFT drop, pixel art, no royalties"/>
         </Head>
         <Component {...pageProps}/>
-        {/* <ThirdwebGuideFooter /> */}
       </ThirdwebProvider>
     );
   }
