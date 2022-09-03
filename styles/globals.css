@@ -48,25 +48,25 @@ body {
 }
 @font-face {
   font-family: "GT America";
-  src: url("../public/fonts/GT-America-Regular.ttf") format("truetype");
+  src: url("/fonts/GT-America-Regular.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Bebas Regular";
-  src: url("../public/fonts/FontsFree-Net-Bebas-Regular.ttf") format("truetype");
+  src: url("/fonts/FontsFree-Net-Bebas-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "NES Controller";
-  src: url("../public/fonts/NES_Controller_MrShrike.ttf") format("truetype");
+  src: url("/fonts/NES_Controller_MrShrike.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "PressStart2P";
-  src: url("../public/fonts/PressStart2P-vaV7.ttf") format("truetype");
+  src: url("/fonts/PressStart2P-vaV7.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
