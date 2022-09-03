@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports ={
+  nextConfig,
+
+  optimizeFonts: false,
+  
+};
 
 module.exports = {
   webpack(config) {
