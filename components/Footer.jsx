@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useContext, createContext } from "react"
 import styled from "styled-components";
-import LogoYellow from "../public/images/logoYellow.png";
+// import LogoYellow from "../public/images/logoYellow.png";
 import Discord from "../public/images/discord.svg";
 import Twitter from "../public/images/twitter.svg";
 import Instagram from "../public/images/instagram.svg";
@@ -9,15 +9,13 @@ import Instagram from "../public/images/instagram.svg";
 const viewportContext = createContext({});
 
 const ViewportProvider = ({ children }) => {
- // const [width, setWidth] = useState(window.innerWidth);
-  // const [height, setHeight] = useState(window.innerHeight);
-  const [width, setWidth] = useState({ width: undefined});
-  const [height, setHeight] = useState({ height: undefined});
+const [width, setWidth] = useState({ width: undefined});
+const [height, setHeight] = useState({ height: undefined});
 
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
+const handleWindowResize = () => {
+  setWidth(window.innerWidth);
+  setHeight(window.innerHeight);
+};
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);

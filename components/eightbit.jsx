@@ -1,8 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useContext, createContext } from "react"
 import styled from "styled-components";
-import Image from 'next/image';
-import Figures from "../public/images/3023.png";
 import Box from '@mui/material/Box';
 
 const viewportContext = createContext({});

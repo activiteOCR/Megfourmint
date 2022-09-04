@@ -7,11 +7,12 @@ import discord from "../public/images/discord.png";
 import bgImage from "../public/images/background.jpg";
 // import metamask from "../../assets/images/metamask.png";
 import pill from "../public/images/pilule.gif";
+import usdt from "../public/images/usdt.gif";
 // import ledger_prize from "../../assets/images/ledger_color.png";
 // import ledger from "../../assets/images/ledger.gif";
 // import checkIcon from "../public/images/checked.svg";
 // import failIcon from "../public/images/fail.svg";
-import logo from "../public/images/logo.png";
+// import logo from "../public/images/logo.png";
 import Customsnackbar from "../components/Customsnackbar";
 import Image from 'next/image';
 
@@ -68,7 +69,7 @@ export default function Giveaway() {
   }, [running]);
 
   const joinDiscord = () => {
-    window.open("https://discord.com/invite/5bRSqNJf84");
+    window.open("https://discord.gg/BHhjs4AY7x");
   };
   const verifyDiscord = () => {
     console.log(discordInputRef.current.value);
@@ -98,7 +99,7 @@ export default function Giveaway() {
     setCaptchaVerified((prev) => true);
   };
   const follow = () => {
-    window.open("https://twitter.com/HyenaGC");
+    window.open("https://twitter.com/Meg4mint");
   };
   const verifyTwitter = () => {
     console.log(
@@ -179,9 +180,9 @@ export default function Giveaway() {
           }
         )
         .then(() => {
-          handleSnackBar("Participation confirmed, you have a message on discord hgc-giveaway", false);
+          handleSnackBar("Participation confirmed, you have a message on discord Meg4mint-giveaway", false);
         })
-        .catch(handleSnackBar("You have already participated Gangsta.", true));
+        .catch(handleSnackBar("You have already participated.", true));
       // post req to server : userData object
       /*
         Notify user on discord
@@ -208,17 +209,17 @@ export default function Giveaway() {
             /> */}
             <Header>
                 <h1>
-                GIVEAWAY : 15 spots for the HGC WhiteList
+                GIVEAWAY : Crypto spots, 100 USDT to earn
                 <p> Raffle date to be defined (GMT+2)</p>
                 </h1>
                 {/* <img src={ledger} alt="ledger" /> */}
                 {/* <img src={pill} alt="pill" className="pill" /> */}
                 <Image
                   className="pill"
-                  src={pill} // Route of the image file
+                  src={usdt} // Route of the image file
                   height={100} // Desired size with correct aspect ratio
                   width={100} // Desired size with correct aspect ratio
-                  alt="pill"
+                  alt="usdt"
                 />
             </Header>
             <Main>
@@ -227,7 +228,7 @@ export default function Giveaway() {
                 <StepDescription>
                     FOLLOW
                     <br />
-                    THE NFT GANG
+                    MEG4MINT
                     <br />
                     ON TWITTER
                 </StepDescription>
@@ -284,7 +285,7 @@ export default function Giveaway() {
                 <StepDescription>
                     JOIN
                     <br />
-                    THE NFT GANG
+                    US
                     <br />
                     ON DISCORD
                 </StepDescription>
@@ -340,9 +341,9 @@ export default function Giveaway() {
                 <StepNumber>03</StepNumber>
                 <StepDescription>
                     I AM
-                    <br />A GANGSTA
+                    <br />A 8-BIT ROBOT
                     <br />
-                    AND NOT A ROBOT
+                    AND NOT A BASIC ROBOT
                 </StepDescription>
 
                 <StepButton>
@@ -368,9 +369,8 @@ export default function Giveaway() {
             </Main>
             <Prize>
                 <p>
-                ✨ WHITELIST OFFER! 👉 MINT PRICE / 3!<br></br><br></br>
-                The Hyena Gangsta Club starts with a collection of 3023 unique Hyena Gangsta NFTs generated from hand-drawn art.
-                It aims to fully use web3 opportunities for fun and social perspectives.
+                ✨ CRYPTO OFFER! 👉 55 USDT for the first - 30 USDT for the second & 15 USDT for the third!<br></br><br></br>
+                ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
                 </p>
                 {/* <img src={ledger_prize} alt="ledger" /> */}
             </Prize>
@@ -391,15 +391,17 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  top: 0;
+  /* top: 0;
+  bottom: 0;
   left: 0;
-  height: 110%;
-  width: 110%;
-  background-image: url("/images/background.jpg");
+  right: 0; */
+  height: 100%;
+  width: 100%;
+  /* background-image: url("/images/background.jpg");
   background-size:     cover;
   background-repeat:   no-repeat;
-  background-position: center center; 
-  margin: 0 auto;
+  background-position: center center;  */
+  margin: 100px auto;
   background-color: #10100f;
   /* background-image: url(${bgImage});
   background-size:     cover;                  
@@ -421,7 +423,7 @@ const Content = styled.div`
   align-items: left;
   justify-content: center;
   align-self: center;
-  width: 75%;
+  width: 100%;
   gap: 8px;
   padding: 0.8% 0%;
 `;
@@ -433,9 +435,9 @@ const Header = styled.div`
   padding: 1% 4%;
   background-color: #1d1d1bd7;
   h1 {
-    font-family: "Bebas Regular";
+    font-family: "NES Controller";
     font-size: clamp(2.1875rem, -0.313rem + 5.208vw, 4.375rem);
-    color: #ffdd00;
+    color: white;
     text-align: center;
     p {
       font-family: "GT America";
@@ -466,14 +468,14 @@ const Main = styled.div`
     "horizontal-bar horizontal-bar horizontal-bar horizontal-bar"
     "participate-button participate-button participate-button participate-button";
   grid-gap: 2% 1%;
-  border: 1px solid #ffdd00;
+  border: 1px solid #02efee;
   width: 100%;
   height: 100%;
   padding: 1% 2%;
   background-color: #1d1d1bd7;
   .btn-participate {
     grid-area: participate-button;
-    font-family: "Arial";
+    font-family: "NES Controller";
     font-weight: 800;
     font-size: 18px;
     border: none;
@@ -484,20 +486,20 @@ const Main = styled.div`
     grid-column: 1/5;
     justify-self: center;
     align-self: center;
-    background-color: #ffdd00;
+    background-color: #02efee;
     color: black;
     margin-bottom: 1%;
     &:disabled {
       color: #000000ae;
-      background-color: #ffdd00ae;
+      background-color: #ffffff;
       &:hover {
-        background-color: #ffdd008b;
+        background-color: #02efee;
       }
     }
     &:hover {
       cursor: pointer;
       transform: scale(1.02);
-      background-color: #ffdd00;
+      background-color: #02efee;
     }
   }
   @media (max-width: ${MAX_WIDTH}px) {
@@ -539,9 +541,9 @@ const StepContainer = styled.div`
 `;
 const StepNumber = styled.h1`
   grid-area: step-number;
-  font-family: "Bebas Regular";
+  font-family: "NES Controller";
   /* vertical-align: text-top; */
-  color: #ffdd00;
+  color: #02efee;
   font-size: clamp(2.5rem, 1.786rem + 1.488vw, 3.125rem);
   @media (max-width: ${MAX_WIDTH}px) {
     font-size: clamp(2.7rem, 1.786rem + 1.488vw, 3.125rem);
@@ -582,7 +584,7 @@ const StepButton = styled.div`
       font-size: clamp(0.8125rem, 0.67rem + 0.298vw, 0.9375rem);
     }
     &:hover {
-      background-color: #ffdd00;
+      background-color: #02efee;
       transform: scale(1.02);
       cursor: pointer;
     }
@@ -624,19 +626,18 @@ const StepVerification = styled.div`
       font-size: 15px;
       outline: none;
       border: none;
-      border-bottom: 2px solid #ffdd00;
+      border-bottom: 2px solid #02efee;
       background-color: #292927e1;
       width: 60%;
       /* height: 80%; */
       padding: 2%;
-      color: #ffdd00;
+      color: #02efee;
     }
     img {
       object-fit: contain;
       width: 25px;
       transition: transform 0.1s ease-in;
-      filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     }
     img:hover {
       transform: scale(1.2);
@@ -653,11 +654,12 @@ const HorizontalSeparator = styled.div`
   justify-self: center;
   height: 2px;
   width: 80%;
-  background-color: #ffdd00;
+  background-color: #02efee;
   margin: 0.5% 0%;
 `;
 const Prize = styled.div`
   display: flex;
+  justify-content: center;
   text-align: center;
   background-color: #1d1d1bd7;
   padding: 18px 3%;
