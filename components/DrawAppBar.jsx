@@ -57,11 +57,11 @@ const useStyles = makeStyles({
     borderRadius: 3,
     color: 'white',
     height: 40,
-    marginRight: 300,
+    // marginRight: 250,
     justifyContent: 'flex-end',
   },
   hide: {
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -163,7 +163,7 @@ export default function DrawerAppBar(props) {
           <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
             <Discord className="icon" />
           </IconButton>
-          <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/cryptoRock_eth">
+          <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
             <Twitter className="icon" />
           </IconButton>
           {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/hyena_gangsta_club/">
@@ -177,7 +177,16 @@ export default function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box  sx={{ display: 'flex' }}>
+    <Box  sx={{ display: 'flex', width: 1200, margin: 'auto' }}>
+      <Box 
+        component="img"
+        sx={{
+          height: 70,
+          width: 70,      
+        }}
+        alt="logo"
+        src="/images/cryptoRocket.png"
+      />
       <AppBar component="nav" theme={theme} position="static" >
         <Toolbar className={classes.root} id="back-to-top-anchor" >
         <IconButton
@@ -185,7 +194,7 @@ export default function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { lg: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -216,7 +225,7 @@ export default function DrawerAppBar(props) {
               <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
                 <Discord className="icon" />
               </IconButton>
-              <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/cryptoRock_eth">
+              <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
               <Twitter className="icon" />
               </IconButton>
               {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/hyena_gangsta_club/">
@@ -236,7 +245,7 @@ export default function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', lg: 'none' },
+            display: { xs: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

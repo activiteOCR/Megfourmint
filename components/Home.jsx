@@ -34,16 +34,14 @@ const useViewport = () => {
 const MobileComponent = () => {
 return (
 <>
-  {/* <Landing> */}
     <DrawAppBar />
     <Content>  
-      <img src="/images/cryptoRocket.png" alt="logo" className="logo" />
+      {/* <img src="/images/cryptoRocket.png" alt="logo" className="logo" /> */}
       <div>
-        <h1>CRYPTO ROCKET</h1>
+        <h1>MEG4MINT</h1>
         <h2>EXTRA LIFE</h2>
       </div>
     </Content>
-  {/* </Landing> */}
 </>
 )};
 
@@ -52,7 +50,7 @@ return (
   <>
     <Content>
       <DrawAppBar />
-      <img src="/images/cryptoRocket.png" alt="logo" className="logo" />
+      {/* <img src="/images/cryptoRocket.png" alt="logo" className="logo" /> */}
       <div>
         <h1>MEG4MINT</h1>
         <h2>EXTRA LIFE</h2>
@@ -120,13 +118,12 @@ const Content = styled.div`
     height: "auto";
     margin-top: -4%;
     margin-bottom: 0;
-    margin-left: 14%;
+    margin-left: 15%;
     padding: 0% 2% 2% 2%;
   }
   @media (max-width: 599px) {
     padding: 0;
     .logo {
-      //margin-top: 11%;
       margin-left: 5%;
     }
     h1 {
@@ -137,12 +134,6 @@ const Content = styled.div`
     }
   }
 `;
-// const Landing = styled.div`
-//   width: 100%;
-//   height: 40%;
-//   background-color: black;
-//   margin-top: -1%;
-// `;
 
 /**
  * Filter css to color svg 
