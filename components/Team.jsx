@@ -58,6 +58,7 @@ const useStyles = makeStyles({
       "& .MuiGrid-root": {
         marginLeft: '0px',
         width:'100%',
+        justifyContent: "center",
       },
     },
     item: {
@@ -113,9 +114,9 @@ const useStyles = makeStyles({
   <Box className={classes.root}>
       <h1><u>Te<span className="h1color">am</span></u></h1>
       <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
-      <Grid className={classes.item} container spacing={8}>
+      <Grid className={classes.item} container spacing={1}>
           <Grid item xs={6}>
-          <Card className={classes.root} sx={{ maxWidth: 800 }}>
+          <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -145,7 +146,7 @@ const useStyles = makeStyles({
                 </Card>
           </Grid>
           <Grid item xs={6}>
-          <Card className={classes.root} sx={{ maxWidth: 800 }}>
+          <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -182,9 +183,9 @@ const useStyles = makeStyles({
     <Box className={classes.root} >
     <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
-        <Grid container spacing={2}>
-            <Grid item xs={6}>
-                <Card className={classes.root} sx={{ maxWidth: 800 }}>
+        <Grid container spacing={1}>
+            <Grid item xs={8}>
+                <Card className={classes.root} sx={{ maxWidth: 1000 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -213,8 +214,8 @@ const useStyles = makeStyles({
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={6}>
-                <Card className={classes.root} sx={{ maxWidth: 800 }}>
+            <Grid item xs={8}>
+                <Card className={classes.root} sx={{ maxWidth: 1000 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -281,7 +282,7 @@ const Content = styled(Box)`
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: #02efee;
     min-width: 0;
-    margin-left: 19%;
+    margin-left: 17%;
   }
   h1 .h1color {
     color: #ffffff;
@@ -292,7 +293,7 @@ const Content = styled(Box)`
     font-size: calc(1rem + 0.4vw);
     //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
-    margin-left: 19%;
+    margin-left: 17%;
     margin-right: 20%;
   }
   u {
