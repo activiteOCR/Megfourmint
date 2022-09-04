@@ -115,154 +115,62 @@ const useStyles = makeStyles({
       <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
       <Grid className={classes.item} container spacing={8}>
           <Grid item xs={6}>
-              <Card className={classes.root} sx={{ maxWidth: 345 }}>
-                  <CardHeader
-                      avatar={
-                      <Avatar
-                      alt="Vesper"
-                      src= "/images/1.jpeg"
-                      style={{
-                          border: '2px solid #ffdd00',
-                      }}
-                      sx={{ width: 100, height: 100 }}
-                      />
-                      }
-                  />
-                  <CardContent >
-                      <Typography variant="subtitle1" color="#ffdd00" style={{ fontFamily: 'GT America' }}>
-                      VESPER
-                      </Typography>
-                  </CardContent>
-                  <CardContent >
-                      <Typography variant="body1" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                      Co-founder and first Gangsta, he is swiss knife of the gang.
-                      </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                      <Social >
-                          <IconButton size="small"  color="inherit" target="_blank" href="https://www.linkedin.com/in/julien-terrier-lion-4675ba114/">
-                              <LinkedIn3 className="icon" />
-                          </IconButton>
-                          <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/Vespereth">
-                          <Twitter className="icon" />
-                          </IconButton>
-                      </Social>
-                  </CardActions>                                        
-              </Card>
+          <Card className={classes.root} sx={{ maxWidth: 800 }}>
+                    <CardHeader
+                        className={classes.avatar}
+                        avatar={
+                        <Avatar
+                        alt="Vesper"
+                        src= "/images/cryptoRocket.png"
+                        style={{
+                            border: '2px solid #02efee',
+                        }}
+                        sx={{ width: 200, height: 200 }}
+                        />
+                        }
+                    />
+                    <CardContent >
+                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
+                          VESPER
+                        </Typography>
+                    </CardContent>
+                    <CardContent >
+                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
+                        Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
+                        Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
+                        handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
+                        collectors through many cycles.
+                        </Typography>
+                    </CardContent>
+                </Card>
           </Grid>
           <Grid item xs={6}>
-              <Card className={classes.root} sx={{ maxWidth: 345 }}>
-                  <CardHeader
-                      avatar={
-                      <Avatar
-                      alt="Skeptik"
-                      src= "/images/2.jpg"
-                      style={{
-                          border: '2px solid #ffdd00'
-                      }}
-                      sx={{ width: 100, height: 100 }}
-                      />
-                      }
-                  />
-                  <CardContent >
-                      <Typography variant="subtitle1" color="#ffdd00" style={{ fontFamily: 'GT America' }}>
-                      SKEPTIK
-                      </Typography>
-                  </CardContent>
-                  <CardContent >
-                      <Typography variant="body1" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                      Co-founder and first Hyena, he is a poet of modern times.
-                      </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                      <Social >
-                          {/* <IconButton size="small"  color="inherit" target="_blank" href="https://www.linkedin.com/in/christjacques/"> */}
-                          <IconButton size="small"  color="inherit" target="_blank" href="https://discord.com/invite/5bRSqNJf84">
-                              <Discord className="icon" />
-                          </IconButton>
-                          {/* <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/SkeptikHyena"> */}
-                          <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/HyenaGC">
-                          <Twitter className="icon" />
-                          </IconButton>
-                      </Social>
-                  </CardActions>                                        
-              </Card>
-          </Grid>
-          <Grid item xs={6}>
-              <Card className={classes.root} sx={{ maxWidth: 345 }}>
-                  <CardHeader
-                      avatar={
-                      <Avatar
-                      alt="Damingo"
-                      src= "/images/3.jpg"
-                      style={{
-                          border: '2px solid #ffdd00'
-                      }}
-                      sx={{ width: 100, height: 100 }}
-                      />
-                      }
-                  />
-                  <CardContent >
-                      <Typography variant="subtitle1" color="#ffdd00" style={{ fontFamily: 'GT America' }}>
-                      DAMINGO
-                      </Typography>
-                  </CardContent>
-                  <CardContent >
-                      <Typography variant="body1" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                          Co-founder and the Artist of the Gang, he draws since he was born.
-                      </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                      <Social >
-                          {/* <IconButton size="small"  color="inherit" target="_blank" href="https://www.instagram.com/yodamingo/"> */}
-                          <IconButton size="small"  color="inherit" target="_blank" href="https://discord.com/invite/5bRSqNJf84">
-                              <Discord className="icon" />
-                          </IconButton>
-                          {/* <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/DomingoYoo"> */}
-                          <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/HyenaGC">
-                          <Twitter className="icon" />
-                          </IconButton>
-                      </Social>
-                  </CardActions>                                        
-              </Card>
-          </Grid>
-          <Grid item xs={6}>
-              <Card className={classes.root} sx={{ maxWidth: 345 }}>
-                  <CardHeader
-                      avatar={
-                      <Avatar
-                      alt="X Hyena"
-                      src= "/images/4.jpg"
-                      style={{
-                          border: '2px solid #ffdd00'
-                      }}
-                      sx={{ width: 100, height: 100 }}
-                      />
-                      }
-                  />
-                  <CardContent >
-                      <Typography variant="subtitle1" color="#ffdd00" style={{ fontFamily: 'GT America' }}>
-                      X HYENA
-                      </Typography>
-                  </CardContent>
-                  <CardContent >
-                      <Typography variant="body1" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                          Co-founder and the only developer to add human psycho in his code.
-                      </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                      <Social >
-                          {/* <IconButton size="small"  color="inherit" target="_blank" href="https://www.linkedin.com/in/ayoub-zahir-70b881115/"> */}
-                          <IconButton size="small"  color="inherit" target="_blank" href="https://discord.com/invite/5bRSqNJf84">
-                              <Discord className="icon" />
-                          </IconButton>
-                          {/* <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/ReactChain"> */}
-                          <IconButton size="small" color="inherit" target="_blank" href="https://twitter.com/HyenaGC">
-                          <Twitter className="icon" />
-                          </IconButton>
-                      </Social>
-                  </CardActions>                                        
-              </Card>
+          <Card className={classes.root} sx={{ maxWidth: 800 }}>
+                    <CardHeader
+                        className={classes.avatar}
+                        avatar={
+                        <Avatar
+                        alt="Stekone"
+                        src= "/images/cryptoRocket.png"
+                        style={{
+                            border: '2px solid #02efee'
+                        }}
+                        sx={{ width: 200, height: 200 }}
+                        />
+                        }
+                    />
+                    <CardContent >
+                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
+                        STEKONE
+                        </Typography>
+                    </CardContent>
+                    <CardContent >
+                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
+                        Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
+                        as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
+                        </Typography>
+                    </CardContent>
+                </Card>
           </Grid>
       </Grid>
   </Box>
