@@ -65,7 +65,7 @@ const data = {
         },
         {
             title: "5. Is there a treasury?",
-            content: 'An additional 10% have been held back for development, some have been given to devs and advisors already and the remainder will be minted to a wallet for future development. Any future proceeds from this will all go back into the project. Any sales will be completely transparent and announced in advance.',
+            content: 'An additional 10% have been held back for development, some have been given to team and advisors already and the remainder will be minted to a wallet for future development. Any future proceeds from this will all go back into the project. Any sales will be completely transparent and announced in advance.',
         },
         {
             title: "6. How were spawn list spots distributed?",
