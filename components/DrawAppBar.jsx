@@ -59,9 +59,14 @@ const useStyles = makeStyles({
     height: 40,
     // marginRight: 250,
     justifyContent: 'flex-end',
+    "& .MuiAppBar-root": {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+    },
   },
   hide: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -177,8 +182,8 @@ export default function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box  sx={{ display: 'flex' }}>
-      <Box 
+    <Box className={classes.root}  sx={{ display: 'flex' }}>
+      {/* <Box 
         component="img"
         sx={{
           height: 70,
@@ -186,15 +191,24 @@ export default function DrawerAppBar(props) {
         }}
         alt="logo"
         src="/images/cryptoRocket.png"
-      />
+      /> */}
       <AppBar component="nav" theme={theme} position="static" >
+      <Box 
+        component="img"
+        sx={{
+          height: 70,
+          width: 70,    
+        }}
+        alt="logo"
+        src="/images/cryptoRocket.png"
+      />
         <Toolbar className={classes.root} id="back-to-top-anchor" >
         <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
+            sx={{ mr: 2, display: { lg: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -245,7 +259,7 @@ export default function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'block', lg: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

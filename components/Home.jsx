@@ -101,6 +101,7 @@ const Content = styled.div`
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: #ffffff;
     min-width: 0;
+    margin-top: 2%;
     margin-left: 17%;
     padding: 0% 2% 2% 2%;
   }
@@ -121,16 +122,16 @@ const Content = styled.div`
     margin-left: 15%;
     padding: 0% 2% 2% 2%;
   }
-  @media (max-width: 599px) {
-    padding: 0;
+  @media (max-width: 1200px) {
+    /* padding: 0;
     .logo {
-      margin-left: 5%;
-    }
+      margin-left: 15%;
+    } */
     h1 {
-      margin-left: 5%;
+      margin-left: 20%;
     }
     h2 {
-      margin-left: 5%;
+      margin-left: 20%;
     }
   }
 `;

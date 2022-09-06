@@ -112,11 +112,11 @@ const useStyles = makeStyles({
   const MobileComponent = ({classes}) => 
   <Content>
   <Box className={classes.root}>
-      <h1><u>Te<span className="h1color">am</span></u></h1>
+      <h1><u><span className="h1color">LAB</span></u></h1>
       <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
       <Grid className={classes.item} container spacing={1}>
-          <Grid item xs={6}>
-          <Card className={classes.root} sx={{ maxWidth: 500 }}>
+          <Grid item xs={8}>
+          <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -126,7 +126,7 @@ const useStyles = makeStyles({
                         style={{
                             border: '2px solid #02efee',
                         }}
-                        sx={{ width: 200, height: 200 }}
+                        sx={{ width: 100, height: 100 }}
                         />
                         }
                     />
@@ -145,8 +145,8 @@ const useStyles = makeStyles({
                     </CardContent>
                 </Card>
           </Grid>
-          <Grid item xs={6}>
-          <Card className={classes.root} sx={{ maxWidth: 500 }}>
+          <Grid item xs={8}>
+          <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -156,7 +156,7 @@ const useStyles = makeStyles({
                         style={{
                             border: '2px solid #02efee'
                         }}
-                        sx={{ width: 200, height: 200 }}
+                        sx={{ width: 100, height: 100 }}
                         />
                         }
                     />
@@ -181,7 +181,7 @@ const useStyles = makeStyles({
   const DesktopComponent = ({classes}) =>
   <Content>
     <Box className={classes.root} >
-    <h1><u><span className="h1color">LAB</span></u></h1>
+        <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
         <Grid container spacing={1}>
             <Grid item xs={8}>
@@ -267,7 +267,7 @@ export default function Team() {
 };
 
 const Wrapper = styled(Box)`
-  height: 25%;
+  height: 100%;
   width: 100%;
   padding: 2% 2% 2% 2%;
   margin: 0 auto;
@@ -302,7 +302,7 @@ const Content = styled(Box)`
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
 }
-  @media (max-width: 900px){
+  /* @media (max-width: 900px){
     flex-direction: column;
     text-align: center;
     h1 {
@@ -315,37 +315,37 @@ const Content = styled(Box)`
       padding:10%;
       padding-top:0%;
     }
-  }
+  } */
 `;
-const Social = styled(IconButton)`
-  height: 100%;
-  align-self: end;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 12%;
-  .icon {
-    width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-      filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-    transition: transform 0.1s ease-in;
-  }
-  .icon:hover {
-    filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-      hue-rotate(359deg) brightness(103%) contrast(104%);
-    transform: scale(1.4);
-    cursor: pointer;
-  }
-  .icon:active {
-    transform: scale(1.3);
-  }
-  @media (max-width: 900px) {
-    .icon {
-      filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-        saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-      transform: scale(1.4);
-    }
-    margin-right: 3%;
-    gap: 8%;
-  }
-`;
+// const Social = styled(IconButton)`
+//   height: 100%;
+//   align-self: end;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: end;
+//   gap: 12%;
+//   .icon {
+//     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
+//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
+//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+//     transition: transform 0.1s ease-in;
+//   }
+//   .icon:hover {
+//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
+//       hue-rotate(359deg) brightness(103%) contrast(104%);
+//     transform: scale(1.4);
+//     cursor: pointer;
+//   }
+//   .icon:active {
+//     transform: scale(1.3);
+//   }
+//   @media (max-width: 900px) {
+//     .icon {
+//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
+//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+//       transform: scale(1.4);
+//     }
+//     margin-right: 3%;
+//     gap: 8%;
+//   }
+// `;
