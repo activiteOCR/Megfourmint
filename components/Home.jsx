@@ -78,7 +78,7 @@ export default function Home() {
   );
 }
 const Wrapper = styled.div`
-  height: 50%;
+  height: 100%;
   width: 100%;
   /* position:relative; */
   /* background-image: url("/images/bkg3.png"); */

@@ -177,7 +177,7 @@ export default function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box  sx={{ display: 'flex', width: 1200, margin: 'auto' }}>
+    <Box  sx={{ display: 'flex' }}>
       <Box 
         component="img"
         sx={{
