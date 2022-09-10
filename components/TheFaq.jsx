@@ -8,11 +8,13 @@ export default function TheFaq() {
         <Wrapper>
             <Content>
                 <h1><u>FAQ</u></h1>
+                <div className="faq-style-wrapper">
                 <Faq
                     data={data}
                     styles={styles}
                     config={config}
                 />
+                </div>
             </Content>
         </Wrapper>
     </div>
@@ -43,6 +45,9 @@ const Content = styled.div`
     text-decoration-color: #02efee;
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
+  }
+  .faq-style-wrapper .faq-body .faq-row .row-content-text {
+    font-family: "Roboto";
   }
 `;
 const data = {

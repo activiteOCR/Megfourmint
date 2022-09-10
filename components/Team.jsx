@@ -127,6 +127,7 @@ const useStyles = makeStyles({
                             border: '2px solid #02efee',
                         }}
                         sx={{ width: 100, height: 100 }}
+                        variant="square"
                         />
                         }
                     />
@@ -157,6 +158,7 @@ const useStyles = makeStyles({
                             border: '2px solid #02efee'
                         }}
                         sx={{ width: 100, height: 100 }}
+                        variant="square"
                         />
                         }
                     />
@@ -190,13 +192,13 @@ const useStyles = makeStyles({
                         className={classes.avatar}
                         avatar={
                         <Avatar
-                        alt="Vesper"
-                        src= "/images/cryptoRocket.png"
-                        style={{
-                            border: '2px solid #02efee',
-                        }}
-                        sx={{ width: 200, height: 200 }}
-                        variant="square"
+                          alt="Vesper"
+                          src= "/images/cryptoRocket.png"
+                          style={{
+                              border: '2px solid #02efee',
+                          }}
+                          sx={{ width: 200, height: 200 }}
+                          variant="square"
                         />
                         }
                     />
@@ -221,13 +223,13 @@ const useStyles = makeStyles({
                         className={classes.avatar}
                         avatar={
                         <Avatar
-                        alt="Stekone"
-                        src= "/images/cryptoRocket.png"
-                        style={{
-                            border: '2px solid #02efee'
-                        }}
-                        sx={{ width: 200, height: 200 }}
-                        variant="square"
+                          alt="Stekone"
+                          src= "/images/cryptoRocket.png"
+                          style={{
+                              border: '2px solid #02efee'
+                          }}
+                          sx={{ width: 200, height: 200 }}
+                          variant="square"
                         />
                         }
                     />
