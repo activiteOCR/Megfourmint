@@ -40,10 +40,13 @@ const useStyles = makeStyles({
         color: '#ffffff',
         display: 'flex',
         flexDirection: 'column',
+        // alignItems: 'flex-end',
       },
       "& .MuiCardContent-root": {
         backgroundColor: "#10100f",
-        
+        display: 'flex',
+        flexDirection: 'column',
+        // alignItems: 'flex-end',
       },
       "& .MuiCardActions-root": {
         backgroundColor: "#10100f",
@@ -56,20 +59,21 @@ const useStyles = makeStyles({
         padding:'15px',
       },
       "& .MuiGrid-root": {
-        marginLeft: '0px',
-        width:'100%',
-        justifyContent: "center",
+        marginLeft: '150px',
+        width:'80%',
+        // justifyContent: "center",
       },
     },
     item: {
       "& .MuiGrid-item": {
-        paddingRight: '15px',
+        // paddingRight: '15px',
         paddingLeft: '40px',
       },
     },
     avatar: {
       "& .MuiCardHeader-avatar": {
         marginRight: '0px',
+        alignItems: 'flex-end',
       },
     },
     hide: {
@@ -186,8 +190,8 @@ const useStyles = makeStyles({
         <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
         <Grid container spacing={1}>
-            <Grid item xs={8}>
-                <Card className={classes.root} sx={{ maxWidth: 1000 }}>
+            <Grid item xs={2}>
+                <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -199,6 +203,7 @@ const useStyles = makeStyles({
                           }}
                           sx={{ width: 200, height: 200 }}
                           variant="square"
+                          
                         />
                         }
                     />
@@ -207,8 +212,20 @@ const useStyles = makeStyles({
                           VESPER
                         </Typography>
                     </CardContent>
-                    <CardContent >
+                    {/* <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
+                        Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
+                        Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
+                        handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
+                        collectors through many cycles.
+                        </Typography>
+                    </CardContent> */}
+                </Card>
+            </Grid>
+            <Grid item xs={7}>
+                <Card className={classes.root} sx={{ maxWidth: 650 }}>
+                    <CardContent >
+                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '20px', fontFamily: 'Bebas Regular' }}>
                         Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
                         Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
                         handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
@@ -217,8 +234,8 @@ const useStyles = makeStyles({
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={8}>
-                <Card className={classes.root} sx={{ maxWidth: 1000 }}>
+            <Grid item xs={2}>
+                <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -235,11 +252,21 @@ const useStyles = makeStyles({
                     />
                     <CardContent >
                         <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
-                        STEKONE
+                          STEKONE
                         </Typography>
                     </CardContent>
-                    <CardContent >
+                    {/* <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
+                        Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
+                        as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
+                        </Typography>
+                    </CardContent> */}
+                </Card>
+            </Grid>
+            <Grid item xs={7}>
+                <Card className={classes.root} sx={{ maxWidth: 650 }}>
+                    <CardContent >
+                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '30px', fontFamily: 'Bebas Regular' }}>
                         Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
                         as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
                         </Typography>
