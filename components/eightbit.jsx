@@ -43,7 +43,7 @@ const MobileComponent = () =>
       <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
       2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
       3. A robot must protect its existence so long as such protection does not conflict with the First or Second Law.<br></br><br></br>
-      4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br><br></br></h2>
+      4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br></h2>
       <h3>IA - JWC - HH</h3>
     </div>
     <Box
@@ -55,10 +55,10 @@ const MobileComponent = () =>
           maxWidth: { xs: 200, md: 300 },
           marginRight: "auto",
           marginLeft: "auto",
-          marginBottom: "-8px",
+          marginTop: "50px",
         }}
-        alt="pill"
-        src="/images/pilule.gif"
+        alt="mega"
+        src="/images/mega.gif"
       />
   </ContentMob>
 ;
@@ -77,17 +77,17 @@ const DesktopComponent = () =>
       <Box 
           component="img"
           sx={{
-            height: 200,
-            width: 200,
+            height: 300,
+            width: 300,
             // maxHeight: { md: 300 },
             // maxWidth: { md: 300 },
-            marginTop: "100px",
+            marginTop: "75px",
           }}
-          alt="pill"
-          src="/images/pilule.gif"
+          alt="mega"
+          src="/images/mega.gif"
         />
     </Content>
-    <ImageList sx={{ width: 1000, height: 304, marginTop:5, marginLeft: 10, marginRight: 10 }} cols={6} rowHeight={150}>
+    <ImageList sx={{ width: 900, height: 304, marginTop:5, marginLeft: 10, marginRight: 10 }} cols={6} rowHeight={150}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <Image
