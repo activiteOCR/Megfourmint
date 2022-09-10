@@ -1,10 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useContext, createContext } from "react"
 import styled from "styled-components";
-// import LogoYellow from "../public/images/logoYellow.png";
-import Discord from "../public/images/discord.svg";
-import Twitter from "../public/images/twitter.svg";
-import Instagram from "../public/images/instagram.svg";
 
 const viewportContext = createContext({});
 
@@ -39,24 +35,6 @@ const MobileComponent = () =>
 <SocialCopyWrapper>
   {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
   <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>  
-    {/* <Social>
-      <Discord
-        className="icon"
-        onClick={() =>
-        window.open("https://discord.com/invite/5bRSqNJf84")
-        }
-      />
-      <Twitter
-        className="icon"
-        onClick={() => window.open("https://twitter.com/HyenaGC")}
-      />
-      <Instagram
-        className="icon"
-        onClick={() =>
-        window.open("https://www.instagram.com/hyena_gangsta_club/")
-        }
-      />
-    </Social> */}
 </SocialCopyWrapper>
 </Content>
 ;
@@ -66,24 +44,6 @@ const DesktopComponent = () =>
 <SocialCopyWrapper>
     <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>
     {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
-    {/* <Social>
-    <Discord
-        className="icon"
-        onClick={() =>
-        window.open("https://discord.com/invite/5bRSqNJf84")
-        }
-    />
-    <Twitter
-        className="icon"
-        onClick={() => window.open("https://twitter.com/HyenaGC")}
-    />
-    <Instagram
-        className="icon"
-        onClick={() =>
-        window.open("https://www.instagram.com/hyena_gangsta_club/")
-        }
-    />
-    </Social> */}
 </SocialCopyWrapper>
 </Content>
  ;
@@ -153,38 +113,3 @@ const SocialCopyWrapper = styled.div`
     text-align: center;
   }
 `;
-// const Social = styled.div`
-//   height: 100%;
-//   //align-self: end;
-//   display: flex;
-//   flex-direction: column;
-//   /* gap: 12%; */
-//   .icon {
-//     padding-bottom: 20px;
-//     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-//     transition: transform 0.1s ease-in;
-//   }
-//   .icon:hover {
-//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-//       hue-rotate(359deg) brightness(103%) contrast(104%);
-//     transform: scale(1.4);
-//     cursor: pointer;
-//   }
-//   .icon:active {
-//     transform: scale(1.3);
-//   }
-//   @media (max-width: 900px) {
-//     flex-direction: row;
-//     margin-left:20px;
-//     .icon {
-//       padding-right: 15px;
-//       padding-top: 20px;
-//       width: clamp(2.0rem, 0.536rem + 1.488vw, 1.9rem); 
-//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-//       transform: scale(1.4);
-//     }
-//   }
-// `;

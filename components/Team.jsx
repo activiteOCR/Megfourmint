@@ -2,19 +2,19 @@ import * as React from 'react';
 import { useState, useEffect, useContext, createContext } from "react"
 import Grid from '@mui/material/Grid'; // Grid version 1
 
-import Discord from "../public/images/discord.svg";
-import Twitter from "../public/images/twitter.svg";
+// import Discord from "../public/images/discord.svg";
+// import Twitter from "../public/images/twitter.svg";
 // import Instagram from "../public/images/instagram.svg";
-import LinkedIn from "../public/images/LinkedIn2.svg";
-import LinkedIn3 from "../public/images/LinkedIn3.svg";
+// import LinkedIn from "../public/images/LinkedIn2.svg";
+// import LinkedIn3 from "../public/images/LinkedIn3.svg";
 
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
+// import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 // import { createTheme, createStyles } from '@mui/material/styles';
@@ -196,6 +196,7 @@ const useStyles = makeStyles({
                             border: '2px solid #02efee',
                         }}
                         sx={{ width: 200, height: 200 }}
+                        variant="square"
                         />
                         }
                     />
@@ -226,6 +227,7 @@ const useStyles = makeStyles({
                             border: '2px solid #02efee'
                         }}
                         sx={{ width: 200, height: 200 }}
+                        variant="square"
                         />
                         }
                     />

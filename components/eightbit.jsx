@@ -2,6 +2,9 @@ import React from 'react'
 import { useState, useEffect, useContext, createContext } from "react"
 import styled from "styled-components";
 import Box from '@mui/material/Box';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import Image from 'next/image';
 
 const viewportContext = createContext({});
 
@@ -61,28 +64,45 @@ const MobileComponent = () =>
 ;
 
 const DesktopComponent = () =>
+ <Box>
   <Content>
-    <div>
-      <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
-      <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
-      2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
-      3. A robot must protect its existence so long as such protection does not conflict with the First or Second Law.<br></br><br></br>
-      4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br><br></br></h2>
-      <h3>IA - JWC - HH</h3>
-    </div>
-    <Box 
-        component="img"
-        sx={{
-          height: 200,
-          width: 200,
-          // maxHeight: { md: 300 },
-          // maxWidth: { md: 300 },
-          marginTop: "100px",
-        }}
-        alt="pill"
-        src="/images/pilule.gif"
-      />
-  </Content>
+      <div>
+        <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
+        <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
+        2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
+        3. A robot must protect its existence so long as such protection does not conflict with the First or Second Law.<br></br><br></br>
+        4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br><br></br></h2>
+        <h3>IA - JWC - HH</h3>
+      </div>
+      <Box 
+          component="img"
+          sx={{
+            height: 200,
+            width: 200,
+            // maxHeight: { md: 300 },
+            // maxWidth: { md: 300 },
+            marginTop: "100px",
+          }}
+          alt="pill"
+          src="/images/pilule.gif"
+        />
+    </Content>
+    <ImageList sx={{ width: 1000, height: 304, marginTop:5, marginLeft: 10, marginRight: 10 }} cols={6} rowHeight={150}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <Image
+            // className="pill"
+            src={`${item.img}?w=150&h=150&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=150&h=150&fit=crop&auto=format&dpr=2 2x`}
+            height={200} // Desired size with correct aspect ratio
+            width={200} // Desired size with correct aspect ratio
+            alt={item.title}
+            loading="lazy"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
+  </Box>
  ;
 
 const Layouts = () => {
@@ -103,6 +123,58 @@ export default function eightbit() {
     </> 
   )
 }
+
+const itemData = [
+  {
+    img: '/images/1.png',
+    title: 'Breakfast',
+  },
+  {
+    img: '/images/2.png',
+    title: 'Burger',
+  },
+  {
+    img: '/images/3.png',
+    title: 'Camera',
+  },
+  {
+    img: '/images/4.png',
+    title: 'Coffee',
+  },
+  {
+    img: '/images/5.png',
+    title: 'Hats',
+  },
+  {
+    img: '/images/6.png',
+    title: 'Honey',
+  },
+  {
+    img: '/images/7.png',
+    title: 'Basketball',
+  },
+  {
+    img: '/images/8.png',
+    title: 'Fern',
+  },
+  {
+    img: '/images/9.png',
+    title: 'Mushrooms',
+  },
+  {
+    img: '/images/10.png',
+    title: 'Tomato basil',
+  },
+  {
+    img: '/images/11.png',
+    title: 'Sea star',
+  },
+  {
+    img: '/images/12.png',
+    title: 'Bike',
+  },
+];
+
 const Wrapper = styled.div`
   height: 50%;
   width: 75%;

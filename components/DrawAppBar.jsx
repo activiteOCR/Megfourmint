@@ -65,6 +65,14 @@ const useStyles = makeStyles({
       justifyContent: 'flex-end',
     },
   },
+  button: {
+    backgroundColor: '#02efee',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#02efee',
+    },
+  },
   hide: {
     [theme.breakpoints.down('lg')]: {
       display: 'none',
@@ -214,7 +222,7 @@ export default function DrawerAppBar(props) {
           </IconButton>
           <Box className={classes.hide} sx={{ m: 10, display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+              <Button key={item} sx={{ m: 3, color: '#fff',  ':hover': { color: '#02efee',}, }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                 <Link
                 activeClass="active"
                 to={item}
@@ -227,10 +235,10 @@ export default function DrawerAppBar(props) {
                 </Link>
               </Button>
             ))}
-            <Button key='Giveaway' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='Giveaway' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                  Giveaway
             </Button>
-            <Button key='Mint' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='Mint' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                  Mint
             </Button>
           </Box>
