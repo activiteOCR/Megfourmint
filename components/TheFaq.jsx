@@ -30,7 +30,8 @@ const Wrapper = styled.div`
 const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: 18%;
+  padding: 0% 2% 2% 20%;
+  /* margin-left: 18%; */
   margin-right: 20%;
   gap: 12px;
   h1 {

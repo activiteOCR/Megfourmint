@@ -56,7 +56,7 @@ const useStyles = makeStyles({
     border: 0,
     borderRadius: 3,
     color: 'white',
-    height: 40,
+    height: 65,
     // marginRight: 250,
     justifyContent: 'flex-end',
     "& .MuiAppBar-root": {
@@ -191,15 +191,6 @@ export default function DrawerAppBar(props) {
 
   return (
     <Box className={classes.root}  sx={{ display: 'flex' }}>
-      {/* <Box 
-        component="img"
-        sx={{
-          height: 70,
-          width: 70,      
-        }}
-        alt="logo"
-        src="/images/cryptoRocket.png"
-      /> */}
       <AppBar component="nav" theme={theme} position="static" >
       <Box 
         component="img"

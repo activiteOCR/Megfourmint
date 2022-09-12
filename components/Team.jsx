@@ -31,49 +31,21 @@ let theme = createTheme({
 
 const useStyles = makeStyles({
     root: {
-      "& .MuiBox-root": {
-        display: 'flex',
-        flexDirection: 'column',
-      },
       "& .MuiCardHeader-root": {
         backgroundColor: "#10100f",
         color: '#ffffff',
         display: 'flex',
         flexDirection: 'column',
-        // alignItems: 'flex-end',
       },
       "& .MuiCardContent-root": {
         backgroundColor: "#10100f",
         display: 'flex',
         flexDirection: 'column',
-        // alignItems: 'flex-end',
-      },
-      "& .MuiCardActions-root": {
-        backgroundColor: "#10100f",
-        display: "flex",
-        justifyContent: "center",
-      },
-      "& .MuiButtonBase-root": {
-        display: "flex",
-        justifyContent: "center",
-        padding:'15px',
-      },
-      "& .MuiGrid-root": {
-        marginLeft: '150px',
-        width:'80%',
-        // justifyContent: "center",
-      },
-    },
-    item: {
-      "& .MuiGrid-item": {
-        // paddingRight: '15px',
-        paddingLeft: '40px',
       },
     },
     avatar: {
       "& .MuiCardHeader-avatar": {
         marginRight: '0px',
-        alignItems: 'flex-end',
       },
     },
     hide: {
@@ -86,12 +58,10 @@ const useStyles = makeStyles({
   const viewportContext = createContext({});
 
   const ViewportProvider = ({ children }) => {
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const [height, setHeight] = useState(window.innerHeight);
   const [width, setWidth] = useState({ width: undefined});
   const [height, setHeight] = useState({ height: undefined});
 
-    const handleWindowResize = () => {
+  const handleWindowResize = () => {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     };
@@ -114,13 +84,13 @@ const useStyles = makeStyles({
   };
   
   const MobileComponent = ({classes}) => 
-  <Content>
+  <ContentMob>
   <Box className={classes.root}>
       <h1><u><span className="h1color">LAB</span></u></h1>
       <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
       <Grid className={classes.item} container spacing={1}>
-          <Grid item xs={8}>
-          <Card className={classes.root} sx={{ maxWidth: 200 }}>
+          <Grid item xs={15}>
+          <Card className={classes.root} sx={{ maxWidth: 350 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -130,7 +100,7 @@ const useStyles = makeStyles({
                         style={{
                             border: '2px solid #02efee',
                         }}
-                        sx={{ width: 100, height: 100 }}
+                        sx={{ width: 150, height: 150 }}
                         variant="square"
                         />
                         }
@@ -150,8 +120,8 @@ const useStyles = makeStyles({
                     </CardContent>
                 </Card>
           </Grid>
-          <Grid item xs={8}>
-          <Card className={classes.root} sx={{ maxWidth: 200 }}>
+          <Grid item xs={15}>
+          <Card className={classes.root} sx={{ maxWidth: 350 }}>
                     <CardHeader
                         className={classes.avatar}
                         avatar={
@@ -161,7 +131,7 @@ const useStyles = makeStyles({
                         style={{
                             border: '2px solid #02efee'
                         }}
-                        sx={{ width: 100, height: 100 }}
+                        sx={{ width: 150, height: 150 }}
                         variant="square"
                         />
                         }
@@ -181,7 +151,7 @@ const useStyles = makeStyles({
           </Grid>
       </Grid>
   </Box>
-</Content>
+</ContentMob>
   ;
   
   const DesktopComponent = ({classes}) =>
@@ -189,8 +159,8 @@ const useStyles = makeStyles({
     <Box className={classes.root} >
         <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
-        <Grid container spacing={1}>
-            <Grid item xs={2}>
+        <Grid container spacing={0}>
+            <Grid item xs={3}>
                 <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
@@ -223,7 +193,7 @@ const useStyles = makeStyles({
                 </Card>
             </Grid>
             <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 650 }}>
+                <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ marginTop: '20px', fontFamily: 'Bebas Regular' }}>
                         Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
@@ -234,7 +204,7 @@ const useStyles = makeStyles({
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={3}>
                 <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
@@ -264,7 +234,7 @@ const useStyles = makeStyles({
                 </Card>
             </Grid>
             <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 650 }}>
+                <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ marginTop: '30px', fontFamily: 'Bebas Regular' }}>
                         Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
@@ -280,7 +250,7 @@ const useStyles = makeStyles({
   
   const Layouts = ({Classes}) => {
     const { width } = useViewport();
-    const breakpoint = 1400;
+    const breakpoint = 900;
   
     return width < breakpoint ? <MobileComponent classes={Classes} /> : <DesktopComponent classes={Classes}/>;
   };  
@@ -300,20 +270,18 @@ export default function Team() {
 const Wrapper = styled(Box)`
   height: 100%;
   width: 100%;
-  padding: 2% 2% 2% 2%;
-  margin: 0 auto;
   background-color: #10100f;
 `;
 const Content = styled(Box)`
   display: flex;
   text-align: center;
+  padding: 2% 2% 2% 20%;
   h1 {
     text-align: left;
     font-family: "NES Controller";
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: #02efee;
     min-width: 0;
-    margin-left: 17%;
   }
   h1 .h1color {
     color: #ffffff;
@@ -322,10 +290,8 @@ const Content = styled(Box)`
     text-align: left;
     font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
-    //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
-    margin-left: 17%;
-    margin-right: 20%;
+    margin-right: 10%;
   }
   u {
     text-decoration: underline;
@@ -333,50 +299,36 @@ const Content = styled(Box)`
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
 }
-  /* @media (max-width: 900px){
-    flex-direction: column;
-    text-align: center;
-    h1 {
-      text-align: left;
-    }
-    h2 {
-      text-align: justify;
-      margin-left: initial;
-      margin-right: initial;
-      padding:10%;
-      padding-top:0%;
-    }
-  } */
 `;
-// const Social = styled(IconButton)`
-//   height: 100%;
-//   align-self: end;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: end;
-//   gap: 12%;
-//   .icon {
-//     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-//     transition: transform 0.1s ease-in;
-//   }
-//   .icon:hover {
-//     filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%)
-//       hue-rotate(359deg) brightness(103%) contrast(104%);
-//     transform: scale(1.4);
-//     cursor: pointer;
-//   }
-//   .icon:active {
-//     transform: scale(1.3);
-//   }
-//   @media (max-width: 900px) {
-//     .icon {
-//       filter: brightness(0) saturate(100%) invert(92%) sepia(17%)
-//         saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-//       transform: scale(1.4);
-//     }
-//     margin-right: 3%;
-//     gap: 8%;
-//   }
-// `;
+const ContentMob = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    text-align: left;
+    font-family: "NES Controller";
+    font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
+    color: #02efee;
+    min-width: 0;
+    margin-left: 10%;
+  }
+  h1 .h1color {
+    color: #ffffff;
+  }
+  h2 {
+    font-family: "Bebas Regular";
+    font-size: calc(1rem + 0.8vw);
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    margin-left: initial;
+    margin-right: initial;
+    padding:10%;
+    padding-top:0%;
+  }
+  u {
+    text-decoration: underline;
+    text-decoration-color: #02efee;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1rem; 
+}
+`;

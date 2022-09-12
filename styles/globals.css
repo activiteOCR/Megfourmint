@@ -30,18 +30,13 @@ body {
   font-family: var(--font);
   color: var(--text-color);
 
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+  /* display: flex; */
+  /* margin: 0 auto; */
+  /* justify-content: center; */
   /* text-align: center; */
 }
 
 /* Box sizing rules */
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
 * {
   box-sizing: border-box;
   padding: 0px;

@@ -36,7 +36,6 @@ return (
 <>
     <DrawAppBar />
     <Content>  
-      {/* <img src="/images/cryptoRocket.png" alt="logo" className="logo" /> */}
       <div>
         <h1>MEG4MINT</h1>
         <h2>EXTRA LIFE</h2>
@@ -50,7 +49,6 @@ return (
   <>
     <Content>
       <DrawAppBar />
-      {/* <img src="/images/cryptoRocket.png" alt="logo" className="logo" /> */}
       <div>
         <h1>MEG4MINT</h1>
         <h2>EXTRA LIFE</h2>
@@ -85,10 +83,8 @@ const Wrapper = styled.div`
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center; 
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: #10100f;
-  /* overflow-y:visible; */
-
 `;
 const Content = styled.div`
   display: flex;
@@ -101,9 +97,9 @@ const Content = styled.div`
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: #ffffff;
     min-width: 0;
-    margin-top: 2%;
-    margin-left: 17%;
-    padding: 0% 2% 2% 2%;
+    /* margin-top: 2%; */
+    /* margin-left: 17%; */
+    padding: 2% 2% 2% 20%;
   }
   h2 {
     font-family: "NES Controller";
@@ -111,27 +107,17 @@ const Content = styled.div`
     font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     letter-spacing: 8px;
     color: rgb(255, 255, 255);
-    margin-left: 17%;
-    padding: 0% 2% 2% 2%;
-  }
-  .logo {
-    width: clamp(7.5625rem, 3.491rem + 10.649vw, 10.875rem);
-    height: "auto";
-    margin-top: -4%;
-    margin-bottom: 0;
-    margin-left: 15%;
-    padding: 0% 2% 2% 2%;
+    /* margin-left: 17%; */
+    padding: 0% 2% 2% 20%;
   }
   @media (max-width: 1200px) {
-    /* padding: 0;
-    .logo {
-      margin-left: 15%;
-    } */
     h1 {
-      margin-left: 20%;
+      text-align: center;
+      padding: 2% 2% 2% 2%;
     }
     h2 {
-      margin-left: 20%;
+      text-align: center;
+      padding: 0% 2% 2% 2%;
     }
   }
 `;

@@ -9,8 +9,6 @@ import Image from 'next/image';
 const viewportContext = createContext({});
 
 const ViewportProvider = ({ children }) => {
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const [height, setHeight] = useState(window.innerHeight);
   const [width, setWidth] = useState({ width: undefined});
   const [height, setHeight] = useState({ height: undefined});
 
@@ -49,13 +47,14 @@ const MobileComponent = () =>
     <Box
         component="img"
         sx={{
-          height: 200,
-          width: 200,
+          height: 300,
+          width: 300,
           maxHeight: { xs: 200, md: 300 },
           maxWidth: { xs: 200, md: 300 },
           marginRight: "auto",
           marginLeft: "auto",
-          marginTop: "50px",
+          marginTop: "40px",
+          marginBottom: "40px",
         }}
         alt="mega"
         src="/images/mega.gif"
@@ -77,21 +76,21 @@ const DesktopComponent = () =>
       <Box 
           component="img"
           sx={{
-            height: 300,
-            width: 300,
-            // maxHeight: { md: 300 },
-            // maxWidth: { md: 300 },
+            // height: 300,
+            // width: 300,
+            maxHeight: { md: 300 },
+            maxWidth: { md: 300 },
             marginTop: "75px",
+            marginRight: "150px",
           }}
           alt="mega"
           src="/images/mega.gif"
         />
     </Content>
-    <ImageList sx={{ width: 900, height: 304, marginTop:5, marginLeft: 10, marginRight: 10 }} cols={6} rowHeight={150}>
+    <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <Image
-            // className="pill"
             src={`${item.img}?w=150&h=150&fit=crop&auto=format`}
             srcSet={`${item.img}?w=150&h=150&fit=crop&auto=format&dpr=2 2x`}
             height={200} // Desired size with correct aspect ratio
@@ -176,37 +175,30 @@ const itemData = [
 ];
 
 const Wrapper = styled.div`
-  height: 50%;
-  width: 75%;
-  padding: 2% 2% 2% 2%;
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   background-color: #10100f;
-  @media (max-width: 600px){
-    height: 20%;
-  }
 `;
 const Content = styled.div`
   display: flex;
   text-align: center;
+  padding: 2% 2% 2% 20%;
   h1 {
     text-align: left;
     font-family: "NES Controller";
     font-size: clamp(2.65625rem, 0.835rem + 3.795vw, 3.85rem); //last -15%
     color: 	#02efee;
     min-width: 0;
-    margin-left: 7%;
   }
   h1 .h1color {
     color: #ffffff;
   }
   h2 {
-    text-align: left;
+    text-align: justify;
     font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
-    //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-right: 10%;
   }
   u {
     text-decoration: underline;
@@ -234,7 +226,6 @@ const ContentMob = styled.div`
   h2 {
     font-family: "Bebas Regular";
     font-size: calc(1rem + 0.8vw);
-    //font-size: clamp(0.85rem, -0.121rem + 2.024vw, 1.5rem); //last -15%
     color: rgb(255, 255, 255);
     text-align: justify;
     margin-left: initial;
