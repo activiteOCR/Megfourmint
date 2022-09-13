@@ -24,16 +24,14 @@ export default function TheFaq() {
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  padding: 2% 2% 2% 2%;
   background-color: #10100f;
 `;
 const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0% 2% 2% 20%;
-  /* margin-left: 18%; */
-  margin-right: 20%;
-  gap: 12px;
+  margin-right: 10%;
+  gap: 10px;
   h1 {
     font-family: "NES Controller";
     font-size: 80px;
@@ -48,7 +46,7 @@ const Content = styled.div`
     text-underline-offset: 1rem; 
   }
   .faq-style-wrapper .faq-body .faq-row .row-content-text {
-    font-family: "Roboto";
+    font-family: "Bebas Regular";
   }
 `;
 const data = {
@@ -71,7 +69,7 @@ const data = {
         },
         {
             title: "5. Is there a treasury?",
-            content: 'An additional 10% have been held back for development, some have been given to team and advisors already and the remainder will be minted to a wallet for future development. Any future proceeds from this will all go back into the project. Any sales will be completely transparent and announced in advance.',
+            content: 'An additional 5% have been held back for development, some have been given to team and advisors already and the remainder will be minted to a wallet for future development. Any future proceeds from this will all go back into the project. Any sales will be completely transparent and announced in advance.',
         },
         {
             title: "6. How were spawn list spots distributed?",
@@ -79,18 +77,18 @@ const data = {
         },
         {
             title: "7. Is there utility? A token? A Game? Metaverse?",
-            content: 'Lol- no. 8liens are NFT art, inspired by cryptopunks',
+            content: 'Lol- no. Meg4mint are NFT art, inspired by cryptopunks',
         },
         {
             title: "8. What can I do with my Meg4mint?",
-            content: 'All 8liens will be CC0, excluding the 1/1 pieces which will be determined individually by each artist',
+            content: 'All Meg4mint will be CC0, excluding the 1/1 pieces which will be determined individually by each artist',
         },
     ],
 };
 const styles = {
     bgColor: "#10100f",
     titleTextColor: "white",
-    rowTitleTextSize: '22px',
+    rowTitleTextSize: '28px',
     rowContentTextSize: '18px',
     rowContentPaddingTop: '10px',
     rowContentPaddingBottom: '10px',

@@ -106,16 +106,14 @@ const useStyles = makeStyles({
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
+                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'Nes Controller' }}>
                           VESPER
                         </Typography>
                     </CardContent>
                     <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                        Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
-                        Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
-                        handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
-                        collectors through many cycles.
+                        Founder - has been involved in the crypto space since 2019 as an investor and began collecting NFTs in 2021. 
+                        He has created several NFTs projects and has a great knowledge in robotics and retrogaming.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -137,8 +135,8 @@ const useStyles = makeStyles({
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
-                        STEKONE
+                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
+                          STEKONE
                         </Typography>
                     </CardContent>
                     <CardContent >
@@ -178,28 +176,18 @@ const useStyles = makeStyles({
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
+                        <Typography variant="h4" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
                           VESPER
                         </Typography>
                     </CardContent>
-                    {/* <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                        Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
-                        Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
-                        handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
-                        collectors through many cycles.
-                        </Typography>
-                    </CardContent> */}
                 </Card>
             </Grid>
             <Grid item xs={7}>
                 <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '20px', fontFamily: 'Bebas Regular' }}>
-                        Founder - has been involved in the crypto space since 2017 as an investor and began collecting NFTs in early 2020. 
-                        Some highlights of his career as a collector include purchasing a CryptoPunk as his first NFT, minting a Fidenza and diamond 
-                        handing countless other jpegs. He has witnessed the birth of many NFT trends and with this experience has advised artists and other 
-                        collectors through many cycles.
+                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '20px', fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
+                        Founder - has been involved in the crypto space since 2019 as an investor and began collecting NFTs in 2021. 
+                        He has created several NFTs projects and has a great knowledge in robotics and retrogaming.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -221,22 +209,16 @@ const useStyles = makeStyles({
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'GT America' }}>
+                        <Typography variant="h4" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
                           STEKONE
                         </Typography>
                     </CardContent>
-                    {/* <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                        Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
-                        as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
-                        </Typography>
-                    </CardContent> */}
                 </Card>
             </Grid>
             <Grid item xs={7}>
                 <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '30px', fontFamily: 'Bebas Regular' }}>
+                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '30px', fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
                         Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
                         as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
                         </Typography>

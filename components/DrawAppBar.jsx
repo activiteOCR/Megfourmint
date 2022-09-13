@@ -28,7 +28,7 @@ import Fade from '@mui/material/Fade';
 import { Link } from "react-scroll";
 
 const drawerWidth = 200;
-const navItems = ['8-BIT', 'LAB', 'FAQ' ];
+const navItems = ['8-BIT', 'SCARCITY', 'LAB', 'FAQ' ];
 
 // const theme = createTheme({
 //   breakpoints: {
@@ -57,7 +57,6 @@ const useStyles = makeStyles({
     borderRadius: 3,
     color: 'white',
     height: 65,
-    // marginRight: 250,
     justifyContent: 'flex-end',
     "& .MuiAppBar-root": {
       display: 'flex',
@@ -179,7 +178,7 @@ export default function DrawerAppBar(props) {
           <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
             <Twitter className="icon" />
           </IconButton>
-          {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/hyena_gangsta_club/">
+          {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/vesper.eth/">
               <Instagram className="icon" />
           </IconButton> */}
         </SocialDrawer>
@@ -241,7 +240,7 @@ export default function DrawerAppBar(props) {
               <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
               <Twitter className="icon" />
               </IconButton>
-              {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/hyena_gangsta_club/">
+              {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/vesper.eth/">
                 <Instagram className="icon" />
               </IconButton> */}
             </Social>
