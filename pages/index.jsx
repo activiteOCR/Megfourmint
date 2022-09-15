@@ -1,5 +1,5 @@
 import Home from "../components/Home";
-import Eightbit from "../components/Eightbit";
+import Eigthbit from "../components/Eigthbit";
 import Scarcity from "../components/Scarcity";
 import { Element } from 'react-scroll'
 import Team from "../components/Team";
@@ -13,7 +13,7 @@ const HomePage = () => {
         <Home />
       </Element>
       <Element id='8-BIT' name='8-BIT'>
-        <Eightbit/>
+        <Eigthbit/>
       </Element>
       <Element id='SCARCITY' name='SCARCITY'>
         <Scarcity/>

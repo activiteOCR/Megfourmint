@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 import Discord from "../public/images/discord.svg";
 import Twitter from "../public/images/twitter.svg";
-import Instagram from "../public/images/instagram.svg";
+// import Instagram from "../public/images/instagram.svg";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
