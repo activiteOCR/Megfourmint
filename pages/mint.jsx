@@ -1,4 +1,4 @@
-import { ChainId, useClaimedNFTSupply, useContractMetadata, useNetwork, useNFTDrop, useUnclaimedNFTSupply, useActiveClaimCondition, useClaimNFT, useWalletConnect, useCoinbaseWallet, } from '@thirdweb-dev/react';
+import { ChainId, useClaimedNFTSupply, useContractMetadata, useNetwork, useNFTDrop,useSignatureDrop, useUnclaimedNFTSupply, useActiveClaimCondition, useClaimNFT, useWalletConnect, useCoinbaseWallet, } from '@thirdweb-dev/react';
 import { useNetworkMismatch } from '@thirdweb-dev/react';
 import { useAddress, useMetamask } from '@thirdweb-dev/react';
 import { formatUnits, parseUnits } from 'ethers/lib/utils';
@@ -6,9 +6,11 @@ import { useState } from 'react';
 import styles from '../styles/Theme.module.css';
 import Image from 'next/image';
 // Put Your NFT Drop Contract address from the dashboard here
-const myNftDropContractAddress = '0x322067594DBCE69A9a9711BC393440aA5e3Aaca1';
+// const myNftDropContractAddress = '0x322067594DBCE69A9a9711BC393440aA5e3Aaca1';
+const myNftDropContractAddress = '0x1c48f9C78Ade6136590a53157B9FbC0507394B76';
 const Mint = () => {
-    const nftDrop = useNFTDrop(myNftDropContractAddress);
+    // const nftDrop = useNFTDrop(myNftDropContractAddress);
+    const nftDrop = useSignatureDrop(myNftDropContractAddress);
     const address = useAddress();
     const connectWithMetamask = useMetamask();
     const connectWithWalletConnect = useWalletConnect();
