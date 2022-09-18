@@ -8,10 +8,11 @@ function MyApp({ Component, pageProps }) {
     return (
       <ThirdwebProvider desiredChainId={activeChainId}>
         <Head>
-          <title>Meg4mint Pixel Art for nostalgics</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <meta name="description" content=" CryptoRocket Website and NFT Drop minting page"/>
-          <meta name="keywords" content="Freemint, NFT drop, pixel art, no royalties"/>
+          <title>Meg4mint Website</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+          {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
+          <meta name="description" content="Meg4mint Pixel Art for nostalgics"/>
+          <meta name="keywords" content="Pixel Art, Freemint, No royalties, NFT, NFTs, ETH, NFTartiste, NFTartwork"/>
         </Head>
         <Component {...pageProps}/>
       </ThirdwebProvider>
