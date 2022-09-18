@@ -209,6 +209,9 @@ const Content = styled.div`
 
 `;
 const ContentMob = styled.div`
+@media (min-width: 769px) {
+    display: none !important;
+  }
   display: flex;
   flex-direction: column;
   text-align: center;
