@@ -108,7 +108,14 @@ const Layouts = ({ deviceType }) => {
 
   console.log({ deviceType });
 
-  return deviceType === 'mobile' ? <MobileComponent /> : <DesktopComponent />;
+  let componentToRender
+  if (deviceType === 'mobile') {
+    componentToRender = <MobileComponent />
+  } else {
+    componentToRender = <DesktopComponent />
+  }
+
+  return componentToRender
 
   // return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
