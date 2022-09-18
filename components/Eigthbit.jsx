@@ -76,7 +76,6 @@ const DesktopComponent = () =>
       {/* <Box 
           component="img"
           sx={{
-            
             maxHeight: { md: 300 },
             maxWidth: { md: 300 },
             marginTop: "75px",
@@ -85,6 +84,13 @@ const DesktopComponent = () =>
           alt="mega"
           src="/images/mega.gif"
         /> */}
+        <Image
+            src="/images/mega.gif"
+            height={300} // Desired size with correct aspect ratio
+            width={300} // Desired size with correct aspect ratio
+            alt="mega"
+            loading="lazy"
+          />
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>
       {itemData.map((item) => (
