@@ -83,6 +83,7 @@ const DesktopComponent = () =>
           }}
           alt="mega"
           src="/images/mega.gif"
+          layout = "responsive" 
         />
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>

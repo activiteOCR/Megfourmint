@@ -38,11 +38,10 @@ const MobileComponent = () =>
   <ContentMob>
     <div>
       <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
-      <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
-      2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
-      3. A robot must protect its existence so long as such protection does not conflict with the First or Second Law.<br></br><br></br>
-      4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br></h2>
-      <h3>IA - JWC - HH</h3>
+      <h2><br></br> Some armors were made with rare and precious materials<br></br>
+        Legendary == .<br></br>
+        Epic == <br></br>
+        Heroic == <br></br></h2>
     </div>
     <Box
         component="img"
@@ -67,10 +66,10 @@ const DesktopComponent = () =>
   <Content>
       <div>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
-        <h2><br></br> Add words and rules about rarity level<br></br>
-        Add words and rules about rarity level.<br></br>
-        Add words and rules about rarity level<br></br>
-        Add words and rules about rarity level<br></br></h2>
+        <h2><br></br> Some armors were made with rare and precious materials<br></br>
+        Legendary == .<br></br>
+        Epic == <br></br>
+        Heroic == <br></br></h2>
         {/* <h3>IA - JWC - HH</h3> */}
       </div>
       {/* <Box 
