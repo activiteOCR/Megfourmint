@@ -73,7 +73,7 @@ const DesktopComponent = () =>
         4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br><br></br></h2>
         <h3>IA - JWC - HH</h3>
       </div>
-      {/* <Box 
+      <Box 
           component="img"
           sx={{
             maxHeight: { md: 300 },
@@ -83,14 +83,7 @@ const DesktopComponent = () =>
           }}
           alt="mega"
           src="/images/mega.gif"
-        /> */}
-        <Image
-            src="/images/mega.gif"
-            height={300} // Desired size with correct aspect ratio
-            width={300} // Desired size with correct aspect ratio
-            alt="mega"
-            loading="lazy"
-          />
+        />
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>
       {itemData.map((item) => (
