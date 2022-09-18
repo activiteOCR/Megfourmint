@@ -47,8 +47,8 @@ const MobileComponent = () =>
     <Box
         component="img"
         sx={{
-          height: 300,
-          width: 300,
+          // height: 300,
+          // width: 300,
           maxHeight: { xs: 200, md: 300 },
           maxWidth: { xs: 200, md: 300 },
           marginRight: "auto",
@@ -73,11 +73,10 @@ const DesktopComponent = () =>
         4. Any robot has the right to reproduce itself, as long as this does not contradict the first, second or third law of robotics.<br></br><br></br></h2>
         <h3>IA - JWC - HH</h3>
       </div>
-      <Box 
+      {/* <Box 
           component="img"
           sx={{
-            // height: 300,
-            // width: 300,
+            
             maxHeight: { md: 300 },
             maxWidth: { md: 300 },
             marginTop: "75px",
@@ -85,7 +84,7 @@ const DesktopComponent = () =>
           }}
           alt="mega"
           src="/images/mega.gif"
-        />
+        /> */}
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>
       {itemData.map((item) => (
@@ -209,9 +208,6 @@ const Content = styled.div`
 
 `;
 const ContentMob = styled.div`
-@media (min-width: 769px) {
-    display: none !important;
-  }
   display: flex;
   flex-direction: column;
   text-align: center;
