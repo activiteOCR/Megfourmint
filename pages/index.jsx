@@ -6,7 +6,11 @@ import Team from "../components/Team";
 import TheFaq from "../components/TheFaq";
 import Footer from "../components/Footer";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  
+  const {data} = props.deviceType;
+  console.log(data);
+
     return (
     <>
       <Element id='Home' name='Home'>
@@ -29,3 +33,16 @@ const HomePage = () => {
     );
   };
 export default HomePage;
+
+export async function getServerSideProps(context) {
+  const UA = context.req.headers['user-agent'];
+  const isMobile = Boolean(UA.match(
+    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  ))
+  
+  return {
+    props: {
+      deviceType: isMobile ? 'mobile' : 'desktop'
+    }
+  }
+}

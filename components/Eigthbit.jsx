@@ -102,43 +102,33 @@ const DesktopComponent = () =>
   </Box>
  ;
 
-const Layouts = ({ deviceType }) => {
+const Layouts = () => {
   const { width } = useViewport();
   const breakpoint = 1200;
 
-  console.log({ deviceType });
+  // console.log({ deviceType });
 
-  let componentToRender
-  if (deviceType === 'mobile') {
-    componentToRender = <MobileComponent />
-  } else {
-    componentToRender = <DesktopComponent />
-  }
+  // let componentToRender
+  // if (deviceType === 'mobile') {
+  //   componentToRender = <MobileComponent />
+  // } else {
+  //   componentToRender = <DesktopComponent />
+  // }
 
-  return componentToRender
+  // return componentToRender
 
-  // return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
+  return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
-export async function getServerSideProps(context) {
-  const UA = context.req.headers['user-agent'];
-  const isMobile = Boolean(UA.match(
-    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-  ))
-  
-  return {
-    props: {
-      deviceType: isMobile ? 'mobile' : 'desktop'
-    }
-  }
-}
+
 
 export default function Eightbit() {
   return (
     <>
       <ViewportProvider>
         <Wrapper>
-          <Layouts deviceType/>
+          {/* <Layouts deviceType={deviceType}/> */}
+          <Layouts />
         </Wrapper>
       </ViewportProvider>
     </> 
