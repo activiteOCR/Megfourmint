@@ -32,16 +32,16 @@ const HomePage = () => {
 
     return (
     <>
-      <DrawAppBar />
+      {/* <DrawAppBar /> */}
       {/* <Element id='Home' name='Home'>
         <Home />
       </Element> */}
-      {/* <Element id='8-BIT' name='8-BIT'>
+      <Element id='8-BIT' name='8-BIT'>
         <Eigthbit/>
-      </Element> */}
-      {/* <Element id='SCARCITY' name='SCARCITY'>
+      </Element>
+      <Element id='SCARCITY' name='SCARCITY'>
         <Scarcity/>
-      </Element> */}
+      </Element>
       <Element id='LAB' name='LAB'>
         <Team />
       </Element>
