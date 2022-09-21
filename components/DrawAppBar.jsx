@@ -199,7 +199,7 @@ export default function DrawerAppBar(props) {
           width: 252,    
         }}
         alt="logo"
-        src="/images/logo2.png"
+        src="/images/Logo2.png"
       />
         <Toolbar className={classes.root} id="back-to-top-anchor" >
         <IconButton
