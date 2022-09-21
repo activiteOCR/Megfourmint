@@ -115,7 +115,7 @@ const DesktopComponent = () =>
 const Layouts = () => {
   const { width } = useViewport();
   const breakpoint = 1200;
-  console.log(width);
+  console.log({width}, breakpoint);
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
