@@ -36,7 +36,8 @@ import Image from 'next/image';
 
 const useViewport = () => {
   const { width, height } = useContext(viewportContext);
-  return { width, height };
+  // return { width, height };
+  return { width };
 };
 
 const MobileComponent = () => 
@@ -116,9 +117,8 @@ const DesktopComponent = () =>
 
 const Layouts = () => {
   const { width } = useViewport();
-  let [widthOne, heightOne] = width;
   const breakpoint = 1200;
-  console.log(widthOne);
+  console.log(width);
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
