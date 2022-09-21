@@ -18,7 +18,6 @@ const ViewportProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("useeffect");
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
@@ -31,6 +30,7 @@ const ViewportProvider = ({ children }) => {
 };
 
 const useViewport = () => {
+  console.log("useviewport");
   const { width, height } = useContext(viewportContext);
   return { width, height };
 };
