@@ -6,11 +6,14 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from 'next/image';
 
-const viewportContext = createContext({});
+  const viewportContext = createContext({});
+  const isSSR = typeof window === "undefined";
+  const ViewportProvider = ({ children }) => {
+  // const [width, setWidth] = useState({ width: undefined});
+  // const [height, setHeight] = useState({ height: undefined});
 
-const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = useState({ width: undefined});
-  const [height, setHeight] = useState({ height: undefined});
+  const [width, setWidth] = useState({ width: isSSR ? 1200 : window.innerWidth });
+  const [height, setHeight] = useState({ height: isSSR ? 800 : window.innerHeight });
 
   const handleWindowResize = () => {
     setWidth(window.innerWidth);
