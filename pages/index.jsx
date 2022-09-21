@@ -42,13 +42,13 @@ const HomePage = () => {
       <Element id='SCARCITY' name='SCARCITY'>
         <Scarcity/>
       </Element>
-      {/* <Element id='LAB' name='LAB'>
+      <Element id='LAB' name='LAB'>
         <Team />
       </Element>
       <Element id='FAQ' name='FAQ'>
         <TheFaq />
       </Element>
-      <Footer /> */}
+      <Footer />
     </>
     );
   };

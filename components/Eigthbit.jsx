@@ -30,7 +30,6 @@ const ViewportProvider = ({ children }) => {
 };
 
 const useViewport = () => {
-  console.log("useviewport");
   const { width, height } = useContext(viewportContext);
   return { width, height };
 };
@@ -113,7 +112,7 @@ const DesktopComponent = () =>
 const Layouts = () => {
   const { width } = useViewport();
   const breakpoint = 1200;
-
+  console.log(width);
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
