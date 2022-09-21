@@ -55,33 +55,29 @@ const useStyles = makeStyles({
     },
   });
 
-  const viewportContext = createContext({});
-
-  const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = useState({ width: undefined});
-  const [height, setHeight] = useState({ height: undefined});
-
-  const handleWindowResize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    };
-  
-    useEffect(() => {
-      window.addEventListener("resize", handleWindowResize);
-      return () => window.removeEventListener("resize", handleWindowResize);
+  const useWindowSize = () => {
+    const isSSR = typeof window === "undefined";
+    const [windowSize, setWindowSize] = useState({
+        width: isSSR ? 1200 : window.innerWidth,
+        height: isSSR ? 800 : window.innerHeight,
+    });
+    
+    function changeWindowSize() {
+      if(!isSSR){
+          setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+      }
+    }
+    
+    React.useEffect(() => {
+        window.addEventListener("resize", changeWindowSize);
+    
+        return () => {
+            window.removeEventListener("resize", changeWindowSize);
+        };
     }, []);
-  
-    return (
-      <viewportContext.Provider value={{ width, height }}>
-        {children}
-      </viewportContext.Provider>
-    );
-  };
-  
-  const useViewport = () => {
-    const { width, height } = useContext(viewportContext);
-    return { width, height };
-  };
+    
+    return windowSize;
+    }
   
   const MobileComponent = ({classes}) => 
   <ContentMob>
@@ -231,7 +227,7 @@ const useStyles = makeStyles({
    ;
   
   const Layouts = ({Classes}) => {
-    const { width } = useViewport();
+    const { width } = useWindowSize();
     const breakpoint = 900;
   
     return width < breakpoint ? <MobileComponent classes={Classes} /> : <DesktopComponent classes={Classes}/>;
@@ -241,11 +237,9 @@ export default function Team() {
   const classes = useStyles();
 
   return (
-    <ViewportProvider>
       <Wrapper>
         <Layouts Classes={classes} />
       </Wrapper>
-    </ViewportProvider>
   );
 };
 

@@ -6,38 +6,34 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from 'next/image';
 
-const viewportContext = createContext({});
-
-const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = useState({ width: undefined});
-  const [height, setHeight] = useState({ height: undefined});
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
+const useWindowSize = () => {
+  const isSSR = typeof window === "undefined";
+  const [windowSize, setWindowSize] = useState({
+      width: isSSR ? 1200 : window.innerWidth,
+      height: isSSR ? 800 : window.innerHeight,
+  });
+  
+  function changeWindowSize() {
+    if(!isSSR){
+        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    }
+  }
+  
+  React.useEffect(() => {
+      window.addEventListener("resize", changeWindowSize);
+  
+      return () => {
+          window.removeEventListener("resize", changeWindowSize);
+      };
   }, []);
-
-  return (
-    <viewportContext.Provider value={{ width, height }}>
-      {children}
-    </viewportContext.Provider>
-  );
-};
-
-const useViewport = () => {
-  const { width, height } = useContext(viewportContext);
-  return { width, height };
-};
+  
+  return windowSize;
+  }
 
 const MobileComponent = () => 
   <ContentMob>
     <div>
-      <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
+      <h1><u><span className="h1color">Scarcity</span></u></h1>
       <h2><br></br> Some armors were made with rare and precious materials<br></br>
         Legendary == .<br></br>
         Epic == <br></br>
@@ -104,7 +100,7 @@ const DesktopComponent = () =>
  ;
 
 const Layouts = () => {
-  const { width } = useViewport();
+  const { width } = useWindowSize();
   const breakpoint = 1200;
 
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
@@ -113,11 +109,9 @@ const Layouts = () => {
 export default function Scarcity() {
   return (
     <>
-      <ViewportProvider>
         <Wrapper>
           <Layouts />
         </Wrapper>
-      </ViewportProvider>
     </> 
   )
 }
