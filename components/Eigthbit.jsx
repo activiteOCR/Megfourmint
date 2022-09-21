@@ -16,8 +16,10 @@ import Image from 'next/image';
   const [height, setHeight] = useState({ height: isSSR ? 800 : window.innerHeight });
 
   const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+    if(!isSSR){
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    }
   };
 
   useEffect(() => {
