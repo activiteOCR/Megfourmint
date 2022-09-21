@@ -30,39 +30,6 @@ React.useEffect(() => {
 return windowSize;
 }
 
-//   const viewportContext = createContext({});
-//   const isSSR = typeof window === "undefined";
-//   const ViewportProvider = ({ children }) => {
-//   // const [width, setWidth] = useState({ width: undefined});
-//   // const [height, setHeight] = useState({ height: undefined});
-
-//   const [width, setWidth] = useState({ width: isSSR ? 1200 : window.innerWidth });
-//   const [height, setHeight] = useState({ height: isSSR ? 800 : window.innerHeight });
-
-//   const handleWindowResize = () => {
-//     if(!isSSR){
-//       setWidth(window.innerWidth);
-//       setHeight(window.innerHeight);
-//     }
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("resize", handleWindowResize);
-//     return () => window.removeEventListener("resize", handleWindowResize);
-//   }, []);
-
-//   return (
-//     <viewportContext.Provider value={{ width, height }}>
-//       {children}
-//     </viewportContext.Provider>
-//   );
-// };
-
-// const useViewport = () => {
-//   const { width, height } = useContext(viewportContext);
-//   return { width, height };
-// };
-
 const MobileComponent = () => 
   <ContentMob>
     <div>
@@ -139,10 +106,10 @@ const DesktopComponent = () =>
  ;
 
 const Layouts = () => {
-  // const { width } = useViewport();
+  
   const { width } = useWindowSize();
   const breakpoint = 1200;
-  console.log(width);
+  
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
@@ -150,13 +117,11 @@ const Layouts = () => {
 
 export default function Eightbit() {
   return (
-    <>
-      {/* <ViewportProvider> */}
+    // <>
         <Wrapper>
           <Layouts />
         </Wrapper>
-      {/* </ViewportProvider> */}
-    </> 
+    // </> 
   )
 }
 

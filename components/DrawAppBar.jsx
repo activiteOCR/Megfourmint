@@ -24,7 +24,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
-
+import Image from 'next/image';
 import { Link } from "react-scroll";
 
 const drawerWidth = 200;
@@ -46,7 +46,7 @@ const navItems = ['8-BIT', 'SCARCITY', 'LAB', 'FAQ' ];
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#00000080',
+      main: '#07001F',
     },
   },
 });
@@ -61,7 +61,9 @@ const useStyles = makeStyles({
     "& .MuiAppBar-root": {
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      marginLeft:'10%',
     },
   },
   button: {
@@ -162,14 +164,14 @@ export default function DrawerAppBar(props) {
               </ListItemButton>
           </ListItem>
         ))}
-        <ListItem key='Giveaway' disablePadding>
+        <ListItem key='GIVEAWAY' disablePadding>
           <ListItemButton target="_blank" href="/giveaway" sx={{ flexDirection: 'column' }}>
-            <ListItemText  primary='Giveaway' />
+            <ListItemText  primary='GIVEAWAY' />
           </ListItemButton>
         </ListItem>
-        <ListItem key='Mint' disablePadding>
+        <ListItem key='MINT' disablePadding>
           <ListItemButton target="_blank" href="/mint" sx={{ flexDirection: 'column' }}>
-            <ListItemText  primary='Mint' />
+            <ListItemText  primary='MINT' />
           </ListItemButton>
         </ListItem>
         <SocialDrawer >
@@ -192,7 +194,7 @@ export default function DrawerAppBar(props) {
   return (
     <Box className={classes.root}  sx={{ display: 'flex' }}>
       <AppBar component="nav" theme={theme} position="static" >
-      <Box 
+      {/* <Box 
         component="img"
         sx={{
           height: 77,
@@ -200,7 +202,15 @@ export default function DrawerAppBar(props) {
         }}
         alt="logo"
         src="/images/Logo2.png"
-      />
+      /> */}
+      <Image
+              // className="titre"
+              // marginTop='10px'
+              src="/images/Logo2.png" // Route of the image file
+              height={75} // Desired size with correct aspect ratio
+              width={250} // Desired size with correct aspect ratio
+              alt="logo"
+            />
         <Toolbar className={classes.root} id="back-to-top-anchor" >
         <IconButton
             color="inherit"
@@ -226,10 +236,10 @@ export default function DrawerAppBar(props) {
                 </Link>
               </Button>
             ))}
-            <Button className={classes.button} key='Giveaway' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                  Giveaway
             </Button>
-            <Button className={classes.button} key='Mint' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                  Mint
             </Button>
           </Box>
@@ -296,7 +306,7 @@ const Social = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
+      filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
       transform: scale(1.4);
     }
     margin-right: 3%;
@@ -312,11 +322,11 @@ const SocialDrawer = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
+    filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
+    filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -325,7 +335,7 @@ const SocialDrawer = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
+      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
       transform: scale(1.4);
     }
     margin-right: 3%;
@@ -340,3 +350,11 @@ DrawerAppBar.propTypes = {
    */
   window: PropTypes.func,
 };
+
+/**
+ * Filter css to color svg 
+ *#ffffff : brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
+  #ffdd00 : brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
+  #606060 : brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
+  #02efee : brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+ */

@@ -121,11 +121,3 @@ const Content = styled.div`
     }
   }
 `;
-
-/**
- * Filter css to color svg 
- *#ffffff : brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
-  #ffdd00 : brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(6605%) hue-rotate(359deg) brightness(103%) contrast(104%);
-  #606060 : brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
-  #02efee : filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
- */
