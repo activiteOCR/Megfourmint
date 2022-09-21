@@ -6,39 +6,62 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from 'next/image';
 
-  const viewportContext = createContext({});
-  const isSSR = typeof window === "undefined";
-  const ViewportProvider = ({ children }) => {
-  // const [width, setWidth] = useState({ width: undefined});
-  // const [height, setHeight] = useState({ height: undefined});
+const useWindowSize = () => {
+const isSSR = typeof window === "undefined";
+const [windowSize, setWindowSize] = useState({
+    width: isSSR ? 1200 : window.innerWidth,
+    height: isSSR ? 800 : window.innerHeight,
+});
 
-  const [width, setWidth] = useState({ width: isSSR ? 1200 : window.innerWidth });
-  const [height, setHeight] = useState({ height: isSSR ? 800 : window.innerHeight });
+function changeWindowSize() {
+  if(!isSSR){
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  }
+}
 
-  const handleWindowResize = () => {
-    if(!isSSR){
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    }
-  };
+React.useEffect(() => {
+    window.addEventListener("resize", changeWindowSize);
 
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
+    return () => {
+        window.removeEventListener("resize", changeWindowSize);
+    };
+}, []);
 
-  return (
-    <viewportContext.Provider value={{ width, height }}>
-      {children}
-    </viewportContext.Provider>
-  );
-};
+return windowSize;
+}
 
-const useViewport = () => {
-  const { width, height } = useContext(viewportContext);
-  // return { width, height };
-  return { width };
-};
+//   const viewportContext = createContext({});
+//   const isSSR = typeof window === "undefined";
+//   const ViewportProvider = ({ children }) => {
+//   // const [width, setWidth] = useState({ width: undefined});
+//   // const [height, setHeight] = useState({ height: undefined});
+
+//   const [width, setWidth] = useState({ width: isSSR ? 1200 : window.innerWidth });
+//   const [height, setHeight] = useState({ height: isSSR ? 800 : window.innerHeight });
+
+//   const handleWindowResize = () => {
+//     if(!isSSR){
+//       setWidth(window.innerWidth);
+//       setHeight(window.innerHeight);
+//     }
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("resize", handleWindowResize);
+//     return () => window.removeEventListener("resize", handleWindowResize);
+//   }, []);
+
+//   return (
+//     <viewportContext.Provider value={{ width, height }}>
+//       {children}
+//     </viewportContext.Provider>
+//   );
+// };
+
+// const useViewport = () => {
+//   const { width, height } = useContext(viewportContext);
+//   return { width, height };
+// };
 
 const MobileComponent = () => 
   <ContentMob>
@@ -116,7 +139,8 @@ const DesktopComponent = () =>
  ;
 
 const Layouts = () => {
-  const { width } = useViewport();
+  // const { width } = useViewport();
+  const { width } = useWindowSize();
   const breakpoint = 1200;
   console.log(width);
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
@@ -127,11 +151,11 @@ const Layouts = () => {
 export default function Eightbit() {
   return (
     <>
-      <ViewportProvider>
+      {/* <ViewportProvider> */}
         <Wrapper>
           <Layouts />
         </Wrapper>
-      </ViewportProvider>
+      {/* </ViewportProvider> */}
     </> 
   )
 }
