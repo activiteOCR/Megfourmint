@@ -39,9 +39,9 @@ const HomePage = () => {
       <Element id='8-BIT' name='8-BIT'>
         <Eigthbit/>
       </Element>
-      <Element id='SCARCITY' name='SCARCITY'>
+      {/* <Element id='SCARCITY' name='SCARCITY'>
         <Scarcity/>
-      </Element>
+      </Element> */}
       <Element id='LAB' name='LAB'>
         <Team />
       </Element>
