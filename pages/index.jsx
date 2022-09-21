@@ -36,9 +36,9 @@ const HomePage = () => {
       {/* <Element id='Home' name='Home'>
         <Home />
       </Element> */}
-      <Element id='8-BIT' name='8-BIT'>
+      {/* <Element id='8-BIT' name='8-BIT'>
         <Eigthbit/>
-      </Element>
+      </Element> */}
       {/* <Element id='SCARCITY' name='SCARCITY'>
         <Scarcity/>
       </Element> */}
