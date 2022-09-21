@@ -68,7 +68,7 @@ const Wrapper = styled.div`
   height: 5%;
   width: 100%;
   padding: 2% 2% 2% 2%;
-  background-color: #10100f;
+  background: linear-gradient(#070047,#07001F);
   @media (max-width: 600px){
     height: 10%;
   }

@@ -252,7 +252,7 @@ export default function Team() {
 const Wrapper = styled(Box)`
   height: 100%;
   width: 100%;
-  background-color: #10100f;
+  background: linear-gradient(#070047,#07001F);
 `;
 const Content = styled(Box)`
   display: flex;

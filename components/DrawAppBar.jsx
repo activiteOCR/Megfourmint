@@ -67,6 +67,7 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: '#fff',
     color: '#000',
+    padding: '0%',
     '&:hover': {
       backgroundColor: '#fff',
       color: '#02efee',
@@ -140,7 +141,7 @@ export default function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        HGC
+        MEG4MINT
       </Typography>
       <Divider />
       <List>
@@ -194,11 +195,11 @@ export default function DrawerAppBar(props) {
       <Box 
         component="img"
         sx={{
-          height: 70,
-          width: 70,    
+          height: 77,
+          width: 252,    
         }}
         alt="logo"
-        src="/images/cryptoRocket.png"
+        src="/images/logo2.png"
       />
         <Toolbar className={classes.root} id="back-to-top-anchor" >
         <IconButton
@@ -282,11 +283,11 @@ const Social = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter:brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -295,7 +296,7 @@ const Social = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+      filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
       transform: scale(1.4);
     }
     margin-right: 3%;
@@ -311,11 +312,11 @@ const SocialDrawer = styled.div`
   gap: 12%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
     transition: transform 0.1s ease-in;
   }
   .icon:hover {
-    filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
     transform: scale(1.4);
     cursor: pointer;
   }
@@ -324,7 +325,7 @@ const SocialDrawer = styled.div`
   }
   @media (max-width: 900px) {
     .icon {
-      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+      filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);
       transform: scale(1.4);
     }
     margin-right: 3%;

@@ -5,17 +5,37 @@ import { Element } from 'react-scroll'
 import Team from "../components/Team";
 import TheFaq from "../components/TheFaq";
 import Footer from "../components/Footer";
+import DrawAppBar from "../components/DrawAppBar";
 
-const HomePage = (props) => {
+// export async function getServerSideProps(context) {
+//   const UA = context.req.headers['user-agent'];
+//   const isMobile = Boolean(UA.match(
+//     /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+//   ))
+//   return {
+//     props: {
+//       deviceType: isMobile ? 'mobile' : 'desktop'
+//     }
+//   }
+// }
+
+// export async function getServerSideProps(context) {
+//   return {
+//     props: { message: `Next.js is awesome` }, // will be passed to the page component as props
+//   }
+// }
+
+const HomePage = () => {
   
-  const {data} = props.deviceType;
-  console.log(data);
+  // const {data} = props.message;
+  // console.log(data);
 
     return (
     <>
-      <Element id='Home' name='Home'>
+      <DrawAppBar />
+      {/* <Element id='Home' name='Home'>
         <Home />
-      </Element>
+      </Element> */}
       <Element id='8-BIT' name='8-BIT'>
         <Eigthbit/>
       </Element>
@@ -33,16 +53,3 @@ const HomePage = (props) => {
     );
   };
 export default HomePage;
-
-export async function getServerSideProps(context) {
-  const UA = context.req.headers['user-agent'];
-  const isMobile = Boolean(UA.match(
-    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-  ))
-  
-  return {
-    props: {
-      deviceType: isMobile ? 'mobile' : 'desktop'
-    }
-  }
-}

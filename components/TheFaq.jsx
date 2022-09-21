@@ -24,7 +24,7 @@ export default function TheFaq() {
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #10100f;
+  background: linear-gradient(#07001F,#070047);
 `;
 const Content = styled.div`
   display: flex;
@@ -86,7 +86,8 @@ const data = {
     ],
 };
 const styles = {
-    bgColor: "#10100f",
+    // bgColor: "#10100f",
+    bgColor: "transparent",
     titleTextColor: "white",
     rowTitleTextSize: '28px',
     rowContentTextSize: '18px',

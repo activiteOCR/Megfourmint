@@ -18,6 +18,7 @@ const ViewportProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    console.log("useeffect");
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
@@ -66,6 +67,13 @@ const DesktopComponent = () =>
  <Box>
   <Content>
       <div>
+        <Image
+              className="titre"
+              src="/images/Image1.png" // Route of the image file
+              height={252} // Desired size with correct aspect ratio
+              width={789} // Desired size with correct aspect ratio
+              alt="titre"
+            />
         <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
         <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
         2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
@@ -78,7 +86,7 @@ const DesktopComponent = () =>
           sx={{
             maxHeight: { md: 300 },
             maxWidth: { md: 300 },
-            marginTop: "75px",
+            marginTop: "325px",
             marginRight: "150px",
           }}
           alt="mega"
@@ -106,17 +114,6 @@ const Layouts = () => {
   const { width } = useViewport();
   const breakpoint = 1200;
 
-  // console.log({ deviceType });
-
-  // let componentToRender
-  // if (deviceType === 'mobile') {
-  //   componentToRender = <MobileComponent />
-  // } else {
-  //   componentToRender = <DesktopComponent />
-  // }
-
-  // return componentToRender
-
   return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
 };
 
@@ -127,7 +124,6 @@ export default function Eightbit() {
     <>
       <ViewportProvider>
         <Wrapper>
-          {/* <Layouts deviceType={deviceType}/> */}
           <Layouts />
         </Wrapper>
       </ViewportProvider>
@@ -189,7 +185,8 @@ const itemData = [
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #10100f;
+  /* background-color: #10100f; */
+  background: linear-gradient(#070047,#07001F);
 `;
 const Content = styled.div`
   display: flex;

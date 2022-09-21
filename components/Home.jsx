@@ -49,10 +49,10 @@ return (
   <>
     <Content>
       <DrawAppBar />
-      <div>
+      {/* <div>
         <h1>MEG4MINT</h1>
         <h2>EXTRA LIFE</h2>
-      </div>
+      </div> */}
   </Content>
 </>
 )};
