@@ -3,6 +3,7 @@ import { useNetworkMismatch } from '@thirdweb-dev/react';
 import { useAddress, useMetamask } from '@thirdweb-dev/react';
 import { formatUnits, parseUnits } from 'ethers/lib/utils';
 import { useState } from 'react';
+import DrawAppBar from "../components/DrawAppBar";
 import styles from '../styles/Theme.module.css';
 import Image from 'next/image';
 // Put Your NFT Drop Contract address from the dashboard here
@@ -57,6 +58,7 @@ const Mint = () => {
         });
     };
     return (<div className={styles.container}>
+       <DrawAppBar />
       <div className={styles.mintInfoContainer}>
         <div className={styles.infoSide}>
           {/* Title of your NFT Collection */}

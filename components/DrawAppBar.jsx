@@ -57,26 +57,24 @@ const useStyles = makeStyles({
     borderRadius: 3,
     color: 'white',
     height: 65,
-    justifyContent: 'flex-end',
     "& .MuiAppBar-root": {
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      justifyContent: 'flex-end',
       alignItems: 'center',
-      marginLeft:'10%',
     },
   },
   button: {
     backgroundColor: '#fff',
     color: '#000',
-    padding: '0%',
+    // padding: '0%',
     '&:hover': {
       backgroundColor: '#fff',
       color: '#02efee',
     },
   },
   hide: {
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('xl')]: {
       display: 'none',
     },
   },
@@ -194,34 +192,27 @@ export default function DrawerAppBar(props) {
   return (
     <Box className={classes.root}  sx={{ display: 'flex' }}>
       <AppBar component="nav" theme={theme} position="static" >
-      {/* <Box 
+      <Box 
         component="img"
         sx={{
-          height: 77,
-          width: 252,    
+          height: 75,
+          width: 250,
+          marginRight: 23,    
         }}
         alt="logo"
         src="/images/Logo2.png"
-      /> */}
-      <Image
-              // className="titre"
-              // marginTop='10px'
-              src="/images/Logo2.png" // Route of the image file
-              height={75} // Desired size with correct aspect ratio
-              width={250} // Desired size with correct aspect ratio
-              alt="logo"
-            />
-        <Toolbar className={classes.root} id="back-to-top-anchor" >
+      />
+        <Toolbar id="back-to-top-anchor">
         <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { lg: 'none' } }}
+            sx={{ mr: 2, display: { xl: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
-          <Box className={classes.hide} sx={{ m: 10, display: { xs: 'none', sm: 'block' } }}>
+          <Box className={classes.hide} sx={{ mr: 20, display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ m: 3, color: '#fff',  ':hover': { color: '#02efee',}, }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
                 <Link
@@ -236,10 +227,10 @@ export default function DrawerAppBar(props) {
                 </Link>
               </Button>
             ))}
-            <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Giveaway
             </Button>
-            <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+            <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Mint
             </Button>
           </Box>

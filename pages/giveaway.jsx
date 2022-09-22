@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import DrawAppBar from "../components/DrawAppBar";
 import ReCAPTCHA from "react-google-recaptcha";
 import twitter from "../public/images/twitter.png";
 import discord from "../public/images/discord.png";
@@ -198,6 +199,7 @@ export default function Giveaway() {
 
   return (
     <Wrapper>
+      <DrawAppBar />
         <Content>
             {/* <img src={logo} alt="logo" className="logo" /> */}
             {/* <Image
