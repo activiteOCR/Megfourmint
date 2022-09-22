@@ -180,7 +180,11 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   /* background-color: #10100f; */
-  background: linear-gradient(#070047,#07001F);
+  /* background: linear-gradient(#070047,#07001F); */
+  background-image: url("/images/fond.png");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center; 
 `;
 const Content = styled.div`
   display: flex;
