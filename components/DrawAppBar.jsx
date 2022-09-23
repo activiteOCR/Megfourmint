@@ -78,6 +78,11 @@ const useStyles = makeStyles({
       display: 'none',
     },
   },
+  logo: {
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 10,
+    },
+  },
 });
 
 function ScrollTop(props) {
@@ -194,6 +199,7 @@ export default function DrawerAppBar(props) {
       <AppBar component="nav" theme={theme} position="static" >
       <Box 
         component="img"
+        className={classes.logo}
         sx={{
           height: 75,
           width: 250,
