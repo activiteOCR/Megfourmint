@@ -24,7 +24,7 @@ import { makeStyles } from '@mui/styles';
 let theme = createTheme({
     palette: {
       primary: {
-        main: '#00000080',
+        main: '#0000000',
       },
     },
   });
@@ -68,7 +68,7 @@ const useStyles = makeStyles({
       }
     }
     
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener("resize", changeWindowSize);
     
         return () => {
@@ -86,17 +86,18 @@ const useStyles = makeStyles({
       <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
       <Grid className={classes.item} container spacing={1}>
           <Grid item xs={15}>
-          <Card className={classes.root} sx={{ maxWidth: 350 }}>
+          <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardHeader
                         className={classes.avatar}
+                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
                         avatar={
                         <Avatar
                         alt="Vesper"
                         src= "/images/cryptoRocket.png"
-                        style={{
-                            border: '2px solid #02efee',
-                        }}
-                        sx={{ width: 150, height: 150 }}
+                        // style={{
+                        //     border: '2px solid #02efee',
+                        // }}
+                        sx={{ width: 200, height: 200 }}
                         variant="square"
                         />
                         }
@@ -115,17 +116,18 @@ const useStyles = makeStyles({
                 </Card>
           </Grid>
           <Grid item xs={15}>
-          <Card className={classes.root} sx={{ maxWidth: 350 }}>
+          <Card className={classes.root} sx={{ maxWidth: 500 }}>
                     <CardHeader
                         className={classes.avatar}
+                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
                         avatar={
                         <Avatar
                         alt="Stekone"
                         src= "/images/cryptoRocket.png"
-                        style={{
-                            border: '2px solid #02efee'
-                        }}
-                        sx={{ width: 150, height: 150 }}
+                        // style={{
+                        //     border: '2px solid #02efee'
+                        // }}
+                        sx={{ width: 200, height: 200 }}
                         variant="square"
                         />
                         }
@@ -137,8 +139,8 @@ const useStyles = makeStyles({
                     </CardContent>
                     <CardContent >
                         <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular' }}>
-                        Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
-                        as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
+                        Founder/Primary Artist - Passionate and creative artist evolving in the crypto universe since 2020.
+                        one collection sold out to his credit and several thousand layers have already been made by his hand
                         </Typography>
                     </CardContent>
                 </Card>
@@ -158,30 +160,31 @@ const useStyles = makeStyles({
                 <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
+                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
                         avatar={
                         <Avatar
                           alt="Vesper"
                           src= "/images/cryptoRocket.png"
-                          style={{
-                              border: '2px solid #02efee',
-                          }}
-                          sx={{ width: 200, height: 200 }}
+                          // style={{
+                          //     border: '2px solid #02efee',
+                          // }}
+                          sx={{ width: 150, height: 150 }}
                           variant="square"
                           
                         />
                         }
                     />
-                    <CardContent >
-                        <Typography variant="h4" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
+                    <CardContent style={{backgroundColor: '#02efee'}} >
+                        <Typography variant="h4" color="#ffffff" style={{ fontFamily: 'NES Controller' }}>
                           VESPER
                         </Typography>
                     </CardContent>
                 </Card>
             </Grid>
             <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 500 }}>
-                    <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '20px', fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
+                <Card className={classes.root} sx={{ maxWidth: 500, mt: 4 }}>
+                    <CardContent style={{background: 'linear-gradient(#01017c,#02efee)'}}>
+                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
                         Founder - has been involved in the crypto space since 2019 as an investor and began collecting NFTs in 2021. 
                         He has created several NFTs projects and has a great knowledge in robotics and retrogaming.
                         </Typography>
@@ -192,31 +195,32 @@ const useStyles = makeStyles({
                 <Card className={classes.root} sx={{ maxWidth: 200 }}>
                     <CardHeader
                         className={classes.avatar}
+                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
                         avatar={
                         <Avatar
                           alt="Stekone"
                           src= "/images/cryptoRocket.png"
-                          style={{
-                              border: '2px solid #02efee'
-                          }}
-                          sx={{ width: 200, height: 200 }}
+                          // style={{
+                          //     border: '2px solid #02efee'
+                          // }}
+                          sx={{ width: 150, height: 150 }}
                           variant="square"
                         />
                         }
                     />
-                    <CardContent >
-                        <Typography variant="h4" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
+                    <CardContent style={{backgroundColor: '#02efee'}}>
+                        <Typography variant="h4" color="#ffffff" style={{ fontFamily: 'NES Controller' }}>
                           STEKONE
                         </Typography>
                     </CardContent>
                 </Card>
             </Grid>
             <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 500 }}>
-                    <CardContent >
-                        <Typography variant="h6" color="#ffffff" style={{ marginTop: '30px', fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
-                        Founder/Primary Artist - is an artist from South Korea. He has been creating art since he was a child and has been active 
-                        as an NFT artist since early 2021. His first collection was primarily focused on 1/1 art and has been collected by many prominent collectors.
+                <Card className={classes.root} sx={{ maxWidth: 500, mt: 6 }}>
+                    <CardContent style={{background: 'linear-gradient(#01017c,#02efee)', }} >
+                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
+                        Founder/Primary Artist - Passionate and creative artist evolving in the crypto universe since 2020.
+                        one collection sold out to his credit and several thousand layers have already been made by his hand
                         </Typography>
                     </CardContent>
                 </Card>

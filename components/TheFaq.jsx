@@ -30,7 +30,8 @@ const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0% 2% 2% 20%;
-  margin-right: 10%;
+  margin-right: 30%;
+  
   gap: 10px;
   h1 {
     font-family: "NES Controller";
