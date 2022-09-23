@@ -60,19 +60,25 @@ const Mint = () => {
     return (<div className={styles.container}>
        <DrawAppBar />
       <div className={styles.mintInfoContainer}>
-        <div className={styles.infoSide}>
-          {/* Title of your NFT Collection */}
-          {/* <h1>{contractMetadata?.name}</h1> */}
-          <h1>Meg4mint</h1>
-          {/* Description of your NFT Collection */}
-          {/* <p className={styles.description}>{contractMetadata?.description}</p> */}
-          <p>Welcome on the minting page, Meg4mint are free and there is no royalty on the secondary market</p>
-        </div>
-
         <div className={styles.imageSide}>
           {/* Image Preview of NFTs */}
-          <img className={styles.image} src={contractMetadata?.image} alt={`${contractMetadata?.name} preview image`}/>
+          {/* <img className={styles.image} src={contractMetadata?.image} alt={`${contractMetadata?.name} preview image`}/> */}
+          <Image
+              className="titre"
+              src="/images/Logo1.png" // Route of the image file
+              height={337} // Desired size with correct aspect ratio
+              width={464} // Desired size with correct aspect ratio
+              alt="titre"
+            />
 
+          <div className={styles.infoSide}>
+            {/* Title of your NFT Collection */}
+            {/* <h1>{contractMetadata?.name}</h1> */}
+            {/* <h1>Meg4mint</h1> */}
+            {/* Description of your NFT Collection */}
+            {/* <p className={styles.description}>{contractMetadata?.description}</p> */}
+            <p>Welcome on the minting page, Meg4mint are free and there is no royalty on the secondary market</p>
+          </div>
           {/* Amount claimed so far */}
           <div className={styles.mintCompletionArea}>
             <div className={styles.mintAreaLeft}>
