@@ -167,11 +167,11 @@ export default function DrawerAppBar(props) {
               </ListItemButton>
           </ListItem>
         ))}
-        <ListItem key='GIVEAWAY' disablePadding>
+        {/* <ListItem key='GIVEAWAY' disablePadding>
           <ListItemButton target="_blank" href="/giveaway" sx={{ flexDirection: 'column' }}>
             <ListItemText  primary='GIVEAWAY' />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
         <ListItem key='MINT' disablePadding>
           <ListItemButton target="_blank" href="/mint" sx={{ flexDirection: 'column' }}>
             <ListItemText  primary='MINT' />
@@ -203,7 +203,7 @@ export default function DrawerAppBar(props) {
         sx={{
           height: 75,
           width: 250,
-          marginRight: 23,    
+          marginRight: 41,    
         }}
         alt="logo"
         src="/images/Logo2.png"
@@ -233,9 +233,9 @@ export default function DrawerAppBar(props) {
                 </Link>
               </Button>
             ))}
-            <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
+            {/* <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Giveaway
-            </Button>
+            </Button> */}
             <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Mint
             </Button>

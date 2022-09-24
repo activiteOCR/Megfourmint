@@ -58,17 +58,17 @@ const Mint = () => {
         });
     };
     return (<div className={styles.container}>
-       <DrawAppBar />
+       {/* <DrawAppBar /> */}
       <div className={styles.mintInfoContainer}>
         <div className={styles.imageSide}>
           {/* Image Preview of NFTs */}
           {/* <img className={styles.image} src={contractMetadata?.image} alt={`${contractMetadata?.name} preview image`}/> */}
           <Image
-              className="titre"
+              className={styles.image}
               src="/images/Logo1.png" // Route of the image file
               height={337} // Desired size with correct aspect ratio
               width={464} // Desired size with correct aspect ratio
-              alt="titre"
+              alt="Logo1"
             />
 
           <div className={styles.infoSide}>
@@ -81,11 +81,14 @@ const Mint = () => {
           </div>
           {/* Amount claimed so far */}
           <div className={styles.mintCompletionArea}>
-            <div className={styles.mintAreaLeft}>
-              <p>Total Minted</p>
-            </div>
+            {/* <div className={styles.mintAreaLeft}>
+              <p>Total Minted :</p>
+            </div> */}
             <div className={styles.mintAreaRight}>
+            
               {claimedSupply && unclaimedSupply ? (<p>
+                  Total Minted :
+                  {'  '}
                   {/* Claimed supply so far */}
                   <b>{claimedSupply?.toNumber()}</b>
                   {' / '}
@@ -94,7 +97,7 @@ const Mint = () => {
             claimedSupply?.toNumber() + unclaimedSupply?.toNumber()}
                 </p>) : (
         // Show loading state if we're still loading the supply
-        <p>Loading...</p>)}
+        <p >Loading...</p>)}
             </div>
           </div>
 
@@ -132,7 +135,7 @@ const Mint = () => {
                 </button>
               </>)) : (<div className={styles.buttons}>
               <button className={styles.mainButton} onClick={connectWithMetamask}>
-                Connect MetaMask
+                Connect with MetaMask
               </button>
               <button className={styles.mainButton} onClick={connectWithWalletConnect}>
                 Connect with Wallet Connect
