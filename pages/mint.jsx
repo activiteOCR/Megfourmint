@@ -146,15 +146,6 @@ const Mint = () => {
             </div>)}
         </div>
       </div>
-      {/* Powered by thirdweb */}{' '}
-      {/* <img src="/logo.png" alt="thirdweb Logo" width={135} className={styles.buttonGapTop}/> */}
-      {/* <Image
-              className="logo"
-              src="/images/logo.png" // Route of the image file
-              height={100} // Desired size with correct aspect ratio
-              width={100} // Desired size with correct aspect ratio
-              alt="logo"
-            /> */}
     </div>);
 };
 export default Mint;
