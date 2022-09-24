@@ -1,4 +1,3 @@
-import Home from "../components/Home";
 import Eigthbit from "../components/Eigthbit";
 import Scarcity from "../components/Scarcity";
 import { Element } from 'react-scroll'
@@ -12,9 +11,6 @@ const HomePage = () => {
     return (
     <>
       <DrawAppBar />
-      {/* <Element id='Home' name='Home'>
-        <Home />
-      </Element> */}
       <Element id='8-BIT' name='8-BIT'>
         <Eigthbit/>
       </Element>

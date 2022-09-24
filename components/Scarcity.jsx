@@ -62,10 +62,7 @@ const DesktopComponent = () =>
   <Content>
       <div>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
-        <h2><br></br> Some armors were made with rare and precious materials<br></br>
-        Legendary == .<br></br>
-        Epic == <br></br>
-        Heroic == <br></br></h2>
+        <h2><br></br> Some armors were made with rare and precious materials (Legendary, Epic, Heroic, ?) affichage des armures + ? pour le dernier niveau <br></br><br></br></h2>
         {/* <h3>IA - JWC - HH</h3> */}
       </div>
       {/* <Box 
@@ -82,7 +79,7 @@ const DesktopComponent = () =>
           src="/images/mega.gif"
         /> */}
     </Content>
-    <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={6} rowHeight={150}>
+    <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={4} gap={50}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <Image
@@ -132,38 +129,6 @@ const itemData = [
   {
     img: '/images/4.png',
     title: 'Coffee',
-  },
-  {
-    img: '/images/5.png',
-    title: 'Hats',
-  },
-  {
-    img: '/images/6.png',
-    title: 'Honey',
-  },
-  {
-    img: '/images/7.png',
-    title: 'Basketball',
-  },
-  {
-    img: '/images/8.png',
-    title: 'Fern',
-  },
-  {
-    img: '/images/9.png',
-    title: 'Mushrooms',
-  },
-  {
-    img: '/images/10.png',
-    title: 'Tomato basil',
-  },
-  {
-    img: '/images/11.png',
-    title: 'Sea star',
-  },
-  {
-    img: '/images/12.png',
-    title: 'Bike',
   },
 ];
 

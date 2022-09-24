@@ -12,11 +12,13 @@ import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
-// import CardActions from '@mui/material/CardActions';
+import CardActions from '@mui/material/CardActions';
+import CardMedia from '@mui/material/CardMedia';
 import Avatar from '@mui/material/Avatar';
 // import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { CardActionArea } from '@mui/material';
 // import { createTheme, createStyles } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
@@ -31,14 +33,17 @@ let theme = createTheme({
 
 const useStyles = makeStyles({
     root: {
+      "& .MuiCard-root": {
+        backgroundColor: 'transparent',
+      },
       "& .MuiCardHeader-root": {
-        backgroundColor: "#10100f",
+        // backgroundColor: "#10100f",
         color: '#ffffff',
         display: 'flex',
         flexDirection: 'column',
       },
       "& .MuiCardContent-root": {
-        backgroundColor: "#10100f",
+        // backgroundColor: "#10100f",
         display: 'flex',
         flexDirection: 'column',
       },
@@ -94,16 +99,13 @@ const useStyles = makeStyles({
                         <Avatar
                         alt="Vesper"
                         src= "/images/cryptoRocket.png"
-                        // style={{
-                        //     border: '2px solid #02efee',
-                        // }}
                         sx={{ width: 200, height: 200 }}
                         variant="square"
                         />
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'Nes Controller' }}>
+                        <Typography variant="h3" color="#02efee" style={{ fontFamily: 'Nes Controller' }}>
                           VESPER
                         </Typography>
                     </CardContent>
@@ -124,16 +126,13 @@ const useStyles = makeStyles({
                         <Avatar
                         alt="Stekone"
                         src= "/images/cryptoRocket.png"
-                        // style={{
-                        //     border: '2px solid #02efee'
-                        // }}
                         sx={{ width: 200, height: 200 }}
                         variant="square"
                         />
                         }
                     />
                     <CardContent >
-                        <Typography variant="h5" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
+                        <Typography variant="h3" color="#02efee" style={{ fontFamily: 'NES Controller' }}>
                           STEKONE
                         </Typography>
                     </CardContent>
@@ -155,75 +154,48 @@ const useStyles = makeStyles({
     <Box className={classes.root} >
         <h1><u><span className="h1color">LAB</span></u></h1>
         <h2><br></br>MEG4MINT was created by two childhood nostalgic for the NES games he used to play after school...<br></br><br></br></h2>
-        <Grid container spacing={0}>
-            <Grid item xs={3}>
-                <Card className={classes.root} sx={{ maxWidth: 200 }}>
-                    <CardHeader
-                        className={classes.avatar}
-                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
-                        avatar={
-                        <Avatar
-                          alt="Vesper"
-                          src= "/images/cryptoRocket.png"
-                          // style={{
-                          //     border: '2px solid #02efee',
-                          // }}
-                          sx={{ width: 150, height: 150 }}
-                          variant="square"
-                          
-                        />
-                        }
-                    />
-                    <CardContent style={{backgroundColor: '#02efee'}} >
-                        <Typography variant="h4" color="#ffffff" style={{ fontFamily: 'NES Controller' }}>
-                          VESPER
-                        </Typography>
-                    </CardContent>
-                </Card>
+        <Grid container spacing={17}>
+            <Grid item xs={5}>
+              <Card sx={{ maxWidth: 500 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="240"
+                    image="/images/cryptoRocket.png"
+                    alt="vesper"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h4" component="div" style={{ color: '#02efee', fontFamily: 'NES Controller' }}>
+                      VESPER
+                    </Typography>
+                    <Typography variant="h6" color="#ffffff">
+                      Founder - has been involved in the crypto space since 2019 as an investor and began collecting NFTs in 2021. 
+                      He has created several NFTs projects and has a great knowledge in robotics and retrogaming.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Grid>
-            <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 500, mt: 4 }}>
-                    <CardContent style={{background: 'linear-gradient(#01017c,#02efee)'}}>
-                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
-                        Founder - has been involved in the crypto space since 2019 as an investor and began collecting NFTs in 2021. 
-                        He has created several NFTs projects and has a great knowledge in robotics and retrogaming.
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
-            <Grid item xs={3}>
-                <Card className={classes.root} sx={{ maxWidth: 200 }}>
-                    <CardHeader
-                        className={classes.avatar}
-                        style={{background: 'linear-gradient(#01017c,#02efee)'}}
-                        avatar={
-                        <Avatar
-                          alt="Stekone"
-                          src= "/images/cryptoRocket.png"
-                          // style={{
-                          //     border: '2px solid #02efee'
-                          // }}
-                          sx={{ width: 150, height: 150 }}
-                          variant="square"
-                        />
-                        }
-                    />
-                    <CardContent style={{backgroundColor: '#02efee'}}>
-                        <Typography variant="h4" color="#ffffff" style={{ fontFamily: 'NES Controller' }}>
-                          STEKONE
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
-            <Grid item xs={7}>
-                <Card className={classes.root} sx={{ maxWidth: 500, mt: 6 }}>
-                    <CardContent style={{background: 'linear-gradient(#01017c,#02efee)', }} >
-                        <Typography variant="h6" color="#ffffff" style={{ fontFamily: 'Bebas Regular', textAlign: 'justify' }}>
-                        Founder/Primary Artist - Passionate and creative artist evolving in the crypto universe since 2020.
-                        one collection sold out to his credit and several thousand layers have already been made by his hand
-                        </Typography>
-                    </CardContent>
-                </Card>
+            <Grid item xs={5}>
+              <Card sx={{ maxWidth: 500 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="240"
+                    image="/images/cryptoRocket.png"
+                    alt="Stekone"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h4" component="div" style={{ color: '#02efee', fontFamily: 'NES Controller' }}>
+                      STEKONE
+                    </Typography>
+                    <Typography variant="h6" color="#ffffff">
+                      Founder/Primary Artist - Passionate and creative artist evolving in the crypto universe since 2020.
+                      one collection sold out to his credit and several thousand layers have already been made by his hand
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Grid>
         </Grid>
     </Box>
