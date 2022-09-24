@@ -24,7 +24,6 @@
 
 .mintInfoContainer {
   display: flex;
-  /* flex-direction: row; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -32,9 +31,6 @@
   padding: 0 24px;
   min-height: 1000px;
   max-width: 95vw;
-  /* gap: 2%; */
-  /* border: 1px solid var(--border-color);
-  border-radius: 16px; */
 }
 
 .infoSide {
@@ -204,5 +200,7 @@
 
   .imageSide {
     width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1%;
   }
 }
