@@ -203,4 +203,12 @@
     font-size: 1rem;
     margin-bottom: 100%;
   }
+
+  .mainButton {
+    line-height: 1.2;
+    font-weight: 400;
+    height: 3rem;
+    min-width: 3rem;
+    font-size: 1rem;
+  }
 }
