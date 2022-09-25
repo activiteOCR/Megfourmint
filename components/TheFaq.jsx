@@ -61,7 +61,7 @@ const data = {
             content: 'Ethereum Mainnet',
         },
         {
-            title: "3. How much do 8liens cost?",
+            title: "3. How much do Meg4mint cost?",
             content: `Meg4mint are free, and there is no royalty on secondary market`,
         },
         {
