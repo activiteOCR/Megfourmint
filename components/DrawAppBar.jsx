@@ -63,6 +63,9 @@ const useStyles = makeStyles({
       justifyContent: 'flex-end',
       alignItems: 'center',
     },
+    "& .MuiToolbar-root": {
+      paddingLeft: '10px',
+    },
   },
   button: {
     backgroundColor: '#fff',

@@ -99,7 +99,7 @@ const useStyles = makeStyles({
                         <Avatar
                         alt="Vesper"
                         src= "/images/cryptoRocket.png"
-                        sx={{ width: 200, height: 200 }}
+                        sx={{ width: 100, height: 100 }}
                         variant="square"
                         />
                         }
@@ -126,7 +126,7 @@ const useStyles = makeStyles({
                         <Avatar
                         alt="Stekone"
                         src= "/images/cryptoRocket.png"
-                        sx={{ width: 200, height: 200 }}
+                        sx={{ width: 100, height: 100 }}
                         variant="square"
                         />
                         }
@@ -158,9 +158,10 @@ const useStyles = makeStyles({
             <Grid item xs={5}>
               <Card sx={{ maxWidth: 500 }}>
                 <CardActionArea>
-                  <CardMedia
+                  <CardMedia 
+                    sx={{ width: 150, height: 150, marginLeft:'30%' }}
                     component="img"
-                    height="240"
+                    height="200"
                     image="/images/cryptoRocket.png"
                     alt="vesper"
                   />
@@ -178,14 +179,15 @@ const useStyles = makeStyles({
             </Grid>
             <Grid item xs={5}>
               <Card sx={{ maxWidth: 500 }}>
-                <CardActionArea>
-                  <CardMedia
+                <CardActionArea >
+                  <CardMedia 
+                    sx={{ width: 150, height: 150, marginLeft:'30%' }}
                     component="img"
-                    height="240"
+                    height="200"
                     image="/images/cryptoRocket.png"
                     alt="Stekone"
                   />
-                  <CardContent>
+                  <CardContent >
                     <Typography gutterBottom variant="h4" component="div" style={{ color: '#02efee', fontFamily: 'NES Controller' }}>
                       STEKONE
                     </Typography>

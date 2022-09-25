@@ -4,7 +4,25 @@ import styled from "styled-components";
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import Image from 'next/image';
+
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#07001F',
+    },
+  },
+});
+
+const useStyles = makeStyles({
+  titre: {
+    [theme.breakpoints.down('lg')]: {
+      marginRight: 100,
+    },
+  },
+});
 
 const useWindowSize = () => {
 const isSSR = typeof window === "undefined";
@@ -30,7 +48,7 @@ React.useEffect(() => {
 return windowSize;
 }
 
-const MobileComponent = () => 
+const MobileComponent = ({classes}) => 
   <ContentMob>
     <div>
       <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
@@ -58,17 +76,18 @@ const MobileComponent = () =>
   </ContentMob>
 ;
 
-const DesktopComponent = () =>
+const DesktopComponent = ({classes}) =>
  <Box>
   <Content>
       <div>
-        <Image
-              className="titre"
-              src="/images/Image1.png" // Route of the image file
-              height={252} // Desired size with correct aspect ratio
-              width={789} // Desired size with correct aspect ratio
-              alt="titre"
-            />
+        <div className="titre">
+          <Image
+                src="/images/Image1.png" // Route of the image file
+                height={252} // Desired size with correct aspect ratio
+                width={789} // Desired size with correct aspect ratio
+                alt="titre"
+              />
+          </div>
         <h1><u><span className="h1color">8</span>-<span className="h1color">BIT</span></u></h1>
         <h2><br></br> 1. A robot may not harm a human being or, remaining passive, allow a human being to be exposed to danger.<br></br><br></br>
         2. A robot must obey the orders given to it by a human being, unless such orders conflict with the First Law.<br></br><br></br>
@@ -105,21 +124,22 @@ const DesktopComponent = () =>
   </Box>
  ;
 
-const Layouts = () => {
+const Layouts = ({Classes}) => {
   
   const { width } = useWindowSize();
   const breakpoint = 1200;
   
-  return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
+  return width < breakpoint ? <MobileComponent classes={Classes}/> : <DesktopComponent classes={Classes}/>;
 };
 
 
 
 export default function Eightbit() {
+  const classes = useStyles();
   return (
     // <>
         <Wrapper>
-          <Layouts />
+          <Layouts Classes={classes}/>
         </Wrapper>
     // </> 
   )
@@ -179,8 +199,6 @@ const itemData = [
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  /* background-color: #10100f; */
-  /* background: linear-gradient(#070047,#07001F); */
   background-image: url("/images/fond.png");
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
@@ -213,7 +231,9 @@ const Content = styled.div`
     text-decoration-thickness: 2px;
     text-underline-offset: 1rem; 
 }
-
+.titre {
+  margin-left: 10%; 
+}
 `;
 const ContentMob = styled.div`
   display: flex;
