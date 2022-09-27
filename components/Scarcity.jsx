@@ -34,10 +34,7 @@ const MobileComponent = () =>
   <ContentMob>
     <div>
       <h1><u><span className="h1color">Scarcity</span></u></h1>
-      <h2><br></br> Some armors were made with rare and precious materials<br></br>
-        Legendary == .<br></br>
-        Epic == <br></br>
-        Heroic == <br></br></h2>
+      <h2><br></br> Some armors were made with rare and precious materials (Bronze, Silver, Gold, Diamond and ? )<br></br><br></br></h2>
     </div>
     <Box
         component="img"
@@ -62,7 +59,7 @@ const DesktopComponent = () =>
   <Content>
       <div>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
-        <h2><br></br> Some armors were made with rare and precious materials (Legendary, Epic, Heroic, ?) affichage des armures + ? pour le dernier niveau <br></br><br></br></h2>
+        <h2><br></br> Some armors were made with rare and precious materials (Bronze, Silver, Gold, Diamond and ? ) <br></br><br></br></h2>
         {/* <h3>IA - JWC - HH</h3> */}
       </div>
       {/* <Box 
@@ -115,20 +112,20 @@ export default function Scarcity() {
 
 const itemData = [
   {
-    img: '/images/1.png',
-    title: 'Breakfast',
+    img: '/images/Bronze.png',
+    title: 'Bronze',
   },
   {
-    img: '/images/2.png',
-    title: 'Burger',
+    img: '/images/Silver.png',
+    title: 'Silver',
   },
   {
-    img: '/images/3.png',
-    title: 'Camera',
+    img: '/images/Gold.png',
+    title: 'Gold',
   },
   {
-    img: '/images/4.png',
-    title: 'Coffee',
+    img: '/images/Diamond.png',
+    title: 'Diamond',
   },
 ];
 

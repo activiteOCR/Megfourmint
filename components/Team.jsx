@@ -125,7 +125,7 @@ const useStyles = makeStyles({
                         avatar={
                         <Avatar
                         alt="Stekone"
-                        src= "/images/cryptoRocket.png"
+                        src= "/images/cryptoRocketv2.png"
                         sx={{ width: 100, height: 100 }}
                         variant="square"
                         />
@@ -184,7 +184,7 @@ const useStyles = makeStyles({
                     sx={{ width: 150, height: 150, marginLeft:'30%' }}
                     component="img"
                     height="200"
-                    image="/images/cryptoRocket.png"
+                    image="/images/cryptoRocketV2.png"
                     alt="Stekone"
                   />
                   <CardContent >
