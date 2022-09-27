@@ -184,7 +184,7 @@ const useStyles = makeStyles({
                     sx={{ width: 150, height: 150, marginLeft:'30%' }}
                     component="img"
                     height="200"
-                    image="/images/cryptoRocketV2.png"
+                    image="/images/cryptoRocketv2.png"
                     alt="Stekone"
                   />
                   <CardContent >
