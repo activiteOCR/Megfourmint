@@ -49,7 +49,7 @@ const MobileComponent = () =>
           marginBottom: "40px",
         }}
         alt="mega"
-        src="/images/mega.gif"
+        src="/images/ArmorGif2.gif"
       />
   </ContentMob>
 ;
