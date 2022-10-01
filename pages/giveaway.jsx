@@ -5,7 +5,7 @@ import DrawAppBar from "../components/DrawAppBar";
 import ReCAPTCHA from "react-google-recaptcha";
 import twitter from "../public/images/twitter.png";
 import discord from "../public/images/discord.png";
-import bgImage from "../public/images/background.jpg";
+// import bgImage from "../public/images/background.jpg";
 // import metamask from "../../assets/images/metamask.png";
 import pill from "../public/images/pilule.gif";
 import usdt from "../public/images/usdt.gif";
