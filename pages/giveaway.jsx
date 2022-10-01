@@ -5,7 +5,7 @@ import DrawAppBar from "../components/DrawAppBar";
 import ReCAPTCHA from "react-google-recaptcha";
 import twitter from "../public/images/twitter.png";
 import discord from "../public/images/discord.png";
-// import bgImage from "../public/images/background.jpg";
+import bgImage from "../public/images/background.jpg";
 // import metamask from "../../assets/images/metamask.png";
 import pill from "../public/images/pilule.gif";
 import usdt from "../public/images/usdt.gif";
@@ -39,7 +39,7 @@ export default function Giveaway() {
   });
   const [twitterVerified, setTwitterVerified] = useState(false); //discord verification
   const [discordVerified, setDiscordVerified] = useState(false); //discord verification
-//   const [walletVerified, setWalletVerified] = useState(false); //discord verification
+  //   const [walletVerified, setWalletVerified] = useState(false); //discord verification
   const [captchaVerified, setCaptchaVerified] = useState(false); //captcha verification
   const discordInputRef = useRef(null);
   const twitterInputRef = useRef(null);
@@ -89,7 +89,7 @@ export default function Giveaway() {
             ...previousState,
             discord: discordInputRef.current.value,
           }));
-        } else handleSnackBar("Join our discord and retry.", true );
+        } else handleSnackBar("Join our discord and retry.", true);
       })
       .catch((err) => {
         console.error(err);
@@ -127,9 +127,9 @@ export default function Giveaway() {
           setUserData((previousState) => ({
             ...previousState,
             twitter: twitterInputRef.current.value
-            .replaceAll(" ", "%20")
-            .replaceAll("#", "%23")
-            .replaceAll("@", ""),
+              .replaceAll(" ", "%20")
+              .replaceAll("#", "%23")
+              .replaceAll("@", ""),
           }));
         } else handleSnackBar("Follow us on twitter and retry.", true);
       })
@@ -137,24 +137,24 @@ export default function Giveaway() {
         console.error(err);
       });
   };
-  
-//   const connectMetamask = () => {
-//     if (window.ethereum) {
-//       window.ethereum
-//         .request({ method: "eth_requestAccounts" })
-//         .then((result) => {
-//           console.log("result", result);
-//           setWalletVerified((prev) => true);
-//           setUserData((previousState) => ({
-//             ...previousState,
-//             wallet: result[0],
-//           }));
-//         })
-//         .catch((err) => {
-//           console.error("error", err);
-//         });
-//     } else handleSnackBar("Please install metamask", true);  
-//   };
+
+  //   const connectMetamask = () => {
+  //     if (window.ethereum) {
+  //       window.ethereum
+  //         .request({ method: "eth_requestAccounts" })
+  //         .then((result) => {
+  //           console.log("result", result);
+  //           setWalletVerified((prev) => true);
+  //           setUserData((previousState) => ({
+  //             ...previousState,
+  //             wallet: result[0],
+  //           }));
+  //         })
+  //         .catch((err) => {
+  //           console.error("error", err);
+  //         });
+  //     } else handleSnackBar("Please install metamask", true);  
+  //   };
   const participate = () => {
     // console.log("twitter ", userData.twitter);
     // console.log("discord ", userData.discord);
@@ -193,191 +193,191 @@ export default function Giveaway() {
   };
   const handleSnackBar = (_message, _iconSeverity) => {
     setOpen(true);
-    setMessage(prev=>_message)
-    setIconSeverity(prev=>_iconSeverity)
+    setMessage(prev => _message)
+    setIconSeverity(prev => _iconSeverity)
   };
 
   return (
     <Wrapper>
       {/* <DrawAppBar /> */}
-        <Content>
-            {/* <img src={logo} alt="logo" className="logo" /> */}
-            {/* <Image
+      <Content>
+        {/* <img src={logo} alt="logo" className="logo" /> */}
+        {/* <Image
               className="logo"
               src={logo} // Route of the image file
               height={50} // Desired size with correct aspect ratio
               width={50} // Desired size with correct aspect ratio
               alt="logo"
             /> */}
-            <Header>
-                <h1>
-                GIVEAWAY : Crypto spots, 100 USDT to earn
-                <p> Raffle date to be defined (GMT+2)</p>
-                </h1>
-                {/* <img src={ledger} alt="ledger" /> */}
-                {/* <img src={pill} alt="pill" className="pill" /> */}
-                <Image
-                  className="pill"
-                  src={usdt} // Route of the image file
-                  height={100} // Desired size with correct aspect ratio
-                  width={100} // Desired size with correct aspect ratio
-                  alt="usdt"
+        <Header>
+          <h1>
+            GIVEAWAY : Crypto spots, 100 USDT to earn
+            <p> Raffle date to be defined (GMT+2)</p>
+          </h1>
+          {/* <img src={ledger} alt="ledger" /> */}
+          {/* <img src={pill} alt="pill" className="pill" /> */}
+          <Image
+            className="pill"
+            src={usdt} // Route of the image file
+            height={100} // Desired size with correct aspect ratio
+            width={100} // Desired size with correct aspect ratio
+            alt="usdt"
+          />
+        </Header>
+        <Main>
+          <StepContainer area="main-step1">
+            <StepNumber>01</StepNumber>
+            <StepDescription>
+              FOLLOW
+              <br />
+              MEG4MINT
+              <br />
+              ON TWITTER
+            </StepDescription>
+            <StepVerification>
+              <p>Your twitter handle :</p>
+              <div className="input-container">
+                <input
+                  type="text"
+                  placeholder="@User"
+                  ref={twitterInputRef}
                 />
-            </Header>
-            <Main>
-                <StepContainer area="main-step1">
-                <StepNumber>01</StepNumber>
-                <StepDescription>
-                    FOLLOW
-                    <br />
-                    MEG4MINT
-                    <br />
-                    ON TWITTER
-                </StepDescription>
-                <StepVerification>
-                    <p>Your twitter handle :</p>
-                    <div className="input-container">
-                    <input
-                        type="text"
-                        placeholder="@User"
-                        ref={twitterInputRef}
-                    />
-                    {/* <img onClick={follow} src={twitter} alt="twitter" /> */}
-                    <Image
-                      onClick={follow}
-                      src={twitter } // Route of the image file
-                      height={35}
-                      width={35}
-                      alt="twitter"
-                    />
-                    </div>
-                </StepVerification>
-                <StepButton>
-                    <button onClick={verifyTwitter}>
-                    <p>Verify</p>
-                    {/* <img src={twitter} alt="twitter icon" /> */}
-                    <Image
-                      src={twitter } // Route of the image file
-                      height={35}
-                      width={35}
-                      alt="twitter"
-                    />
-                    </button>
-                    {twitterVerified ? (
-                    // <img src={checkIcon} alt="verified" />
-                    <Image
-                      src="/images/checked.svg"
-                      height={25}
-                      width={25}
-                      alt="verified"
-                    />
-                    ) : (
-                    // <img src={failIcon} alt="not verified" />
-                    <Image
-                      src="/images/fail.svg"
-                      height={25}
-                      width={25}
-                      alt="not verified"
-                    />
-                    )}
-                </StepButton>
-                </StepContainer>
-                <StepContainer area="main-step2">
-                <StepNumber>02</StepNumber>
-                <StepDescription>
-                    JOIN
-                    <br />
-                    US
-                    <br />
-                    ON DISCORD
-                </StepDescription>
-                <StepVerification>
-                    <p>Your discord tag :</p>
-                    <div className="input-container">
-                    <input
-                        type="text"
-                        placeholder="Member#3023"
-                        ref={discordInputRef}
-                    />
-                    {/* <img onClick={joinDiscord} src={discord} alt="twitter" /> */}
-                    <Image
-                      onClick={joinDiscord}
-                      src={discord} 
-                      height={35}
-                      width={35}
-                      alt="discord icon"
-                    />
-                    </div>
-                </StepVerification>
-                <StepButton>
-                    <button onClick={verifyDiscord}>
-                    <p>Verify</p>
-                    {/* <img src={discord} alt="discord icon" /> */}
-                    <Image
-                      src={discord} 
-                      height={35}
-                      width={35}
-                      alt="discord icon"
-                    />
-                    </button>
-                    {discordVerified ? (
-                    // <img src={checkIcon} alt="twitter" />
-                    <Image
-                      src="/images/checked.svg"
-                      height={25}
-                      width={25}
-                      alt="twitter"
-                    />
-                    ) : (
-                    // <img src={failIcon} alt="twitter" />
-                    <Image
-                      src="/images/fail.svg"
-                      height={25}
-                      width={25}
-                      alt="twitter"
-                    />
-                    )}
-                </StepButton>
-                </StepContainer>{" "}
-                <StepContainer area="main-step3">
-                <StepNumber>03</StepNumber>
-                <StepDescription>
-                    I AM
-                    <br />A 8-BIT ROBOT
-                    <br />
-                    AND NOT A BASIC ROBOT
-                </StepDescription>
+                {/* <img onClick={follow} src={twitter} alt="twitter" /> */}
+                <Image
+                  onClick={follow}
+                  src={twitter} // Route of the image file
+                  height={35}
+                  width={35}
+                  alt="twitter"
+                />
+              </div>
+            </StepVerification>
+            <StepButton>
+              <button onClick={verifyTwitter}>
+                <p>Verify</p>
+                {/* <img src={twitter} alt="twitter icon" /> */}
+                <Image
+                  src={twitter} // Route of the image file
+                  height={35}
+                  width={35}
+                  alt="twitter"
+                />
+              </button>
+              {twitterVerified ? (
+                // <img src={checkIcon} alt="verified" />
+                <Image
+                  src="/images/checked.svg"
+                  height={25}
+                  width={25}
+                  alt="verified"
+                />
+              ) : (
+                // <img src={failIcon} alt="not verified" />
+                <Image
+                  src="/images/fail.svg"
+                  height={25}
+                  width={25}
+                  alt="not verified"
+                />
+              )}
+            </StepButton>
+          </StepContainer>
+          <StepContainer area="main-step2">
+            <StepNumber>02</StepNumber>
+            <StepDescription>
+              JOIN
+              <br />
+              US
+              <br />
+              ON DISCORD
+            </StepDescription>
+            <StepVerification>
+              <p>Your discord tag :</p>
+              <div className="input-container">
+                <input
+                  type="text"
+                  placeholder="Member#3023"
+                  ref={discordInputRef}
+                />
+                {/* <img onClick={joinDiscord} src={discord} alt="twitter" /> */}
+                <Image
+                  onClick={joinDiscord}
+                  src={discord}
+                  height={35}
+                  width={35}
+                  alt="discord icon"
+                />
+              </div>
+            </StepVerification>
+            <StepButton>
+              <button onClick={verifyDiscord}>
+                <p>Verify</p>
+                {/* <img src={discord} alt="discord icon" /> */}
+                <Image
+                  src={discord}
+                  height={35}
+                  width={35}
+                  alt="discord icon"
+                />
+              </button>
+              {discordVerified ? (
+                // <img src={checkIcon} alt="twitter" />
+                <Image
+                  src="/images/checked.svg"
+                  height={25}
+                  width={25}
+                  alt="twitter"
+                />
+              ) : (
+                // <img src={failIcon} alt="twitter" />
+                <Image
+                  src="/images/fail.svg"
+                  height={25}
+                  width={25}
+                  alt="twitter"
+                />
+              )}
+            </StepButton>
+          </StepContainer>{" "}
+          <StepContainer area="main-step3">
+            <StepNumber>03</StepNumber>
+            <StepDescription>
+              I AM
+              <br />A 8-BIT ROBOT
+              <br />
+              AND NOT A BASIC ROBOT
+            </StepDescription>
 
-                <StepButton>
-                    <ReCAPTCHA
-                    // style={{maxWidth:"200px"}}
-                    size="compact"
-                    theme="dark"
-                    sitekey="6LeDH4AgAAAAALJWi7YuapMiDcK8IgedGZs6kIay"
-                    onChange={captchaHandler}
-                    />
-                </StepButton>
-                </StepContainer>
-                <HorizontalSeparator />
-                <button
-                className="btn-participate"
-                disabled={
-                    !twitterVerified || !discordVerified || !captchaVerified
-                }
-                onClick={participate}
-                >
-                Participate
-                </button>
-            </Main>
-            <Prize>
-                <p>
-                ✨ CRYPTO OFFER! 👉 55 USDT for the first - 30 USDT for the second & 15 USDT for the third!<br></br><br></br>
-                ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
-                </p>
-                {/* <img src={ledger_prize} alt="ledger" /> */}
-            </Prize>
-            <Customsnackbar open={open} setOpen={setOpen} message={message} iconSeverity={iconSeverity}/>
-            {/* <Image
+            <StepButton>
+              <ReCAPTCHA
+                // style={{maxWidth:"200px"}}
+                size="compact"
+                theme="dark"
+                sitekey="6LeDH4AgAAAAALJWi7YuapMiDcK8IgedGZs6kIay"
+                onChange={captchaHandler}
+              />
+            </StepButton>
+          </StepContainer>
+          <HorizontalSeparator />
+          <button
+            className="btn-participate"
+            disabled={
+              !twitterVerified || !discordVerified || !captchaVerified
+            }
+            onClick={participate}
+          >
+            Participate
+          </button>
+        </Main>
+        <Prize>
+          <p>
+            ✨ CRYPTO OFFER! 👉 55 USDT for the first - 30 USDT for the second & 15 USDT for the third!<br></br><br></br>
+            ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
+          </p>
+          {/* <img src={ledger_prize} alt="ledger" /> */}
+        </Prize>
+        <Customsnackbar open={open} setOpen={setOpen} message={message} iconSeverity={iconSeverity} />
+        {/* <Image
               className="logo"
               src={logo} // Route of the image file
               height={50} // Desired size with correct aspect ratio
