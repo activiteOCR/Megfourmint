@@ -45,11 +45,11 @@ const MobileComponent = () =>
           maxWidth: { xs: 200, md: 300 },
           marginRight: "auto",
           marginLeft: "auto",
-          marginTop: "40px",
-          marginBottom: "40px",
+          // marginTop: "10px",
+          marginBottom: "80px",
         }}
         alt="mega"
-        src="/images/ArmorGif2.gif"
+        src="/images/Scarcity.gif"
       />
   </ContentMob>
 ;
@@ -57,24 +57,10 @@ const MobileComponent = () =>
 const DesktopComponent = () =>
  <Box>
   <Content>
-      <div>
+      <Box>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
-        <h2><br></br> Some armors were made with rare and precious materials (Bronze, Silver, Gold, Diamond and ? ) <br></br><br></br></h2>
-        {/* <h3>IA - JWC - HH</h3> */}
-      </div>
-      {/* <Box 
-          component="img"
-          sx={{
-            // height: 300,
-            // width: 300,
-            maxHeight: { md: 300 },
-            maxWidth: { md: 300 },
-            marginTop: "75px",
-            marginRight: "150px",
-          }}
-          alt="mega"
-          src="/images/mega.gif"
-        /> */}
+        <h2><br></br> Some armors were made with rare and precious materials. <br></br></h2>
+      </Box>
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={4} gap={50}>
       {itemData.map((item) => (
@@ -112,20 +98,20 @@ export default function Scarcity() {
 
 const itemData = [
   {
-    img: '/images/Bronze.png',
-    title: 'Bronze',
+    img: '/images/Original.png',
+    title: 'Original',
   },
   {
-    img: '/images/Silver.png',
-    title: 'Silver',
+    img: '/images/Tranium.png',
+    title: 'Tranium',
   },
   {
     img: '/images/Gold.png',
     title: 'Gold',
   },
   {
-    img: '/images/Diamond.png',
-    title: 'Diamond',
+    img: '/images/SM.png',
+    title: 'SM',
   },
 ];
 
@@ -149,11 +135,11 @@ const Content = styled.div`
     color: #ffffff;
   }
   h2 {
-    text-align: justify;
+    text-align: left;
     font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
     color: rgb(255, 255, 255);
-    margin-right: 10%;
+    /* margin-right: 10%; */
   }
   u {
     text-decoration: underline;
