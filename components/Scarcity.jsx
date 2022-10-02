@@ -5,7 +5,26 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import Image from 'next/image';
+
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#0000000',
+    },
+  },
+});
+
+const useStyles = makeStyles({
+  root: {
+    "& 	.MuiImageListItemBar-title": {
+      fontSize: '25px',
+    },
+    
+  },
+});
 
 const useWindowSize = () => {
   const isSSR = typeof window === "undefined";
@@ -31,7 +50,7 @@ const useWindowSize = () => {
   return windowSize;
   }
 
-const MobileComponent = () => 
+const MobileComponent = ({classes}) => 
   <ContentMob>
     <div>
       <h1><u><span className="h1color">Scarcity</span></u></h1>
@@ -55,8 +74,8 @@ const MobileComponent = () =>
   </ContentMob>
 ;
 
-const DesktopComponent = () =>
- <Box>
+const DesktopComponent = ({classes}) =>
+ <Box className={classes.root}>
   <Content>
       <Box>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
@@ -74,7 +93,7 @@ const DesktopComponent = () =>
             alt={item.title}
             loading="lazy"
           />
-           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'NES Controller' }} />
+           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontFamily: 'NES Controller' }} />
         </ImageListItem>
       ))}
     </ImageList>
@@ -89,25 +108,26 @@ const DesktopComponent = () =>
             alt={item.title}
             loading="lazy"
           />
-           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'NES Controller' }} />
+           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontFamily: 'NES Controller' }} />
         </ImageListItem>
       ))}
     </ImageList>
   </Box>
  ;
 
-const Layouts = () => {
+const Layouts = ({Classes}) => {
   const { width } = useWindowSize();
   const breakpoint = 1200;
 
-  return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
+  return width < breakpoint ? <MobileComponent classes={Classes}/> : <DesktopComponent classes={Classes}/>;
 };
 
 export default function Scarcity() {
+  const classes = useStyles();
   return (
     <>
         <Wrapper>
-          <Layouts />
+          <Layouts Classes={classes}/>
         </Wrapper>
     </> 
   )
