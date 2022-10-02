@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Image from 'next/image';
 
 const useWindowSize = () => {
@@ -34,7 +35,7 @@ const MobileComponent = () =>
   <ContentMob>
     <div>
       <h1><u><span className="h1color">Scarcity</span></u></h1>
-      <h2><br></br> Some armors were made with rare and precious materials (Bronze, Silver, Gold, Diamond and ? )<br></br><br></br></h2>
+      <h2><br></br> Five levels of armor are available, Legacy, Heroic, Epic, Fusion and Legendary, scientists are currently working on an option that can be added to all levels...<br></br><br></br></h2>
     </div>
     <Box
         component="img"
@@ -59,7 +60,7 @@ const DesktopComponent = () =>
   <Content>
       <Box>
         <h1><u><span className="h1color">Scarcity</span></u></h1>
-        <h2><br></br> Some armors were made with rare and precious materials. <br></br></h2>
+        <h2><br></br> Five levels of armor are available, Legacy, Heroic, Epic, Fusion and Legendary, scientists are currently working on an option that can be added to all levels.... <br></br></h2>
       </Box>
     </Content>
     <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={4} gap={50}>
@@ -73,6 +74,7 @@ const DesktopComponent = () =>
             alt={item.title}
             loading="lazy"
           />
+           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'NES Controller' }} />
         </ImageListItem>
       ))}
     </ImageList>
@@ -99,19 +101,19 @@ export default function Scarcity() {
 const itemData = [
   {
     img: '/images/Original.png',
-    title: 'Original',
+    title: 'Legacy',
   },
   {
     img: '/images/Tranium.png',
-    title: 'Tranium',
+    title: 'Heroic',
   },
   {
     img: '/images/Gold.png',
-    title: 'Gold',
+    title: 'Epic',
   },
   {
     img: '/images/SM.png',
-    title: 'SM',
+    title: 'Fusion',
   },
 ];
 
@@ -139,7 +141,7 @@ const Content = styled.div`
     font-family: "Bebas Regular";
     font-size: calc(1rem + 0.4vw);
     color: rgb(255, 255, 255);
-    /* margin-right: 10%; */
+    margin-right: 30%;
   }
   u {
     text-decoration: underline;
