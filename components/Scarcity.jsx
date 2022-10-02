@@ -63,8 +63,23 @@ const DesktopComponent = () =>
         <h2><br></br> Five levels of armor are available, Legacy, Heroic, Epic, Fusion and Legendary, scientists are currently working on an option that can be added to all levels.... <br></br></h2>
       </Box>
     </Content>
-    <ImageList sx={{ width: 900, height: 304, marginLeft:'20%' }} cols={4} gap={50}>
+    <ImageList sx={{ width: 950, height: 350, marginLeft:'19%' }} cols={4} gap={50}>
       {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <Image
+            src={`${item.img}?w=150&h=150&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=150&h=150&fit=crop&auto=format&dpr=2 2x`}
+            height={200} // Desired size with correct aspect ratio
+            width={200} // Desired size with correct aspect ratio
+            alt={item.title}
+            loading="lazy"
+          />
+           <ImageListItemBar position="below" title={item.title} style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'NES Controller' }} />
+        </ImageListItem>
+      ))}
+    </ImageList>
+    <ImageList sx={{ width: 500, height: 250, marginLeft:'31%' }} cols={2} gap={50}>
+      {itemData2.map((item) => (
         <ImageListItem key={item.img}>
           <Image
             src={`${item.img}?w=150&h=150&fit=crop&auto=format`}
@@ -114,6 +129,17 @@ const itemData = [
   {
     img: '/images/SM.png',
     title: 'Fusion',
+  },
+];
+
+const itemData2 = [
+  {
+    img: '/images/interro-aseprite.png',
+    title: 'Legendary',
+  },
+  {
+    img: '/images/interro-aseprite.png',
+    title: 'Option',
   },
 ];
 
