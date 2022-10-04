@@ -76,7 +76,7 @@ export default function Giveaway() {
     console.log(discordInputRef.current.value);
     axios
       .get(
-        `https://hgc-back-end-dev.herokuapp.com/api/disc/${discordInputRef.current.value
+        `https://meg4mint-back-end-dev.herokuapp.com/api/disc/${discordInputRef.current.value
           // `http://localhost:1314/api/disc/${discordInputRef.current.value
           .replaceAll(" ", "%20")
           .replaceAll("#", "%23")}`
@@ -113,7 +113,7 @@ export default function Giveaway() {
     axios
       .get(
         // `https://hgc-back-end.herokuapp.com/api/user/${twitterInputRef.current.value
-        `https://hgc-back-end-dev.herokuapp.com/api/twit/${twitterInputRef.current.value
+        `https://meg4mint-back-end-dev.herokuapp.com/api/twit/${twitterInputRef.current.value
           // `http://localhost:1314/api/twit/${twitterInputRef.current.value
 
           .replaceAll(" ", "%20")
@@ -172,7 +172,7 @@ export default function Giveaway() {
       //   .post("http://localhost:1314/api/participate", userData, {
       axios
         .post(
-          "https://hgc-back-end-dev.herokuapp.com/api/participate",
+          "https://meg4mint-back-end-dev.herokuapp.com/api/participate",
           userData,
           {
             headers: {
