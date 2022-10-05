@@ -70,7 +70,6 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: '#fff',
     color: '#000',
-    // padding: '0%',
     '&:hover': {
       backgroundColor: '#fff',
       color: '#02efee',
@@ -223,7 +222,7 @@ export default function DrawerAppBar(props) {
           </IconButton>
           <Box className={classes.hide} sx={{ mr: 20, display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ m: 3, color: '#fff',  ':hover': { color: '#02efee',}, }} style={{ fontFamily: 'NES Controller', fontSize: '25px' }}>
+              <Button key={item} sx={{ m: 3, color: '#fff',  ':hover': { color: '#02efee',}, }} style={{ fontFamily: 'NES Controller', fontSize: '30px' }}>
                 <Link
                 activeClass="active"
                 to={item}
@@ -239,7 +238,7 @@ export default function DrawerAppBar(props) {
             {/* <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Giveaway
             </Button> */}
-            <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
+            <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '30px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Mint
             </Button>
           </Box>
