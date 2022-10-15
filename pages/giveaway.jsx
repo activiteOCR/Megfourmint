@@ -358,7 +358,8 @@ export default function Giveaway() {
           <button
             className="btn-participate"
             disabled={
-              !twitterVerified || !discordVerified || !captchaVerified
+              // !twitterVerified || !discordVerified || !captchaVerified
+              !twitterVerified || !discordVerified
             }
             onClick={participate}
           >
