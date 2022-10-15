@@ -95,10 +95,10 @@ export default function Giveaway() {
         console.error(err);
       });
   };
-  const captchaHandler = (value) => {
-    // console.log(value);
-    setCaptchaVerified((prev) => true);
-  };
+  // const captchaHandler = (value) => {
+  //   // console.log(value);
+  //   setCaptchaVerified((prev) => true);
+  // };
   const follow = () => {
     window.open("https://twitter.com/Meg4mint");
   };
@@ -163,18 +163,15 @@ export default function Giveaway() {
 
     if (
       twitterVerified &&
-      discordVerified &&
+      discordVerified 
       //walletVerified &&
-      captchaVerified
+      //captchaVerified
     ) {
       // axios.post("https://hgc-back-end-dev.herokuapp.com/api/participate", userData, {
       // axios
       //   .post("http://localhost:1314/api/participate", userData, {
       axios
-        .post(
-          "https://meg4mint-back-end-dev.herokuapp.com/api/participate",
-          userData,
-          {
+        .post("https://meg4mint-back-end-dev.herokuapp.com/api/participate",userData, {
             headers: {
               "Content-type": "application/json",
             },
@@ -199,7 +196,6 @@ export default function Giveaway() {
 
   return (
     <Wrapper>
-      {/* <DrawAppBar /> */}
       <Content>
         {/* <img src={logo} alt="logo" className="logo" /> */}
         {/* <Image
@@ -211,7 +207,7 @@ export default function Giveaway() {
             /> */}
         <Header>
           <h1>
-            GIVEAWAY : Crypto spots, 100 USDT to earn
+            GIVEAWAY : Crypto spots, 50 USDT to earn
             <p> Raffle date to be defined (GMT+2)</p>
           </h1>
           {/* <img src={ledger} alt="ledger" /> */}
@@ -339,7 +335,7 @@ export default function Giveaway() {
               )}
             </StepButton>
           </StepContainer>{" "}
-          <StepContainer area="main-step3">
+          {/* <StepContainer area="main-step3">
             <StepNumber>03</StepNumber>
             <StepDescription>
               I AM
@@ -357,7 +353,7 @@ export default function Giveaway() {
                 onChange={captchaHandler}
               />
             </StepButton>
-          </StepContainer>
+          </StepContainer> */}
           <HorizontalSeparator />
           <button
             className="btn-participate"
@@ -371,7 +367,7 @@ export default function Giveaway() {
         </Main>
         <Prize>
           <p>
-            ✨ CRYPTO OFFER! 👉 55 USDT for the first - 30 USDT for the second & 15 USDT for the third!<br></br><br></br>
+            ✨ CRYPTO OFFER! 👉 30 USDT for the first - 15 USDT for the second & 5 USDT for the third!<br></br><br></br>
             ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
           </p>
           {/* <img src={ledger_prize} alt="ledger" /> */}
@@ -468,9 +464,12 @@ const Main = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-template-areas:
-    "main-step1 main-step2 main-step3 main-step4 "
+    /* "main-step1 main-step2 main-step3 main-step4 "
     "horizontal-bar horizontal-bar horizontal-bar horizontal-bar"
-    "participate-button participate-button participate-button participate-button";
+    "participate-button participate-button participate-button participate-button"; */
+    "main-step1 main-step2"
+    "horizontal-bar horizontal-bar"
+    "participate-button participate-button";
   grid-gap: 2% 1%;
   border: 1px solid #02efee;
   width: 100%;
@@ -513,7 +512,7 @@ const Main = styled.div`
     grid-template-areas:
       "main-step1"
       "main-step2"
-      "main-step3"
+      /*"main-step3"*/
       /* "main-step4" */
       "horizontal-bar"
       "participate-button";
