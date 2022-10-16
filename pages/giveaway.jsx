@@ -368,7 +368,7 @@ export default function Giveaway() {
         </Main>
         <Prize>
           <p>
-            ✨ CRYPTO OFFER! 👉 30 USDT for the first - 15 USDT for the second & 5 USDT for the third!<br></br><br></br>
+          <br></br><br></br>✨ CRYPTO OFFER! 👉 30 USDT for the first - 15 USDT for the second & 5 USDT for the third!<br></br><br></br>
             ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
           </p>
           {/* <img src={ledger_prize} alt="ledger" /> */}
@@ -396,7 +396,7 @@ const Wrapper = styled.div`
   right: 0; */
   height: 100%;
   width: 100%;
-  background-image: url("/images/fond.png");
+  background-image: url("/images/fond4.png");
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;  */
@@ -673,7 +673,7 @@ const Prize = styled.div`
   text-align: center;
   /* background-color: #02efee; */
   /* background: linear-gradient(#07001F,#070047); */
-  padding: 140px 3%;
+  padding: 50px 3%;
   width: 100%;
   height: max-content;
   gap: 2%;
