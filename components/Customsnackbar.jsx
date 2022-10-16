@@ -24,7 +24,7 @@ export default function Customsnackbar({open, setOpen, message, iconSeverity}) {
             <Alert
             style={{
                 fontSize: "20px",
-                backgroundColor: "#ffdd00",
+                backgroundColor: "#02efee",
                 color: "black",
             }}
             onClose={handleClose}
