@@ -399,10 +399,11 @@ const Wrapper = styled.div`
   background-image: url("/images/fond.png");
   background-size:     cover;
   background-repeat:   no-repeat;
-  background-position: center center; 
-  /* margin: 100px auto; */
-  /* margin: 0 auto; */
-  /* background-color: #10100f; */
+  background-position: center center;  */
+  /* margin: 10px auto;
+  margin: 0 0;
+  /* background: linear-gradient(#07001F,#070047); */
+  /* background-color: #02efee; */
   /* background-image: url(${bgImage});
   background-size:     cover;                  
   background-repeat:   no-repeat;
@@ -420,7 +421,7 @@ const Content = styled.div`
   /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: center;
   align-self: center;
   width: 100%;
@@ -429,12 +430,13 @@ const Content = styled.div`
 `;
 const Header = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 1% 4%;
-  /* background-color: #1d1d1bd7; */
-  background: linear-gradient(#07001F,#070047);
+  /* background-color: #02efee; */
+  /* background: linear-gradient(#07001F,#070047); */
   h1 {
     font-family: "NES Controller";
     font-size: clamp(2.1875rem, -0.313rem + 5.208vw, 4.375rem);
@@ -462,8 +464,10 @@ const Header = styled.div`
 const Main = styled.div`
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content max-content max-content;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content max-content; */
   grid-template-areas:
     /* "main-step1 main-step2 main-step3 main-step4 "
     "horizontal-bar horizontal-bar horizontal-bar horizontal-bar"
@@ -475,7 +479,7 @@ const Main = styled.div`
   border: 1px solid #02efee;
   width: 100%;
   height: 100%;
-  padding: 1% 2%;
+  padding: 1% 5%;
   background-color: #1d1d1bd7;
   .btn-participate {
     grid-area: participate-button;
@@ -525,6 +529,8 @@ const StepContainer = styled.div`
   width: 100%;
   grid-area: ${(props) => props.area};
   display: grid;
+  justify-content: space-evenly;
+  align-items: center;
   min-height: max-content;
   grid-template-rows: max-content 1fr max-content max-content;
   grid-template-areas:
@@ -665,9 +671,9 @@ const Prize = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  /* background-color: #1d1d1bd7; */
-  background: linear-gradient(#07001F,#070047);
-  padding: 18px 3%;
+  /* background-color: #02efee; */
+  /* background: linear-gradient(#07001F,#070047); */
+  padding: 140px 3%;
   width: 100%;
   height: max-content;
   gap: 2%;
@@ -678,7 +684,7 @@ const Prize = styled.div`
   }
   p {
     font-family: "GT America";
-    font-size: 20px; //last -15%
+    font-size: 30px; //last -15%
   }
   @media (max-width: ${MAX_WIDTH}px) {
     flex-direction: column;
