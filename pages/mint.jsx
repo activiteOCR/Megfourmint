@@ -8,10 +8,10 @@ import styles from '../styles/Theme.module.css';
 import Image from 'next/image';
 // Put Your NFT Drop Contract address from the dashboard here
 // const myNftDropContractAddress = '0x322067594DBCE69A9a9711BC393440aA5e3Aaca1';
-const myNftDropContractAddress = '0x1c48f9C78Ade6136590a53157B9FbC0507394B76';
+const {myNftDropContractAddress} = '0x1c48f9C78Ade6136590a53157B9FbC0507394B76';
 const Mint = () => {
     // const nftDrop = useNFTDrop(myNftDropContractAddress);
-    const nftDrop = useSignatureDrop(myNftDropContractAddress);
+    const nftDrop = useContract("0x1c48f9C78Ade6136590a53157B9FbC0507394B76", "signature-drop"); //useSignatureDrop(myNftDropContractAddress);
     const address = useAddress();
     const connectWithMetamask = useMetamask();
     const connectWithWalletConnect = useWalletConnect();
@@ -22,7 +22,7 @@ const Mint = () => {
     // The amount the user claims
     const [quantity, setQuantity] = useState(1); // default to 1
     // Load contract metadata
-    const { data: contractMetadata } = useContractMetadata(myNftDropContractAddress);
+    const { data: contractMetadata } = useContractMetadata('0x1c48f9C78Ade6136590a53157B9FbC0507394B76');
     // Load claimed supply and unclaimed supply
     const { data: unclaimedSupply } = useUnclaimedNFTSupply(nftDrop);
     const { data: claimedSupply } = useClaimedNFTSupply(nftDrop);
