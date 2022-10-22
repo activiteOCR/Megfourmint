@@ -1,4 +1,4 @@
-import { ChainId, useClaimedNFTSupply, useContractMetadata, useNetwork, useNFTDrop,useSignatureDrop, useUnclaimedNFTSupply, useActiveClaimCondition, useClaimNFT, useWalletConnect, useCoinbaseWallet, } from '@thirdweb-dev/react';
+import { ChainId, useClaimedNFTSupply, useContract, useContractMetadata, useNetwork, useNFTDrop,useSignatureDrop, useUnclaimedNFTSupply, useActiveClaimCondition, useClaimNFT, useWalletConnect, useCoinbaseWallet, } from '@thirdweb-dev/react';
 import { useNetworkMismatch } from '@thirdweb-dev/react';
 import { useAddress, useMetamask } from '@thirdweb-dev/react';
 import { formatUnits, parseUnits } from 'ethers/lib/utils';
@@ -11,7 +11,7 @@ import Image from 'next/image';
 //const myNftDropContractAddress = '0x1c48f9C78Ade6136590a53157B9FbC0507394B76';
 const Mint = () => {
     // const nftDrop = useNFTDrop(myNftDropContractAddress);
-    const nftDrop = useContract("0x1c48f9C78Ade6136590a53157B9FbC0507394B76", "signature-drop"); //useSignatureDrop(myNftDropContractAddress);
+    const { contract: nftDrop } = useContract("0x1c48f9C78Ade6136590a53157B9FbC0507394B76", "signature-drop"); //useSignatureDrop(myNftDropContractAddress);
     const address = useAddress();
     const connectWithMetamask = useMetamask();
     const connectWithWalletConnect = useWalletConnect();
@@ -22,7 +22,7 @@ const Mint = () => {
     // The amount the user claims
     const [quantity, setQuantity] = useState(1); // default to 1
     // Load contract metadata
-    const { data: contractMetadata } = useContractMetadata('0x1c48f9C78Ade6136590a53157B9FbC0507394B76');
+    const { data: contractMetadata } = useContractMetadata(nftDrop);
     // Load claimed supply and unclaimed supply
     const { data: unclaimedSupply } = useUnclaimedNFTSupply(nftDrop);
     const { data: claimedSupply } = useClaimedNFTSupply(nftDrop);
