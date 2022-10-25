@@ -11,7 +11,7 @@ import Image from 'next/image';
 //const myNftDropContractAddress = '0x1c48f9C78Ade6136590a53157B9FbC0507394B76';
 const Mint = () => {
     // const nftDrop = useNFTDrop(myNftDropContractAddress);
-    const { contract: nftDrop } = useContract("0x1c48f9C78Ade6136590a53157B9FbC0507394B76", "signature-drop"); //useSignatureDrop(myNftDropContractAddress);
+    const { contract: nftDrop } = useContract("0xCa8aed9078f3acDCA8b06c906F71A1C4DCf7c72c", "signature-drop"); //useSignatureDrop(myNftDropContractAddress);
     const address = useAddress();
     const connectWithMetamask = useMetamask();
     const connectWithWalletConnect = useWalletConnect();
@@ -105,7 +105,8 @@ const Mint = () => {
           {address ? (
         // Sold out or show the claim button
         isSoldOut ? (<div>
-                <h2>Sold Out</h2>
+              <h2>Coming Soon on the Ethereum Mainnet</h2>
+                {/* <h2>Sold Out</h2> */}
               </div>) : isNotReady ? (<div>
                 <h2>Not ready to be minted yet</h2>
               </div>) : (<>
