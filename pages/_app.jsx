@@ -1,4 +1,5 @@
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { Analytics } from '@vercel/analytics/react';
 import "../styles/globals.css";
 import Head from "next/head";
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
           <meta name="keywords" content="Pixel Art, Freemint, No royalties, NFT, NFTs, ETH, NFTartiste, NFTartwork"/>
         </Head>
         <Component {...pageProps}/>
+        <Analytics />
       </ThirdwebProvider>
     );
   }
