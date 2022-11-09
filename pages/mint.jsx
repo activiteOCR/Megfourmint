@@ -25,7 +25,7 @@ import Image from "next/image";
 const Mint = () => {
   // const nftDrop = useNFTDrop(myNftDropContractAddress);
   const { contract: nftDrop } = useContract(
-    "0x1c48f9C78Ade6136590a53157B9FbC0507394B76",
+    "0xCa8aed9078f3acDCA8b06c906F71A1C4DCf7c72c",
     "signature-drop"
   ); //useSignatureDrop(myNftDropContractAddress);
   const address = useAddress();
