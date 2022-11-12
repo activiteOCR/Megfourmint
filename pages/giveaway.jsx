@@ -7,15 +7,16 @@ import twitter from "../public/images/twitter.png";
 import discord from "../public/images/discord.png";
 import bgImage from "../public/images/background.jpg";
 // import metamask from "../../assets/images/metamask.png";
-import pill from "../public/images/pilule.gif";
-import usdt from "../public/images/usdt.gif";
+// import pill from "../public/images/pilule.gif";
+// import usdt from "../public/images/usdt.gif";
+import legend from "../public/images/legend.jpg";
 // import ledger_prize from "../../assets/images/ledger_color.png";
 // import ledger from "../../assets/images/ledger.gif";
 // import checkIcon from "../public/images/checked.svg";
 // import failIcon from "../public/images/fail.svg";
 // import logo from "../public/images/logo.png";
 import Customsnackbar from "../components/Customsnackbar";
-import Image from 'next/image';
+import Image from "next/image";
 
 const MAX_WIDTH = 1000;
 const tab = [
@@ -153,7 +154,7 @@ export default function Giveaway() {
   //         .catch((err) => {
   //           console.error("error", err);
   //         });
-  //     } else handleSnackBar("Please install metamask", true);  
+  //     } else handleSnackBar("Please install metamask", true);
   //   };
   const participate = () => {
     // console.log("twitter ", userData.twitter);
@@ -163,7 +164,7 @@ export default function Giveaway() {
 
     if (
       twitterVerified &&
-      discordVerified 
+      discordVerified
       //walletVerified &&
       //captchaVerified
     ) {
@@ -171,14 +172,20 @@ export default function Giveaway() {
       // axios
       //   .post("http://localhost:1314/api/participate", userData, {
       axios
-        .post("https://meg4mint-back-end-dev.herokuapp.com/api/participate",userData, {
+        .post(
+          "https://meg4mint-back-end-dev.herokuapp.com/api/participate",
+          userData,
+          {
             headers: {
               "Content-type": "application/json",
             },
           }
         )
         .then(() => {
-          handleSnackBar("Participation confirmed, you have a message on discord Meg4mint-giveaway", false);
+          handleSnackBar(
+            "Participation confirmed, you have a message on discord Meg4mint-giveaway",
+            false
+          );
         })
         .catch(handleSnackBar("You have already participated.", true));
       // post req to server : userData object
@@ -190,8 +197,8 @@ export default function Giveaway() {
   };
   const handleSnackBar = (_message, _iconSeverity) => {
     setOpen(true);
-    setMessage(prev => _message)
-    setIconSeverity(prev => _iconSeverity)
+    setMessage((prev) => _message);
+    setIconSeverity((prev) => _iconSeverity);
   };
 
   return (
@@ -207,17 +214,17 @@ export default function Giveaway() {
             /> */}
         <Header>
           <h1>
-            GIVEAWAY : Crypto spots, 50 USDT to earn
-            <p> Raffle date to be defined (GMT+2)</p>
+            GIVEAWAY : super, ultra, legendary, 1/1 NFT
+            <p> Raffle condition at least 50 particpants or after one week</p>
           </h1>
           {/* <img src={ledger} alt="ledger" /> */}
           {/* <img src={pill} alt="pill" className="pill" /> */}
           <Image
             className="pill"
-            src={usdt} // Route of the image file
-            height={100} // Desired size with correct aspect ratio
-            width={100} // Desired size with correct aspect ratio
-            alt="usdt"
+            src={legend} // Route of the image file
+            height={150} // Desired size with correct aspect ratio
+            width={150} // Desired size with correct aspect ratio
+            alt="legendary"
           />
         </Header>
         <Main>
@@ -233,11 +240,7 @@ export default function Giveaway() {
             <StepVerification>
               <p>Your twitter handle :</p>
               <div className="input-container">
-                <input
-                  type="text"
-                  placeholder="@User"
-                  ref={twitterInputRef}
-                />
+                <input type="text" placeholder="@User" ref={twitterInputRef} />
                 {/* <img onClick={follow} src={twitter} alt="twitter" /> */}
                 <Image
                   onClick={follow}
@@ -368,12 +371,20 @@ export default function Giveaway() {
         </Main>
         <Prize>
           <p>
-          <br></br><br></br>✨ CRYPTO OFFER! 👉 30 USDT for the first - 15 USDT for the second & 5 USDT for the third!<br></br><br></br>
+            <br></br>
+            <br></br>✨ LEGENDARY GIVEAWAY! 👉 Members you will have a decent
+            shot at possibly earning one Meg4mint legendary<br></br>
+            <br></br>
             ⭐⭐⭐ Raffle via smartcontract and true random number ⭐⭐⭐
           </p>
           {/* <img src={ledger_prize} alt="ledger" /> */}
         </Prize>
-        <Customsnackbar open={open} setOpen={setOpen} message={message} iconSeverity={iconSeverity} />
+        <Customsnackbar
+          open={open}
+          setOpen={setOpen}
+          message={message}
+          iconSeverity={iconSeverity}
+        />
         {/* <Image
               className="logo"
               src={logo} // Route of the image file
@@ -397,9 +408,10 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   background-image: url("/images/fond4.png");
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  */
   /* margin: 10px auto;
   margin: 0 0;
   /* background: linear-gradient(#07001F,#070047); */
@@ -647,7 +659,8 @@ const StepVerification = styled.div`
       object-fit: contain;
       width: 25px;
       transition: transform 0.1s ease-in;
-      filter: brightness(0) saturate(100%) invert(92%) sepia(88%) saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
+      filter: brightness(0) saturate(100%) invert(92%) sepia(88%)
+        saturate(2585%) hue-rotate(100deg) brightness(94%) contrast(99%);
     }
     img:hover {
       transform: scale(1.2);
@@ -693,7 +706,7 @@ const Prize = styled.div`
     padding: 4% 8%;
     gap: 10px;
     p {
-    font-size: 20px; //last -15%
-  }
+      font-size: 20px; //last -15%
+    }
   }
 `;
