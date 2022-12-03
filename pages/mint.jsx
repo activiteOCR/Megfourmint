@@ -102,8 +102,8 @@ const Mint = () => {
             {/* Description of your NFT Collection */}
             {/* <p className={styles.description}>{contractMetadata?.description}</p> */}
             <p>
-              Welcome on the minting page, Meg4mint are free and there is no
-              royalty on the secondary market
+              Welcome on the minting page, Meg4mint NFTs are free - OG mint (3
+              NFTs per wallet) - 05/12 - 6:00PM CET
             </p>
           </div>
           {/* Amount claimed so far */}
