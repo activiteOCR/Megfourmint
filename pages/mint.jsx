@@ -64,7 +64,7 @@ const Mint = () => {
   // Function to mint/claim an NFT
   const mint = async () => {
     if (isOnWrongNetwork) {
-      switchNetwork && switchNetwork(ChainId.Goerli);
+      switchNetwork && switchNetwork(ChainId.Mainnet);
       return;
     }
     claimNFT.mutate(
