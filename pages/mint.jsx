@@ -26,7 +26,7 @@ const Mint = () => {
   return (
     <div align="center">
       <iframe
-        src="https://gateway.ipfscdn.io/ipfs/Qmcine1gpZUbQ73nk7ZGCcjKBVFYXrEtqrhujXk3HDQ6Nn/erc721.html?contract=0xcB324a4C479D7b33d3377932227c675f5eF3ec9B&chainId=1&rpcUrl=https%3A%2F%2Feth-mainnet.g.alchemy.com%2Fv2%2FVoKQ0id_WSY3NTUqoSj1aVj1N3Dy7hXt&theme=dark&primaryColor=blue"
+        src="https://gateway.ipfscdn.io/ipfs/Qmcine1gpZUbQ73nk7ZGCcjKBVFYXrEtqrhujXk3HDQ6Nn/erc721.html?contract=0xcB324a4C479D7b33d3377932227c675f5eF3ec9B&chainId=1"
         width="600px"
         height="600px"
         //style="max-width:100%;"
