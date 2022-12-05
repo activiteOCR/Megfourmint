@@ -36,7 +36,7 @@ const Mint = () => {
   const claimNFT = useClaimNFT(nftDrop);
   const [, switchNetwork] = useNetwork();
   // The amount the user claims
-  const [quantity, setQuantity] = useState(1); // default to 1
+  const [quantity, setQuantity] = useState(3); // default to 1
   // Load contract metadata
   const { data: contractMetadata } = useContractMetadata(nftDrop);
   // Load claimed supply and unclaimed supply
