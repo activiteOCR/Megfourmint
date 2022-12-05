@@ -25,9 +25,12 @@ import Image from "next/image";
 const Mint = () => {
   // const nftDrop = useNFTDrop(myNftDropContractAddress);
   const { contract: nftDrop } = useContract(
-    "0xcB324a4C479D7b33d3377932227c675f5eF3ec9B",
-    "signature-drop"
-  ); //useSignatureDrop(myNftDropContractAddress);
+    "0xcB324a4C479D7b33d3377932227c675f5eF3ec9B"
+  );
+  // const { contract: nftDrop } = useContract(
+  //   "0xcB324a4C479D7b33d3377932227c675f5eF3ec9B",
+  //   "signature-drop"
+  // ); //useSignatureDrop(myNftDropContractAddress);
   const address = useAddress();
   const connectWithMetamask = useMetamask();
   const connectWithWalletConnect = useWalletConnect();
