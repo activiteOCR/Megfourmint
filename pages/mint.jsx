@@ -261,7 +261,7 @@ const Mint = () => {
   const { contract: nftDrop } = useContract(myNftDropContractAddress);
 
   const address = useAddress();
-  const [quantity, setQuantity] = useState(3);
+  const [quantity, setQuantity] = useState(2);
 
   const { data: contractMetadata } = useContractMetadata(nftDrop);
 
@@ -469,8 +469,8 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Meg4mint NFTs are free (3 NFTs per
-                wallet) - OG Mint will be closed 08/12 - 6:00PM CET
+                Welcome on the minting page, Meg4mint NFTs are free - WL Mint (2
+                NFTs per wallet) will be open 19/12 - 7:00PM CET
               </p>
             </div>
 
