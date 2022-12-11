@@ -470,7 +470,7 @@ const Mint = () => {
               </p> */}
               <p>
                 Welcome on the minting page, Meg4mint NFTs are free - WL Mint (2
-                NFTs per wallet) will be open 19/12 - 7:00PM CET
+                NFTs per wallet) will be open 23/12 - 7:00PM CET
               </p>
             </div>
 
