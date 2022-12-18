@@ -473,7 +473,13 @@ const Mint = () => {
                 NFTs per wallet) will be open 23/12 - 7:00PM CET
               </p>
             </div>
-
+            <Image
+              className={styles.image}
+              src="/images/Phases.png" // Route of the image file
+              height={620} // Desired size with correct aspect ratio
+              width={1156} // Desired size with correct aspect ratio
+              alt="Phases"
+            />
             <div className={styles.imageSide}>
               {/* Image Preview of NFTs */}
               {/* <img
