@@ -469,8 +469,8 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Meg4mint NFTs are free - WL Mint (2
-                NFTs per wallet) will be open 23/12 - 7:00PM CET
+                Welcome on the minting page, Meg4mint NFTs are free -
+                Partnership Mint will be open 27/12 - 5:00PM CET
               </p>
             </div>
             <Image
