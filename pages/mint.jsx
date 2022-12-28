@@ -261,7 +261,7 @@ const Mint = () => {
   const { contract: nftDrop } = useContract(myNftDropContractAddress);
 
   const address = useAddress();
-  const [quantity, setQuantity] = useState(2);
+  const [quantity, setQuantity] = useState(1);
 
   const { data: contractMetadata } = useContractMetadata(nftDrop);
 
