@@ -469,15 +469,15 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Meg4mint NFTs are free -
-                Partnership Mint will be open 27/12 - 5:00PM CET
+                Welcome on the minting page, Meg4mint NFTs are free - Public
+                Mint 2 will be open 28/12 - 5:00PM CET
               </p>
             </div>
             <Image
               className={styles.image}
               src="/images/Phases.png" // Route of the image file
               height={620} // Desired size with correct aspect ratio
-              width={1156} // Desired size with correct aspect ratio
+              width={1276} // Desired size with correct aspect ratio
               alt="Phases"
             />
             <div className={styles.imageSide}>
