@@ -469,8 +469,8 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Meg4mint NFTs are free - Public
-                Mint 2 will be open 28/12 - 5:00PM CET
+                Welcome on the minting page, Meg4mint NFTs are free - Soldout
+                officialy since 28/12
               </p>
             </div>
             <Image
