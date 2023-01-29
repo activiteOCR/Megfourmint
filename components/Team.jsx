@@ -2,12 +2,6 @@ import * as React from 'react';
 import { useState, useEffect, useContext, createContext } from "react"
 import Grid from '@mui/material/Grid'; // Grid version 1
 
-// import Discord from "../public/images/discord.svg";
-// import Twitter from "../public/images/twitter.svg";
-// import Instagram from "../public/images/instagram.svg";
-// import LinkedIn from "../public/images/LinkedIn2.svg";
-// import LinkedIn3 from "../public/images/LinkedIn3.svg";
-
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
