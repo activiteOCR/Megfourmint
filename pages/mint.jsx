@@ -232,8 +232,9 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Meg4mint NFTs are free - Soldout
-                officialy since 28/12
+                Welcome on the minting page, Legendary drop is now open 
+                MP(WL) : 0.06eth
+                - MP(Public) : 0.1eth
               </p>
             </div>
             <Image
