@@ -7,7 +7,9 @@ import Head from "next/head";
 const activeChainId = ChainId.Mainnet;
 function MyApp({ Component, pageProps }) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider desiredChainId={activeChainId} sdkOptions={{
+      gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
+    }}>
       <Head>
         <title>Meg4mint Website</title>
         <meta

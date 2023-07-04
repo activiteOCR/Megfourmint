@@ -232,7 +232,7 @@ const Mint = () => {
                 {contractMetadata?.description}
               </p> */}
               <p>
-                Welcome on the minting page, Legendary drop is now open 
+                Welcome on the minting page, Legendary drop is now open for WL
                 MP(WL) : 0.06eth
                 - MP(Public) : 0.1eth
               </p>
