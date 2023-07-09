@@ -1,16 +1,21 @@
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { Mainnet } from '@thirdweb-dev/chains';
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 import Head from "next/head";
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mainnet;
+//const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }) {
+  
   return (
-    <ThirdwebProvider desiredChainId={activeChainId} sdkOptions={{
-      gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
-    }}>
+    // <ThirdwebProvider desiredChainId={activeChainId} sdkOptions={{
+    //   gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
+    // }}>
+      <ThirdwebProvider activeChain={Mainnet} sdkOptions={{
+          gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
+      }}>
       <Head>
         <title>Meg4mint Website</title>
         <meta
