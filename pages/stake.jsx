@@ -37,7 +37,7 @@ const Stake = () => {
   const { data: stakedTokens } = useContractRead(
     contract,
     "getStakeInfo",
-    address
+    [address]
   )
 
   useEffect(() => {
