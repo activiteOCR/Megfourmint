@@ -1,5 +1,5 @@
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
-import { Mainnet } from '@thirdweb-dev/chains';
+import { Ethereum } from '@thirdweb-dev/chains';
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 import Head from "next/head";
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     // <ThirdwebProvider desiredChainId={activeChainId} sdkOptions={{
     //   gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
     // }}>
-      <ThirdwebProvider activeChain={Mainnet} sdkOptions={{
+      <ThirdwebProvider activeChain={Ethereum} sdkOptions={{
           gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],
       }}>
       <Head>
