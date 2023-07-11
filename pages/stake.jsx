@@ -44,7 +44,9 @@ const Stake = () => {
     if (!contract || !address) return
 
     async function loadClaimableRewards() {
-      const stakeInfo = await contract?.call("getStakeInfo", address)
+      console.log(address)
+      //const stakeInfo = await contract?.call("getStakeInfo", address)
+      const stakeInfo = await contract?.call("getStakeInfo", [address])
       setClaimableRewards(stakeInfo[1])
     }
 

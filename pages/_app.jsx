@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     //   gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
     // }}>
       <ThirdwebProvider activeChain={Mainnet} sdkOptions={{
-          gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
+          gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],
       }}>
       <Head>
         <title>Meg4mint Website</title>
