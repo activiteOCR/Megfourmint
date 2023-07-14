@@ -86,23 +86,24 @@
 
 
 .nftBoxGrid {
-  width: 1200px;
+  width: 975px;
   max-width: 95vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2%;
-  margin-top: 28px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
 .nftBox {
   border-radius: 16px;
   border: 1px solid #ccc;
-  width: 19%;
+  width: 31%;
   min-height: 200px;
-  padding: 16px;
+  margin-bottom: 20px;
+  padding: 0px;
 }
 
 .optionSelectBox {
