@@ -44,8 +44,6 @@ const Stake = () => {
     if (!contract || !address) return
 
     async function loadClaimableRewards() {
-      console.log(address)
-      //const stakeInfo = await contract?.call("getStakeInfo", address)
       const stakeInfo = await contract?.call("getStakeInfo", [address])
       setClaimableRewards(stakeInfo[1])
     }
@@ -56,6 +54,7 @@ const Stake = () => {
   async function stakeNft(id) {
     if (!address) return
 
+    console.log(id);
     const isApproved = await nftDropContract?.isApproved(
       address,
       stakingContractAddress
@@ -63,7 +62,7 @@ const Stake = () => {
     if (!isApproved) {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true)
     }
-    await contract?.call("stake", [id])
+    await contract?.call("stake", [[id]])
   }
 
   if (isLoading) {
