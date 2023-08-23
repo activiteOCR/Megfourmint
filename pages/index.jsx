@@ -5,6 +5,8 @@ import Team from "../components/Team";
 import TheFaq from "../components/TheFaq";
 import Footer from "../components/Footer";
 import DrawAppBar from "../components/DrawAppBar";
+import Roadmap from "../components/Roadmap";
+import Tokenomics from "../components/Tokenomics";
 
 const HomePage = () => {
   return (
@@ -12,6 +14,12 @@ const HomePage = () => {
       <DrawAppBar />
       <Element id="8-BIT" name="8-BIT">
         <Eigthbit />
+      </Element>
+      <Element id="ROADMAP" name="ROADMAP">
+        <Roadmap />
+      </Element>
+      <Element id="TOKENOMICS" name="TOKENOMICS">
+        <Tokenomics />
       </Element>
       <Element id="SCARCITY" name="SCARCITY">
         <Scarcity />

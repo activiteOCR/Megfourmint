@@ -4,7 +4,8 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 import Discord from "../public/images/discord.svg";
 import Twitter from "../public/images/twitter.svg";
-// import Instagram from "../public/images/instagram.svg";
+import Meg from "../public/images/meg.svg";
+import Gitbook from "../public/images/gitbook.svg";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -24,11 +25,11 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
-import Image from 'next/image';
+//import Image from 'next/image';
 import { Link } from "react-scroll";
 
 const drawerWidth = 200;
-const navItems = ['8-BIT', 'SCARCITY', 'LAB', 'FAQ' ];
+const navItems = ['8-BIT','ROADMAP', 'TOKENOMICS', 'SCARCITY', 'LAB', 'FAQ' ];
 
 // const theme = createTheme({
 //   breakpoints: {
@@ -58,13 +59,17 @@ const useStyles = makeStyles({
     color: 'white',
     height: 65,
     "& .MuiAppBar-root": {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
+      // display: 'flex',
+      // flexDirection: 'row',
+       justifyContent: 'flex-end',
+      // alignItems: 'center',
     },
     "& .MuiToolbar-root": {
-      paddingLeft: '10px',
+      paddingLeft: '0px',
+      paddingRight: '0px',
+    },
+    "& .MuiBox-root": {
+      marginRight:'40px',
     },
   },
   button: {
@@ -180,15 +185,18 @@ export default function DrawerAppBar(props) {
           </ListItemButton>
         </ListItem>
         <SocialDrawer >
-          <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
+          <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/fFNAHsvcbZ">
             <Discord className="icon" />
           </IconButton>
-          <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
+          <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/meg4mint3023">
             <Twitter className="icon" />
           </IconButton>
-          {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/vesper.eth/">
-              <Instagram className="icon" />
-          </IconButton> */}
+          <IconButton size="large" color="inherit" target="_blank" href="https://drive.google.com/file/d/1JcIoUhk1HbFiSgjTBDG2Cf8wB_wVjkVt/view?usp=sharing">
+                <Meg className="icon" />
+              </IconButton>
+              <IconButton size="large" color="inherit" target="_blank" href="https://meg4mint.gitbook.io/meg4mint-litepaper/">
+                <Gitbook className="icon" />
+              </IconButton>
         </SocialDrawer>
       </List> 
     </Box>
@@ -198,18 +206,18 @@ export default function DrawerAppBar(props) {
 
   return (
     <Box className={classes.root}  sx={{ display: 'flex' }}>
-      <AppBar component="nav" theme={theme} position="static" >
-      <Box 
+      <AppBar component="nav" theme={theme} position="static" marginRight="100">
+      {/* <Box 
         component="img"
         className={classes.logo}
         sx={{
-          height: 75,
-          width: 250,
-          marginRight: 41,    
+          height: 38,
+          width: 125,
+          marginRight: 10,    
         }}
         alt="logo"
         src="/images/Logo2.png"
-      />
+      /> */}
         <Toolbar id="back-to-top-anchor">
         <IconButton
             color="inherit"
@@ -220,6 +228,17 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
+          <Box 
+            component="img"
+            className={classes.logo}
+            sx={{
+              height: 38,
+              width: 125,
+              //marginRight: 10,    
+            }}
+            alt="logo"
+            src="/images/Logo2.png"
+          />
           <Box className={classes.hide} sx={{ mr: 20, display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ m: 2, color: '#fff',  ':hover': { color: '#02efee',}, }} style={{ fontFamily: 'NES Controller', fontSize: '30px' }}>
@@ -235,24 +254,24 @@ export default function DrawerAppBar(props) {
                 </Link>
               </Button>
             ))}
-            {/* <Button className={classes.button} key='GIVEAWAY' target="_blank" href="/giveaway" sx={{ m: 3, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '25px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
-                 Giveaway
-            </Button> */}
             <Button className={classes.button} key='MINT' target="_blank" href="/mint" sx={{ m: 2, color: '#fff' }} style={{ fontFamily: 'NES Controller', fontSize: '30px', maxWidth: '150px', maxHeight: '30px', minWidth: '100px', minHeight: '30px' }}>
                  Mint
             </Button>
           </Box>
           <Box className={classes.hide} sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Social >
-              <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/BHhjs4AY7x">
+              <IconButton size="large"  color="inherit" target="_blank" href="https://discord.gg/fFNAHsvcbZ">
                 <Discord className="icon" />
               </IconButton>
-              <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/Meg4mint">
+              <IconButton size="large" color="inherit" target="_blank" href="https://twitter.com/meg4mint3023">
               <Twitter className="icon" />
               </IconButton>
-              {/* <IconButton size="large" color="inherit" target="_blank" href="https://www.instagram.com/vesper.eth/">
-                <Instagram className="icon" />
-              </IconButton> */}
+              <IconButton size="large" color="inherit" target="_blank" href="https://drive.google.com/file/d/1JcIoUhk1HbFiSgjTBDG2Cf8wB_wVjkVt/view?usp=sharing">
+                <Meg className="icon" />
+              </IconButton>
+              <IconButton size="large" color="inherit" target="_blank" href="https://meg4mint.gitbook.io/meg4mint-litepaper/">
+                <Gitbook className="icon" />
+              </IconButton>
             </Social>
           </Box>
         </Toolbar>
@@ -289,7 +308,7 @@ const Social = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: end;
-  gap: 12%;
+  gap: 4%;
   .icon {
     width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
     filter:brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(3%) hue-rotate(187deg) brightness(114%) contrast(100%);

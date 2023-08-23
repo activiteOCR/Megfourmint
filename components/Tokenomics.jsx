@@ -1,9 +1,7 @@
 import React from "react";
-import { useState, useEffect, useContext, createContext } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 import { createTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
@@ -51,13 +49,11 @@ const useWindowSize = () => {
 const MobileComponent = ({ classes }) => (
   <ContentMob>
     <div>
-      <h1><u><span className="h1color">Roadmap</span></u></h1>
+      <h1><u><span className="h1color">Tokenomics</span></u></h1>
     </div>
     <Box
       component="img"
       sx={{
-        // height: 300,
-        // width: 300,
         maxHeight: { xs: 375, md: 700 },
         maxWidth: { xs: 375, md: 700 },
         marginRight: "auto",
@@ -66,7 +62,7 @@ const MobileComponent = ({ classes }) => (
         marginBottom: "40px",
       }}
       alt="mega"
-      src="/images/RMap.png"
+      src="/images/Tokenomics.png"
     />
   </ContentMob>
 );
@@ -74,14 +70,14 @@ const DesktopComponent = ({ classes }) => (
   <Box>
     <Content>
       <Box>
-        <h1><u><span className="h1color">Roadmap</span></u></h1>
+        <h1><u><span className="h1color">Tokenomics</span></u></h1>
       </Box>
     </Content>
     <div className="titre">
           <Image
-            src="/images/RMap.png" // Route of the image file
-            height={1168} // Desired size with correct aspect ratio
-            width={2932} // Desired size with correct aspect ratio
+            src="/images/Tokenomics.png" // Route of the image file
+            height={1389} // Desired size with correct aspect ratio
+            width={2755} // Desired size with correct aspect ratio
             alt="titre"
           />
     </div>
@@ -98,7 +94,7 @@ const Layouts = ({ Classes }) => {
   );
 };
 
-export default function Roadmap() {
+export default function Tokenomics() {
   const classes = useStyles();
   return (
     // <>
@@ -112,7 +108,7 @@ export default function Roadmap() {
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  background: linear-gradient(#07001F,#070047);
+  background: linear-gradient(#070047,#07001F);
 `;
 const Content = styled.div`
   display: flex;
@@ -128,13 +124,6 @@ const Content = styled.div`
   h1 .h1color {
     color: #ffffff;
   }
-  /* h2 {
-    text-align: justify;
-    font-family: "Bebas Regular";
-    font-size: calc(1rem + 0.4vw);
-    color: rgb(255, 255, 255);
-    margin-right: 10%;
-  } */
   u {
     text-decoration: underline;
     text-decoration-color: #02efee;
@@ -160,16 +149,6 @@ const ContentMob = styled.div`
   h1 .h1color {
     color: #ffffff;
   }
-  /* h2 {
-    font-family: "Bebas Regular";
-    font-size: calc(1rem + 0.8vw);
-    color: rgb(255, 255, 255);
-    text-align: justify;
-    margin-left: initial;
-    margin-right: initial;
-    padding: 10%;
-    padding-top: 0%;
-  } */
   u {
     text-decoration: underline;
     text-decoration-color: #02efee;

@@ -10,11 +10,10 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   
   return (
-    // <ThirdwebProvider desiredChainId={activeChainId} sdkOptions={{
-    //   gatewayUrls: ["https://ipfs.thirdwebstorage.com/ipfs/"],
-    // }}>
-      <ThirdwebProvider activeChain="ethereum" sdkOptions={{
-          gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],
+      <ThirdwebProvider 
+        activeChain="ethereum"
+        clientId="8b2c969ed487cdc075a0246183e872fe" 
+        sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],
       }}>
       <Head>
         <title>Meg4mint Website</title>
