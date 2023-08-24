@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }) {
       <ThirdwebProvider 
         activeChain="ethereum"
         clientId="8b2c969ed487cdc075a0246183e872fe" 
-        sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],
-      }}>
+        // sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],}}
+      >
       <Head>
         <title>Meg4mint Website</title>
         <meta
