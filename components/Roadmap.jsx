@@ -1,9 +1,9 @@
 import React from "react";
-import { useState, useEffect, useContext, createContext } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+//import ImageList from "@mui/material/ImageList";
+//import ImageListItem from "@mui/material/ImageListItem";
 import { createTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
@@ -128,13 +128,6 @@ const Content = styled.div`
   h1 .h1color {
     color: #ffffff;
   }
-  /* h2 {
-    text-align: justify;
-    font-family: "Bebas Regular";
-    font-size: calc(1rem + 0.4vw);
-    color: rgb(255, 255, 255);
-    margin-right: 10%;
-  } */
   u {
     text-decoration: underline;
     text-decoration-color: #02efee;
@@ -160,16 +153,6 @@ const ContentMob = styled.div`
   h1 .h1color {
     color: #ffffff;
   }
-  /* h2 {
-    font-family: "Bebas Regular";
-    font-size: calc(1rem + 0.8vw);
-    color: rgb(255, 255, 255);
-    text-align: justify;
-    margin-left: initial;
-    margin-right: initial;
-    padding: 10%;
-    padding-top: 0%;
-  } */
   u {
     text-decoration: underline;
     text-decoration-color: #02efee;

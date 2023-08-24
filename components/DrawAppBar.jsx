@@ -71,6 +71,10 @@ const useStyles = makeStyles({
     "& .MuiBox-root": {
       marginRight:'40px',
     },
+    "& .MuiButtonBase-root": {
+      marginLeft:'5px',
+      gap:'5px',
+    },
   },
   button: {
     backgroundColor: '#fff',
