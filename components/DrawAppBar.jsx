@@ -341,9 +341,9 @@ const SocialDrawer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  gap: 12%;
+  gap: 20%;
   .icon {
-    width: clamp(1.5rem, 0.536rem + 1.488vw, 1.9rem);
+    width: clamp(1.5rem, 0.536rem + 0.488vw, 1.9rem);
     filter: brightness(0) saturate(100%) invert(37%) sepia(4%) saturate(30%) hue-rotate(315deg) brightness(89%) contrast(74%);
     transition: transform 0.1s ease-in;
   }
