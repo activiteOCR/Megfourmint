@@ -361,7 +361,7 @@ const SocialDrawer = styled.div`
       transform: scale(1.4);
     }
     margin-right: 3%;
-    gap: 8%;
+    gap: 20%;
   }
 `;
 
