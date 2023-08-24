@@ -54,15 +54,15 @@ const MobileComponent = ({ classes }) => (
     <Box
       component="img"
       sx={{
-        maxHeight: { xs: 375, md: 700 },
-        maxWidth: { xs: 375, md: 700 },
+        maxHeight: { xs: 500, md: 1400 },
+        maxWidth: { xs: 500, md: 1400 },
         marginRight: "auto",
         marginLeft: "auto",
         marginTop: "40px",
         marginBottom: "40px",
       }}
       alt="mega"
-      src="/images/Tokenomics.png"
+      src="/images/Tokenomics_mod.png"
     />
   </ContentMob>
 );

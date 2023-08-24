@@ -58,15 +58,15 @@ const MobileComponent = ({ classes }) => (
       sx={{
         // height: 300,
         // width: 300,
-        maxHeight: { xs: 375, md: 700 },
-        maxWidth: { xs: 375, md: 700 },
+        maxHeight: { xs: 750, md: 1400 },
+        maxWidth: { xs: 750, md: 1400 },
         marginRight: "auto",
         marginLeft: "auto",
         marginTop: "40px",
         marginBottom: "40px",
       }}
       alt="mega"
-      src="/images/RMap.png"
+      src="/images/rdm_mob.png"
     />
   </ContentMob>
 );

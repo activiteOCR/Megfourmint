@@ -1,5 +1,5 @@
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
-import { Ethereum } from '@thirdweb-dev/chains';
+//import { Ethereum } from '@thirdweb-dev/chains';
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 import Head from "next/head";
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
       <ThirdwebProvider 
         activeChain="ethereum"
         clientId="8b2c969ed487cdc075a0246183e872fe" 
-        // sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],}}
+        //sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],}}
       >
       <Head>
         <title>Meg4mint Website</title>
