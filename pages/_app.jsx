@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
       <ThirdwebProvider 
         activeChain="ethereum"
-        clientId="8b2c969ed487cdc075a0246183e872fe" 
+        clientId="332688349d519bbd50a8aacab757b80a" 
         //sdkOptions={{ gatewayUrls: ["https://gateway.ipfscdn.io/ipfs/"],}}
       >
       <Head>
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-      <Analytics />
+      {/* <Analytics /> */}
     </ThirdwebProvider>
   );
 }
