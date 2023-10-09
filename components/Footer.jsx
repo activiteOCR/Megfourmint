@@ -33,8 +33,12 @@ const useViewport = () => {
 const MobileComponent = () => 
 <Content>
 <SocialCopyWrapper>
-  {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
-  <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>  
+    <div><h1>Meg4mint partners</h1></div>
+    <CopyRight><a rel="noreferrer" href="https://www.pinksale.finance" target="_blank"> PINKSALE </a></CopyRight>
+    <div><img src="/images/pinksale.png" alt="creativecommon" className="creativeCommon" /></div>
+
+    <CopyRight><a rel="noreferrer" href="https://www.dexview.com" target="_blank"> DEXVIEW </a></CopyRight>
+    <div><img src="/images/dexview.png" alt="creativecommon" className="creativeCommon" /></div>
 </SocialCopyWrapper>
 </Content>
 ;
@@ -42,8 +46,12 @@ const MobileComponent = () =>
 const DesktopComponent = () =>
 <Content>
 <SocialCopyWrapper>
-    <CopyRight>This work is licensed under a <a rel="noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></CopyRight>
-    {/* <img src="/images/CC.png" alt="creativecommon" className="creativeCommon" /> */}
+    <div><h1>Meg4mint partners</h1></div>
+    <CopyRight><a rel="noreferrer" href="https://www.pinksale.finance" target="_blank"> PINKSALE </a></CopyRight>
+    <div><img src="/images/pinksale.png" alt="creativecommon" className="creativeCommon" /></div>
+
+    <CopyRight><a rel="noreferrer" href="https://www.dexview.com" target="_blank"> DEXVIEW </a></CopyRight>
+    <div><img src="/images/dexview.png" alt="creativecommon" className="creativeCommon" /></div>
 </SocialCopyWrapper>
 </Content>
  ;
@@ -68,7 +76,8 @@ const Wrapper = styled.div`
   height: 5%;
   width: 100%;
   padding: 2% 2% 2% 2%;
-  background: linear-gradient(#070047,#07001F);
+  //background: linear-gradient(#070047,#07001F);
+  background: linear-gradient(#464646,#fefeff);
   @media (max-width: 600px){
     height: 10%;
   }
@@ -98,7 +107,7 @@ const Content = styled.div`
 `;
 const CopyRight = styled.p`
   font-family: "NES Controller";
-  font-size: 1.1rem;
+  font-size: 3.1rem;
   color: #ffffff;
 `;
 const SocialCopyWrapper = styled.div`
